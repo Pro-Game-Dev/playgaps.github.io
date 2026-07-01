@@ -285,7 +285,8 @@ input,select{ font: inherit; color: inherit; }
 .hero__title em{ font-style:normal; color:var(--poppy); position:relative; white-space:nowrap; }
 .hero__subtitle{ font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch; margin-bottom: var(--sp-6); }
 .hero__ctas{ display:flex; flex-wrap:wrap; gap: var(--sp-4); margin-bottom: var(--sp-6); }
-.trust-row{ display:flex; flex-wrap:wrap; gap: var(--sp-3); align-items:center; font-size:var(--fs-sm); font-weight:600; }
+.trust-row{ display:grid; grid-template-columns: repeat(2, max-content); gap: var(--sp-3); align-items:center; font-size:var(--fs-sm); font-weight:600; }
+@media(min-width:560px){ .trust-row{ grid-template-columns: repeat(4, max-content); } }
 .trust-pill{ display:inline-flex; align-items:center; gap:6px; background:var(--paper-dim); border:2px solid var(--line); border-radius:var(--radius-pill); padding:6px 14px; }
 .trust-pill svg{ width:14px; height:14px; flex-shrink:0; }
 
@@ -430,6 +431,7 @@ input,select{ font: inherit; color: inherit; }
 @media(min-width:560px){ .catalog-grid{ grid-template-columns:repeat(2,1fr); } }
 @media(min-width:860px){ .catalog-grid{ grid-template-columns:repeat(3,1fr); } }
 @media(min-width:1180px){ .catalog-grid{ grid-template-columns:repeat(4,1fr); } }
+.catalog__more{ display:flex; justify-content:center; margin-top: var(--sp-7); }
 .catalog-empty{
   grid-column:1/-1; text-align:center; padding:var(--sp-8) var(--sp-5);
   border:var(--border-w) dashed var(--ink-soft); border-radius:var(--radius-lg); color:var(--ink-soft); font-weight:600;
@@ -648,6 +650,9 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         <div class="catalog__controls" id="catalogChips" role="group" aria-label="Filter games by category"></div>
         <p class="catalog__count" id="catalogCount" aria-live="polite"></p>
         <div class="catalog-grid" id="catalogGrid"><!-- rendered by JS --></div>
+        <div class="catalog__more" id="catalogMore" style="display:none;">
+          <button type="button" class="btn btn--ghost" id="catalogShowAll">Show all 16 games</button>
+        </div>
       </div>
     </div>
   </section>
@@ -955,7 +960,7 @@ function metaPills(game){
 function cardMarkup(game, featured){
   var url = storeUrl(game.pkg);
   var ribbon = game.teacherApproved
-    ? '<span class="hand-note">' + BADGE + 'teacher\u2019s pick!</span><span class="ribbon">' + BADGE + 'Teacher Approved</span>'
+    ? '<span class="ribbon">' + BADGE + 'Teacher Approved</span>'
     : "";
   return '' +
   '<a class="game-card' + (featured ? ' game-card--featured' : '') + ' reveal" href="' + url + '" target="_blank" rel="noopener" aria-label="View ' + game.name + ' on Google Play">' +
@@ -982,7 +987,11 @@ function cardMarkup(game, featured){
    CATALOG — searchable / filterable / sortable grid of all
    16 games
    ============================================================ */
-var catalogState = { category: "All", query: "", sort: "default", teacherOnly: false };
+var catalogState = { category: "All", query: "", sort: "default", teacherOnly: false, expanded: false };
+var INITIAL_COUNT = 8;
+function isDefaultView(){
+  return catalogState.category === "All" && !catalogState.query.trim() && catalogState.sort === "default" && !catalogState.teacherOnly;
+}
 
 function renderChips(){
   var html = CATEGORIES.map(function(cat){
@@ -995,12 +1004,14 @@ function renderChips(){
   document.querySelectorAll(".chip[data-cat]").forEach(function(chip){
     chip.addEventListener("click", function(){
       catalogState.category = chip.getAttribute("data-cat");
+      if (catalogState.category !== "All") catalogState.expanded = true;
       renderChips();
       renderCatalog();
     });
   });
   document.getElementById("teacherChip").addEventListener("click", function(){
     catalogState.teacherOnly = !catalogState.teacherOnly;
+    if (catalogState.teacherOnly) catalogState.expanded = true;
     renderChips();
     renderCatalog();
   });
@@ -1038,16 +1049,23 @@ function renderCatalog(){
   });
   filtered = sortGames(filtered);
 
-  document.getElementById("catalogCount").textContent =
-    "Showing " + filtered.length + " of " + GAMES.length + " games";
+  var showCap = isDefaultView() && !catalogState.expanded;
+  var visible = showCap ? filtered.slice(0, INITIAL_COUNT) : filtered;
+
+  document.getElementById("catalogCount").textContent = showCap
+    ? "Showing " + visible.length + " of " + GAMES.length + " games"
+    : "Showing " + filtered.length + " of " + GAMES.length + " games";
+
+  var moreWrap = document.getElementById("catalogMore");
+  moreWrap.style.display = (showCap && filtered.length > INITIAL_COUNT) ? "flex" : "none";
 
   var grid = document.getElementById("catalogGrid");
   function paint(){
-    if (filtered.length === 0){
+    if (visible.length === 0){
       grid.innerHTML = '<div class="catalog-empty">No games match that search — try a different word, or tap “All” to see everything.</div>';
       return;
     }
-    grid.innerHTML = filtered.map(function(g){ return cardMarkup(g, false); }).join("");
+    grid.innerHTML = visible.map(function(g){ return cardMarkup(g, false); }).join("");
     observeReveals(grid);
   }
   if (document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
@@ -1063,12 +1081,19 @@ renderCatalog();
 var searchInput = document.getElementById("catalogSearch");
 searchInput.addEventListener("input", function(){
   catalogState.query = searchInput.value;
+  if (catalogState.query.trim()) catalogState.expanded = true;
   renderCatalog();
 });
 
 var sortSelect = document.getElementById("catalogSort");
 sortSelect.addEventListener("change", function(){
   catalogState.sort = sortSelect.value;
+  if (catalogState.sort !== "default") catalogState.expanded = true;
+  renderCatalog();
+});
+
+document.getElementById("catalogShowAll").addEventListener("click", function(){
+  catalogState.expanded = true;
   renderCatalog();
 });
 
