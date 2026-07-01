@@ -4,39 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Play Gaps — Educational Games for Kids | Numbers, Letters, Shapes &amp; More</title>
-<meta name="description" content="Play Gaps makes 16 educational Android games for kids ages 3+ — counting, the alphabet, shapes, animals, and times tables. 1.5M+ downloads and a Teacher Approved game on Google Play.">
+<meta name="description" content="Play Gaps makes 16 educational Android games for kids ages 3+ — counting, the alphabet, shapes, animals, colors, and times tables. 1.5M+ downloads and 6 Teacher Approved games on Google Play.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://playgaps.com/">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F8FA">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14161B">
+
 <meta property="og:title" content="Play Gaps — Educational Games for Kids">
-<meta property="og:description" content="16 playful learning games for ages 3+. Counting, alphabet, shapes, animals, and times tables — free to start on Google Play.">
+<meta property="og:description" content="16 playful learning games for ages 3+. Counting, alphabet, shapes, animals, and times tables — free to start on Google Play. 6 games carry Google Play's Teacher Approved badge.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://playgaps.com">
+<meta property="og:url" content="https://playgaps.com/">
+<meta property="og:site_name" content="Play Gaps">
+<meta property="og:image" content="https://playgaps.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Play Gaps — educational Android games for kids, ages 3+">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Play Gaps — Educational Games for Kids">
+<meta name="twitter:description" content="16 playful learning games for ages 3+, with 6 Teacher Approved titles on Google Play.">
+<meta name="twitter:image" content="https://playgaps.com/assets/og-image.jpg">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' fill='%23E8503F' stroke='%231C2027' stroke-width='5'/%3E%3Ctext x='32' y='44' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='%231C2027' text-anchor='middle'%3E1%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Sets the theme before first paint, so there's no flash of the wrong colour scheme -->
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem("pg-theme");
+    if (saved === "light" || saved === "dark"){
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  }catch(e){}
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://playgaps.com/#organization",
+      "name": "Play Gaps",
+      "url": "https://playgaps.com/",
+      "logo": "https://playgaps.com/assets/icon-512.png",
+      "email": "playgapsofficial@gmail.com",
+      "sameAs": ["https://play.google.com/store/apps/dev?id=4612285757053932453"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://playgaps.com/#website",
+      "url": "https://playgaps.com/",
+      "name": "Play Gaps",
+      "publisher": { "@id": "https://playgaps.com/#organization" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Play Gaps educational games for kids",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "Learn 1 to 1000 Numbers", "url": "https://play.google.com/store/apps/details?id=com.hiegames.freelearnnumbers1to1000", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.0", "ratingCount": "807" } } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "1 to 100 number counting game", "url": "https://play.google.com/store/apps/details?id=com.hiegames.numbersforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.1", "ratingCount": "954" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "100 Animals and Birds for kids", "url": "https://play.google.com/store/apps/details?id=com.hiegames.animalsforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.9", "ratingCount": "331" } } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "Times Tables Chart", "url": "https://play.google.com/store/apps/details?id=com.hiegames.timestableschart", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.3", "ratingCount": "4960" } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "Numbers Spelling", "url": "https://play.google.com/store/apps/details?id=com.hiegames.numberswithspellings", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.9", "ratingCount": "140" } } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "30 Basic shapes names for kids", "url": "https://play.google.com/store/apps/details?id=com.hiegames.learnshapes", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "ratingCount": "241" } } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "SoftwareApplication", "name": "1 to 500 number counting game", "url": "https://play.google.com/store/apps/details?id=com.hiegames.countingnumbersforkidsfree", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "ratingCount": "162" } } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "SoftwareApplication", "name": "100 Sea Animals for kids", "url": "https://play.google.com/store/apps/details?id=com.playgaps.seaanimals", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+        { "@type": "ListItem", "position": 9, "item": { "@type": "SoftwareApplication", "name": "Color Peek: Kids First Drawing", "url": "https://play.google.com/store/apps/details?id=com.playgaps.colorpeekforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+        { "@type": "ListItem", "position": 10, "item": { "@type": "SoftwareApplication", "name": "Times Tables Mastery for Kids", "url": "https://play.google.com/store/apps/details?id=com.hiegames.timestablesmasteryforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+        { "@type": "ListItem", "position": 11, "item": { "@type": "SoftwareApplication", "name": "Learn 1 - 100 numbers for kids", "url": "https://play.google.com/store/apps/details?id=com.hiegames.learn1to100numbersforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.1", "ratingCount": "9" } } },
+        { "@type": "ListItem", "position": 12, "item": { "@type": "SoftwareApplication", "name": "Learn the Alphabet with boat game", "url": "https://play.google.com/store/apps/details?id=com.hiegames.learnthealphabet", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "6" } } },
+        { "@type": "ListItem", "position": 13, "item": { "@type": "SoftwareApplication", "name": "Number Woods: Kids Learn 1-100", "url": "https://play.google.com/store/apps/details?id=com.hiegames.numberwoodenblocks", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.0", "ratingCount": "5" } } },
+        { "@type": "ListItem", "position": 14, "item": { "@type": "SoftwareApplication", "name": "Learn ABC: Kids Alphabet Game", "url": "https://play.google.com/store/apps/details?id=com.hiegames.alphabetwoodenblocksgame", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "ratingCount": "18" } } },
+        { "@type": "ListItem", "position": 15, "item": { "@type": "SoftwareApplication", "name": "ABC,123 & More: Pre-K Games", "url": "https://play.google.com/store/apps/details?id=com.hiegames.learnabcand123", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "ratingCount": "9" } } },
+        { "@type": "ListItem", "position": 16, "item": { "@type": "SoftwareApplication", "name": "Colors For Kids to learn", "url": "https://play.google.com/store/apps/details?id=com.hiegames.colorsforkids", "applicationCategory": "EducationalApplication", "operatingSystem": "ANDROID", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "14" } } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What ages are Play Gaps games designed for?", "acceptedAnswer": { "@type": "Answer", "text": "Every Play Gaps game is designed for kids ages 3 and up, with big buttons, simple taps, and no reading required to get started." } },
+        { "@type": "Question", "name": "Are Play Gaps games free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 16 games are free to download and free to start. A few ads keep the lights on, and any extra content is always optional." } },
+        { "@type": "Question", "name": "What does the Teacher Approved badge mean?", "acceptedAnswer": { "@type": "Answer", "text": "Teacher Approved is a Google Play program that recognizes high-quality apps for kids, reviewed by a panel of teachers and child-development experts. Six Play Gaps games currently carry the badge." } },
+        { "@type": "Question", "name": "Does Play Gaps collect data from kids?", "acceptedAnswer": { "@type": "Answer", "text": "Data handling is disclosed individually for each game in its Google Play Data Safety section, which is the most accurate and current place to check before installing." } },
+        { "@type": "Question", "name": "How do I install a Play Gaps game?", "acceptedAnswer": { "@type": "Answer", "text": "Tap any game card on this page — it opens that game's official Google Play listing, where you can install it the same way as any other Android app." } }
+      ]
+    }
+  ]
+}
+</script>
 
 <style>
 /* ============================================================
    PLAY GAPS — DESIGN TOKENS
    ============================================================ */
 :root{
-  /* color */
-  --paper:        #F6F8FA;
-  --paper-dim:    #ECF1F5;
-  --ink:          #1C2027;
-  --ink-soft:     #4A5160;
-  --poppy:        #E8503F;
-  --marigold:     #FFC53D;
-  --sky:          #2F6FE4;
-  --leaf:         #2FAE6B;
-  --white:        #FFFFFF;
+  color-scheme: light dark;
 
-  /* type */
+  /* theme-adaptive tokens (flip automatically with light-dark(), or via [data-theme]) */
+  --paper:     light-dark(#F6F8FA, #14161B);
+  --paper-dim: light-dark(#ECF1F5, #1B1E26);
+  --surface:   light-dark(#FFFFFF, #20242E);
+  --line:      light-dark(#1C2027, #EDEFF4);
+  --ink:       light-dark(#1C2027, #EDEFF4);
+  --ink-soft:  light-dark(#4A5160, #A6AEBD);
+
+  /* fixed brand swatches — do not shift with theme, so tiles read the same in light or dark */
+  --poppy:     #E8503F;
+  --marigold:  #FFC53D;
+  --sky:       #2F6FE4;
+  --leaf:      #2FAE6B;
+  --swatch-dark:  #1C2027;
+  --swatch-white: #FFFFFF;
+  --tile-ink:  #1C2027;   /* text/icons drawn on top of accent tiles: always dark for contrast */
+  --white:     #FFFFFF;
+
   --font-display: 'Baloo 2', system-ui, sans-serif;
   --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
   --font-hand:    'Caveat', cursive;
 
-  /* fluid type scale */
   --fs-hero:  clamp(2.4rem, 4.4vw + 1.1rem, 4.4rem);
   --fs-h2:    clamp(1.7rem, 2.4vw + 1rem, 2.6rem);
   --fs-h3:    clamp(1.15rem, 0.8vw + 0.9rem, 1.4rem);
@@ -45,169 +139,119 @@
   --fs-sm:    0.875rem;
   --fs-xs:    0.75rem;
 
-  /* spacing */
   --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
   --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
   --sp-9: 96px; --sp-10:128px;
 
-  /* shape */
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 22px;
   --radius-pill: 999px;
   --border-w: 3px;
 
-  /* hard, flat, offset shadows — no blur, tactile-brutalist */
-  --shadow-sm: 3px 3px 0 var(--ink);
-  --shadow-md: 5px 5px 0 var(--ink);
-  --shadow-lg: 8px 8px 0 var(--ink);
+  --shadow-sm: 3px 3px 0 var(--line);
+  --shadow-md: 5px 5px 0 var(--line);
+  --shadow-lg: 8px 8px 0 var(--line);
 
   --ease: cubic-bezier(.22,.9,.32,1.18);
   --container: 1160px;
 }
 
-/* ============================================================
-   RESET / BASE
-   ============================================================ */
+:root[data-theme="light"]{ color-scheme: light; }
+:root[data-theme="dark"]{  color-scheme: dark; }
+
 *, *::before, *::after{ box-sizing: border-box; }
-html{
-  scroll-behavior: smooth;
-  scroll-padding-top: 84px;
-}
+html{ scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+@view-transition{ navigation: auto; }
+
 body{
-  margin:0;
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  color: var(--ink);
-  background: var(--paper);
+  margin:0; font-family: var(--font-body); font-size: var(--fs-body);
+  line-height: 1.6; color: var(--ink); background: var(--paper);
   -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 1px 1px, light-dark(rgba(28,32,39,.05), rgba(255,255,255,.045)) 1px, transparent 0);
+  background-size: 22px 22px;
 }
-h1,h2,h3,h4{
-  font-family: var(--font-display);
-  margin: 0;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-}
+h1,h2,h3,h4{ font-family: var(--font-display); margin: 0; line-height: 1.08; letter-spacing: -0.01em; }
 p{ margin:0; }
 ul{ margin:0; padding:0; list-style:none; }
 a{ color: inherit; text-decoration: none; }
 img,svg{ display:block; max-width:100%; }
 button{ font: inherit; color: inherit; background:none; border:none; cursor:pointer; }
+input,select{ font: inherit; color: inherit; }
 
-.container{
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: var(--sp-5);
-}
-
-.visually-hidden{
-  position:absolute; width:1px; height:1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap;
-}
+.container{ width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--sp-5); }
+.visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
 
 .skip-link{
   position:absolute; top:-100px; left:var(--sp-4);
   background:var(--ink); color:var(--paper);
   padding:var(--sp-3) var(--sp-5); border-radius:var(--radius-sm);
-  z-index:1000; transition:top .2s var(--ease);
-  font-weight:600;
+  z-index:1000; transition:top .2s var(--ease); font-weight:600;
 }
 .skip-link:focus{ top: var(--sp-4); }
+:focus-visible{ outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 4px; }
 
-:focus-visible{
-  outline: 3px solid var(--sky);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* ============================================================
-   ACCENT TILE PALETTE (used across icons / badges / surfaces)
-   ============================================================ */
 .tile--poppy{    background: var(--poppy); }
 .tile--marigold{ background: var(--marigold); }
-.tile--sky{      background: var(--sky); }
-.tile--leaf{     background: var(--leaf); }
-.tile--dark{     background: var(--ink); }
-.tile--dark .mark-big,
-.tile--dark .mark-top{ color: var(--marigold); }
+.tile--sky{      background: var(--sky); color:#fff; }
+.tile--leaf{     background: var(--leaf); color:#fff; }
+.tile--dark{     background: var(--swatch-dark); }
+.tile--dark .mark-big, .tile--dark .mark-top{ color: var(--marigold); }
+.tile--white{    background: var(--swatch-white); }
 
 /* ============================================================
    NAV
    ============================================================ */
 .nav{
-  position: sticky; top:0; z-index: 100;
-  width:100%;
-  background: rgba(246,248,250,0.7);
+  position: sticky; top:0; z-index: 100; width:100%;
+  background: light-dark(rgba(246,248,250,.7), rgba(20,22,27,.7));
   border-bottom: var(--border-w) solid transparent;
   transition: background .25s ease, border-color .25s ease, backdrop-filter .25s ease;
 }
 .nav.is-scrolled{
-  background: rgba(246,248,250,0.82);
+  background: light-dark(rgba(246,248,250,.86), rgba(20,22,27,.86));
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   backdrop-filter: blur(14px) saturate(140%);
-  border-bottom-color: var(--ink);
+  border-bottom-color: var(--line);
 }
-.nav__inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding-block: var(--sp-4);
-  gap: var(--sp-4);
-}
-.nav__logo{
-  display:flex; align-items:center; gap:var(--sp-2);
-  font-family: var(--font-display);
-  font-weight:700;
-  font-size:1.4rem;
-  flex-shrink:0;
-}
-.nav__logo-dot{
-  width:14px; height:14px; border-radius:4px;
-  background:var(--poppy); border:2px solid var(--ink);
-  transform: rotate(12deg);
-  flex-shrink:0;
-}
-.nav__links{
-  display:none;
-  align-items:center; gap:var(--sp-6);
-  font-weight:600; font-size:var(--fs-sm);
-}
-.nav__links a{
-  position:relative; padding-block:4px;
-}
+.nav__inner{ display:flex; align-items:center; justify-content:space-between; padding-block: var(--sp-4); gap: var(--sp-4); }
+.nav__logo{ display:flex; align-items:center; gap:var(--sp-2); font-family: var(--font-display); font-weight:700; font-size:1.4rem; flex-shrink:0; }
+.nav__logo-dot{ width:14px; height:14px; border-radius:4px; background:var(--poppy); border:2px solid var(--swatch-dark); transform: rotate(12deg); flex-shrink:0; }
+.nav__links{ display:none; align-items:center; gap:var(--sp-6); font-weight:600; font-size:var(--fs-sm); }
+.nav__links a{ position:relative; padding-block:4px; }
 .nav__links a::after{
-  content:''; position:absolute; left:0; right:0; bottom:-2px;
-  height:3px; background:var(--poppy); border-radius:2px;
-  transform:scaleX(0); transform-origin:left;
+  content:''; position:absolute; left:0; right:0; bottom:-2px; height:3px;
+  background:var(--poppy); border-radius:2px; transform:scaleX(0); transform-origin:left;
   transition: transform .2s var(--ease);
 }
 .nav__links a:hover::after{ transform:scaleX(1); }
-
 .nav__right{ display:flex; align-items:center; gap:var(--sp-3); }
 
+.theme-toggle{
+  display:flex; align-items:center; justify-content:center; width:40px; height:40px;
+  border:var(--border-w) solid var(--line); border-radius:var(--radius-sm); background:var(--surface);
+  flex-shrink:0; transition: transform .15s var(--ease);
+}
+.theme-toggle:hover{ transform: translate(-1px,-1px); }
+.theme-toggle svg{ width:18px; height:18px; }
+.theme-toggle .icon-sun{ display:none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+
 .nav__burger{
-  display:flex; flex-direction:column; gap:5px;
-  width:38px; height:38px; align-items:center; justify-content:center;
-  border:var(--border-w) solid var(--ink); border-radius:var(--radius-sm);
-  background:var(--paper);
+  display:flex; flex-direction:column; gap:5px; width:40px; height:40px;
+  align-items:center; justify-content:center; border:var(--border-w) solid var(--line);
+  border-radius:var(--radius-sm); background:var(--surface); flex-shrink:0;
 }
 .nav__burger span{ width:18px; height:2.5px; background:var(--ink); border-radius:2px; transition: transform .2s ease, opacity .2s ease; }
 .nav.is-open .nav__burger span:nth-child(1){ transform: translateY(7.5px) rotate(45deg); }
 .nav.is-open .nav__burger span:nth-child(2){ opacity:0; }
 .nav.is-open .nav__burger span:nth-child(3){ transform: translateY(-7.5px) rotate(-45deg); }
-
-.nav__mobile-panel{
-  display:none;
-  flex-direction:column;
-  gap: var(--sp-2);
-  padding: var(--sp-2) 0 var(--sp-5);
-  font-weight:600;
-}
+.nav__mobile-panel{ display:none; flex-direction:column; gap: var(--sp-2); padding: var(--sp-2) 0 var(--sp-5); font-weight:600; }
 .nav.is-open .nav__mobile-panel{ display:flex; }
-.nav__mobile-panel a{
-  padding: var(--sp-3) var(--sp-2);
-  border-bottom: 2px solid var(--paper-dim);
-}
+.nav__mobile-panel a{ padding: var(--sp-3) var(--sp-2); border-bottom: 2px solid var(--paper-dim); min-height:44px; display:flex; align-items:center; }
 
 /* ============================================================
    BUTTONS
@@ -215,291 +259,281 @@ button{ font: inherit; color: inherit; background:none; border:none; cursor:poin
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   font-family:var(--font-body); font-weight:700; font-size:var(--fs-sm);
-  padding: 13px 24px;
-  border-radius: var(--radius-pill);
-  border: var(--border-w) solid var(--ink);
-  box-shadow: var(--shadow-sm);
-  transform: translate(0,0);
-  transition: transform .15s var(--ease), box-shadow .15s var(--ease);
-  white-space: nowrap;
+  padding: 13px 24px; border-radius: var(--radius-pill); border: var(--border-w) solid var(--line);
+  box-shadow: var(--shadow-sm); transform: translate(0,0); min-height:44px;
+  transition: transform .15s var(--ease), box-shadow .15s var(--ease); white-space: nowrap;
 }
 .btn:hover{ transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.btn:active{ transform: translate(1px,1px); box-shadow: 1px 1px 0 var(--ink); }
-.btn--primary{ background: var(--poppy); color: var(--ink); }
-.btn--ghost{ background: var(--paper); color: var(--ink); }
-.btn--sm{ padding: 9px 16px; font-size: var(--fs-xs); box-shadow: 3px 3px 0 var(--ink); }
+.btn:active{ transform: translate(1px,1px); box-shadow: 1px 1px 0 var(--line); }
+.btn--primary{ background: var(--poppy); color: var(--tile-ink); }
+.btn--ghost{ background: var(--surface); color: var(--ink); }
+.btn--sm{ padding: 9px 16px; font-size: var(--fs-xs); box-shadow: 3px 3px 0 var(--line); min-height:36px; }
 
 /* ============================================================
    HERO
    ============================================================ */
-.hero{
-  padding-block: var(--sp-8) var(--sp-9);
-  position:relative; overflow:hidden;
-}
-.hero__inner{
-  display:grid; gap: var(--sp-7);
-  align-items:center;
-}
-@media(min-width:980px){
-  .hero__inner{ grid-template-columns: 1.05fr 0.95fr; gap:var(--sp-9); }
-}
-
+.hero{ padding-block: var(--sp-8) var(--sp-9); position:relative; overflow:hidden; }
+.hero__inner{ display:grid; gap: var(--sp-7); align-items:center; }
+@media(min-width:980px){ .hero__inner{ grid-template-columns: 1.05fr 0.95fr; gap:var(--sp-9); } }
 .hero__eyebrow{
-  display:inline-flex; align-items:center; gap:8px;
-  font-weight:700; font-size:var(--fs-xs); letter-spacing:.02em;
-  background:var(--white); border:2px solid var(--ink); border-radius:var(--radius-pill);
-  padding:7px 16px; box-shadow: 3px 3px 0 var(--ink);
-  margin-bottom: var(--sp-5);
+  display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:var(--fs-xs); letter-spacing:.02em;
+  background:var(--surface); border:2px solid var(--line); border-radius:var(--radius-pill);
+  padding:7px 16px; box-shadow: 3px 3px 0 var(--line); margin-bottom: var(--sp-5);
 }
 .hero__eyebrow .pip{ width:8px; height:8px; border-radius:50%; background:var(--leaf); }
-
 .hero__title{ font-size: var(--fs-hero); font-weight:700; margin-bottom: var(--sp-5); }
-.hero__title em{ font-style:normal; color:var(--poppy); }
-
-.hero__subtitle{
-  font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch;
-  margin-bottom: var(--sp-6);
-}
-
+.hero__title em{ font-style:normal; color:var(--poppy); position:relative; white-space:nowrap; }
+.hero__subtitle{ font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch; margin-bottom: var(--sp-6); }
 .hero__ctas{ display:flex; flex-wrap:wrap; gap: var(--sp-4); margin-bottom: var(--sp-6); }
-
 .trust-row{ display:flex; flex-wrap:wrap; gap: var(--sp-3); align-items:center; font-size:var(--fs-sm); font-weight:600; }
-.trust-pill{
-  display:inline-flex; align-items:center; gap:6px;
-  background:var(--paper-dim); border:2px solid var(--ink); border-radius:var(--radius-pill);
-  padding:6px 14px;
-}
+.trust-pill{ display:inline-flex; align-items:center; gap:6px; background:var(--paper-dim); border:2px solid var(--line); border-radius:var(--radius-pill); padding:6px 14px; }
 .trust-pill svg{ width:14px; height:14px; flex-shrink:0; }
 
-/* --- block scatter (signature element) --- */
-.blocks{
-  position:relative;
-  height: clamp(280px, 36vw, 420px);
-  display:flex; align-items:center; justify-content:center;
-}
+.blocks{ position:relative; height: clamp(280px, 36vw, 420px); display:flex; align-items:center; justify-content:center; }
 .block-tile{
-  position:absolute;
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-weight:800;
-  border:var(--border-w) solid var(--ink); border-radius:var(--radius-md);
-  box-shadow: var(--shadow-md);
-  opacity:0; transform: translateY(40px) rotate(0deg) scale(.7);
-  animation: blockDrop .7s var(--ease) forwards;
+  position:absolute; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:800; border:var(--border-w) solid var(--swatch-dark);
+  border-radius:var(--radius-md); box-shadow: 5px 5px 0 var(--swatch-dark); color:var(--tile-ink);
+  opacity:0; transform: translateY(40px) rotate(0deg) scale(.7); animation: blockDrop .7s var(--ease) forwards;
 }
-@keyframes blockDrop{
-  to{ opacity:1; transform: translateY(0) rotate(var(--rot)) scale(1); }
-}
+@keyframes blockDrop{ to{ opacity:1; transform: translateY(0) rotate(var(--rot)) scale(1); } }
 .block-tile:nth-child(1){ --rot:-9deg; width:34%; aspect-ratio:1; font-size:clamp(2.2rem,5vw,3.4rem); top:6%; left:6%; background:var(--poppy); animation-delay:.05s; }
 .block-tile:nth-child(2){ --rot:7deg;  width:26%; aspect-ratio:1; font-size:clamp(1.7rem,4vw,2.6rem); top:2%; right:8%; background:var(--marigold); animation-delay:.18s; }
-.block-tile:nth-child(3){ --rot:-5deg; width:30%; aspect-ratio:1; font-size:clamp(2rem,4.6vw,3rem); bottom:8%; left:0%; background:var(--sky); color:var(--white); animation-delay:.30s; }
-.block-tile:nth-child(4){ --rot:11deg; width:24%; aspect-ratio:1; font-size:clamp(1.6rem,3.6vw,2.3rem); bottom:18%; right:4%; background:var(--leaf); color:var(--white); animation-delay:.42s; }
-.block-tile:nth-child(5){ --rot:-13deg; width:20%; aspect-ratio:1; font-size:clamp(1.3rem,3vw,1.9rem); top:38%; left:34%; background:var(--ink); color:var(--marigold); animation-delay:.54s; }
-.block-tile:nth-child(6){ --rot:16deg; width:18%; aspect-ratio:1; font-size:clamp(1.2rem,2.8vw,1.7rem); bottom:0%; right:30%; background:var(--white); animation-delay:.64s; }
+.block-tile:nth-child(3){ --rot:-5deg; width:30%; aspect-ratio:1; font-size:clamp(2rem,4.6vw,3rem); bottom:8%; left:0%; background:var(--sky); color:#fff; animation-delay:.30s; }
+.block-tile:nth-child(4){ --rot:11deg; width:24%; aspect-ratio:1; font-size:clamp(1.6rem,3.6vw,2.3rem); bottom:18%; right:4%; background:var(--leaf); color:#fff; animation-delay:.42s; }
+.block-tile:nth-child(5){ --rot:-13deg; width:20%; aspect-ratio:1; font-size:clamp(1.3rem,3vw,1.9rem); top:38%; left:34%; background:var(--swatch-dark); color:var(--marigold); animation-delay:.54s; }
+.block-tile:nth-child(6){ --rot:16deg; width:18%; aspect-ratio:1; font-size:clamp(1.2rem,2.8vw,1.7rem); bottom:0%; right:30%; background:var(--swatch-white); animation-delay:.64s; }
+
+@media(hover:hover){
+  .block-tile:hover{ transform: translateY(-6px) rotate(var(--rot)) scale(1.04); transition: transform .2s var(--ease); }
+}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .blocks{ animation: blocksParallax linear; animation-timeline: view(); animation-range: entry 0% cover 40%; }
+    @keyframes blocksParallax{ from{ transform: translateY(18px); } to{ transform: translateY(-6px); } }
+  }
+}
 
 /* ============================================================
    STATS STRIP
    ============================================================ */
-.stats{ padding-block: var(--sp-7); border-top:var(--border-w) solid var(--ink); border-bottom:var(--border-w) solid var(--ink); background:var(--white); }
-.stats__grid{
-  display:grid; grid-template-columns: repeat(2,1fr); gap: var(--sp-4);
-}
+.stats{ padding-block: var(--sp-7); border-top:var(--border-w) solid var(--line); border-bottom:var(--border-w) solid var(--line); background:var(--surface); }
+.stats__grid{ display:grid; grid-template-columns: repeat(2,1fr); gap: var(--sp-4); }
 @media(min-width:760px){ .stats__grid{ grid-template-columns: repeat(4,1fr); } }
-.stat-card{
-  text-align:center; padding: var(--sp-5) var(--sp-3);
-  border:var(--border-w) solid var(--ink); border-radius:var(--radius-md);
-  background:var(--paper);
-}
-.stat-card--badge{ background:var(--marigold); }
+.stat-card{ text-align:center; padding: var(--sp-5) var(--sp-3); border:var(--border-w) solid var(--line); border-radius:var(--radius-md); background:var(--paper); }
+.stat-card--badge{ background:var(--marigold); color:var(--tile-ink); border-color:var(--swatch-dark); }
 .stat-number{ font-family:var(--font-display); font-weight:800; font-size:clamp(1.6rem,3vw,2.4rem); display:block; }
 .stat-label{ font-size:var(--fs-xs); font-weight:600; color:var(--ink-soft); margin-top:4px; display:block; }
-.stat-card--badge .stat-label{ color:var(--ink); }
+.stat-card--badge .stat-label{ color:var(--swatch-dark); }
 
 /* ============================================================
-   SECTION HEADERS (shared)
+   SECTION HEADERS
    ============================================================ */
 .section{ padding-block: var(--sp-9); }
-.section__head{ max-width:62ch; margin-bottom: var(--sp-7); }
-.section__eyebrow{
-  display:inline-block; font-weight:700; font-size:var(--fs-xs); letter-spacing:.06em; text-transform:uppercase;
-  color:var(--poppy); margin-bottom:var(--sp-3);
-}
+.section__head{ max-width:62ch; margin-bottom: var(--sp-7); position:relative; }
+.section__eyebrow{ display:inline-block; font-weight:700; font-size:var(--fs-xs); letter-spacing:.06em; text-transform:uppercase; color:var(--poppy); margin-bottom:var(--sp-3); }
 .section__title{ font-size: var(--fs-h2); margin-bottom: var(--sp-3); }
 .section__sub{ color:var(--ink-soft); font-size:var(--fs-lg); }
-
 .reveal{ opacity:0; transform: translateY(26px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
 .reveal.is-visible{ opacity:1; transform:none; }
 
+/* corner-block accent — reuses the hero's block-tile signature next to section headers */
+.corner-block{
+  position:absolute; top:-6px; right:0; width:40px; height:40px; border-radius:10px;
+  border:3px solid var(--swatch-dark); box-shadow:4px 4px 0 var(--swatch-dark);
+  display:none; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:800; font-size:1.1rem; color:var(--tile-ink);
+  transform: rotate(8deg);
+}
+@media(min-width:680px){ .corner-block{ display:flex; } }
+
 /* ============================================================
-   GAME CARDS (shared component, used in bento + carousel)
+   GAME CARDS
    ============================================================ */
 .game-tile{
-  position:relative;
-  border:var(--border-w) solid var(--ink); border-radius:var(--radius-md);
+  position:relative; border:var(--border-w) solid var(--swatch-dark); border-radius:var(--radius-md);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  aspect-ratio:1; overflow:hidden; flex-shrink:0;
+  aspect-ratio:1; overflow:hidden; flex-shrink:0; background:var(--swatch-white);
 }
-.game-tile .glyph{ position:absolute; top:8px; right:8px; width:18px; height:18px; opacity:.9; }
-.mark-top{ font-family:var(--font-display); font-weight:700; font-size:.78em; line-height:1; color:var(--ink); }
-.mark-big{ font-family:var(--font-display); font-weight:800; line-height:1; color:var(--ink); letter-spacing:-0.02em; }
+.game-tile__icon{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+.game-tile .glyph{ position:absolute; top:8px; right:8px; width:18px; height:18px; opacity:.9; z-index:1; }
+.mark-top{ font-family:var(--font-display); font-weight:700; font-size:.78em; line-height:1; color:var(--tile-ink); position:relative; z-index:1; }
+.mark-big{ font-family:var(--font-display); font-weight:800; line-height:1; color:var(--tile-ink); letter-spacing:-0.02em; position:relative; z-index:1; }
 
 .game-card{
-  position:relative;
-  background:var(--white);
-  border:var(--border-w) solid var(--ink);
-  border-radius:var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: var(--sp-5);
+  position:relative; background:var(--surface); border:var(--border-w) solid var(--line);
+  border-radius:var(--radius-lg); box-shadow: var(--shadow-md); padding: var(--sp-5);
   display:flex; flex-direction:column; gap:var(--sp-4);
-  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
-  height:100%;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease); height:100%;
+  view-transition-name: none;
 }
-.game-card:hover{ transform: translate(-3px,-3px); box-shadow: 8px 8px 0 var(--ink); }
+.game-card:hover{ transform: translate(-3px,-3px); box-shadow: 8px 8px 0 var(--line); }
 .game-card__top{ display:flex; align-items:flex-start; gap:var(--sp-4); }
 .game-card .game-tile{ width:64px; font-size:.95rem; }
 .game-card--featured .game-tile{ width:84px; font-size:1.15rem; }
 .game-card__name{ font-family:var(--font-display); font-weight:700; font-size:var(--fs-h3); margin-bottom:2px; }
-.game-card__cat{
-  display:inline-block; font-size:var(--fs-xs); font-weight:700; color:var(--ink-soft);
-  background:var(--paper-dim); border-radius:var(--radius-pill); padding:3px 10px; width:fit-content;
-}
+.game-card__cat{ display:inline-block; font-size:var(--fs-xs); font-weight:700; color:var(--ink-soft); background:var(--paper-dim); border-radius:var(--radius-pill); padding:3px 10px; width:fit-content; }
 .game-card__tagline{ font-size:var(--fs-sm); color:var(--ink-soft); }
 .game-card__meta{ display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:auto; }
-.meta-pill{
-  display:inline-flex; align-items:center; gap:5px;
-  font-size:var(--fs-xs); font-weight:700;
-  background:var(--paper); border:2px solid var(--ink); border-radius:var(--radius-pill);
-  padding:4px 10px;
-}
+.meta-pill{ display:inline-flex; align-items:center; gap:5px; font-size:var(--fs-xs); font-weight:700; background:var(--paper); border:2px solid var(--line); border-radius:var(--radius-pill); padding:4px 10px; }
 .meta-pill svg{ width:12px; height:12px; }
-.game-card__cta{
-  display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3);
-  margin-top:var(--sp-2); font-weight:700; font-size:var(--fs-sm);
-  border-top:2px dashed var(--ink-soft); padding-top:var(--sp-3);
-}
+.game-card__cta{ display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3); margin-top:var(--sp-2); font-weight:700; font-size:var(--fs-sm); border-top:2px dashed var(--ink-soft); padding-top:var(--sp-3); }
 .game-card__cta svg{ width:16px; height:16px; transition: transform .15s ease; }
 .game-card:hover .game-card__cta svg{ transform: translateX(4px); }
 
 .ribbon{
-  position:absolute; top:-12px; right:18px;
-  background:var(--marigold); border:2px solid var(--ink); border-radius:8px;
-  padding:5px 12px; font-size:var(--fs-xs); font-weight:700;
-  transform: rotate(4deg);
-  display:flex; align-items:center; gap:5px;
-  box-shadow: 3px 3px 0 var(--ink);
-  z-index:2;
+  position:absolute; top:-12px; right:18px; background:var(--marigold); border:2px solid var(--swatch-dark);
+  border-radius:8px; padding:5px 12px; font-size:var(--fs-xs); font-weight:700; color:var(--tile-ink); transform: rotate(4deg);
+  display:flex; align-items:center; gap:5px; box-shadow: 3px 3px 0 var(--swatch-dark); z-index:3;
 }
 .ribbon svg{ width:12px; height:12px; }
 .hand-note{
-  font-family:var(--font-hand); font-weight:700; font-size:1.05rem;
-  color:var(--ink); position:absolute; top:-34px; right:8px;
-  transform: rotate(-6deg); display:flex; align-items:center; gap:4px;
-  z-index:1;
+  font-family:var(--font-hand); font-weight:700; font-size:1.05rem; color:var(--ink);
+  position:absolute; top:-34px; right:8px; transform: rotate(-6deg);
+  display:flex; align-items:center; gap:4px; z-index:1;
 }
 .hand-note svg{ width:20px; }
 
-/* bento grid for top performers */
-.bento{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); margin-bottom: var(--sp-7); }
+.bento{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); margin-bottom: var(--sp-8); }
 .bento__hero-row{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); }
 .bento__top-row{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); }
-@media(min-width:680px){
-  .bento__hero-row{ grid-template-columns:1fr 1fr; }
-  .bento__top-row{ grid-template-columns:1fr 1fr; }
+@media(min-width:680px){ .bento__hero-row{ grid-template-columns:1fr 1fr; } .bento__top-row{ grid-template-columns:1fr 1fr; } }
+@media(min-width:980px){ .bento__top-row{ grid-template-columns:repeat(3,1fr); } }
+
+/* ============================================================
+   CATALOG (searchable / filterable full library)
+   ============================================================ */
+.catalog__head{ display:flex; flex-wrap:wrap; gap:var(--sp-5); align-items:flex-end; justify-content:space-between; margin-bottom: var(--sp-5); }
+.catalog__controls{ display:flex; flex-wrap:wrap; gap:var(--sp-2); align-items:center; }
+.chip{
+  display:inline-flex; align-items:center; gap:6px; font-family:var(--font-body); font-weight:700; font-size:var(--fs-xs);
+  background:var(--surface); border:2px solid var(--line); border-radius:var(--radius-pill); padding:8px 14px; min-height:36px;
+  transition: transform .15s var(--ease), background .15s ease, color .15s ease; cursor:pointer;
 }
-@media(min-width:980px){
-  .bento__top-row{ grid-template-columns:repeat(3,1fr); }
+.chip:hover{ transform: translate(-1px,-1px); }
+.chip.is-active{ background:var(--swatch-dark); color:var(--marigold); border-color:var(--swatch-dark); }
+.chip--badge.is-active{ background:var(--marigold); color:var(--swatch-dark); border-color:var(--swatch-dark); }
+
+.catalog__toolbar{ display:flex; flex-wrap:wrap; gap:var(--sp-3); align-items:center; margin-bottom:var(--sp-4); }
+.search-wrap{ position:relative; flex:1 1 220px; max-width:280px; }
+.search-input{
+  width:100%; font-weight:600; font-size:var(--fs-sm); padding:10px 16px; min-height:40px;
+  border:2px solid var(--line); border-radius:var(--radius-pill); background:var(--surface); color:var(--ink);
+}
+.search-input::placeholder{ color:var(--ink-soft); font-weight:500; }
+.sort-select{
+  font-weight:600; font-size:var(--fs-sm); padding:9px 14px; min-height:40px;
+  border:2px solid var(--line); border-radius:var(--radius-pill); background:var(--surface); color:var(--ink);
+}
+.catalog__count{ font-size:var(--fs-sm); color:var(--ink-soft); font-weight:600; margin-bottom:var(--sp-5); }
+.catalog-grid{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); }
+@media(min-width:560px){ .catalog-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(min-width:860px){ .catalog-grid{ grid-template-columns:repeat(3,1fr); } }
+@media(min-width:1180px){ .catalog-grid{ grid-template-columns:repeat(4,1fr); } }
+.catalog-empty{
+  grid-column:1/-1; text-align:center; padding:var(--sp-8) var(--sp-5);
+  border:var(--border-w) dashed var(--ink-soft); border-radius:var(--radius-lg); color:var(--ink-soft); font-weight:600;
 }
 
-/* more games — horizontal scroll-snap shelf */
-.shelf-wrap{ position:relative; }
-.shelf{
-  display:flex; gap:var(--sp-4); overflow-x:auto; scroll-snap-type:x mandatory;
-  padding-bottom:var(--sp-4); padding-inline:2px;
-  scrollbar-width: thin;
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.how-grid{ display:grid; grid-template-columns:1fr; gap:var(--sp-6); counter-reset: how; }
+@media(min-width:760px){ .how-grid{ grid-template-columns:repeat(3,1fr); } }
+.how-step{ position:relative; padding-top:var(--sp-6); }
+.how-step__num{
+  counter-increment: how; position:relative; display:flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:var(--radius-md); border:var(--border-w) solid var(--line);
+  box-shadow: var(--shadow-sm); font-family:var(--font-display); font-weight:800; font-size:1.4rem;
+  color:var(--tile-ink); margin-bottom:var(--sp-4);
 }
-.shelf::-webkit-scrollbar{ height:8px; }
-.shelf::-webkit-scrollbar-thumb{ background:var(--ink); border-radius:8px; }
-.shelf::-webkit-scrollbar-track{ background:var(--paper-dim); border-radius:8px; }
-.shelf .game-card{ min-width:230px; max-width:230px; scroll-snap-align:start; }
-.shelf .game-card .game-tile{ width:56px; font-size:.85rem; }
-.shelf-hint{ font-size:var(--fs-xs); color:var(--ink-soft); margin-top:var(--sp-3); display:flex; align-items:center; gap:6px; }
+.how-step:nth-child(1) .how-step__num{ background:var(--poppy); }
+.how-step:nth-child(2) .how-step__num{ background:var(--marigold); }
+.how-step:nth-child(3) .how-step__num{ background:var(--sky); color:#fff; }
+.how-step__num::before{ content: counter(how); }
+.how-step__title{ font-family:var(--font-display); font-weight:700; font-size:1.15rem; margin-bottom:6px; }
+.how-step__body{ color:var(--ink-soft); font-size:var(--fs-sm); max-width:32ch; }
+.how-connector{ display:none; }
+@media(min-width:760px){
+  .how-step:not(:last-child)::after{
+    content:''; position:absolute; top:28px; left:calc(100% - 18px); width:calc(var(--sp-6) + 36px);
+    border-top:3px dashed var(--ink-soft); opacity:.5;
+  }
+}
 
 /* ============================================================
    WHY SECTION
    ============================================================ */
-.why{ background:var(--ink); color:var(--paper); }
+.why{ background:var(--swatch-dark); color:#EDEFF4; }
 .why .section__eyebrow{ color:var(--marigold); }
 .why .section__sub{ color: #C7CCD6; }
 .why-grid{ display:grid; grid-template-columns:1fr; gap:var(--sp-5); }
 @media(min-width:680px){ .why-grid{ grid-template-columns:1fr 1fr; } }
-@media(min-width:980px){ .why-grid{ grid-template-columns:repeat(4,1fr); } }
-.why-card{
-  background:#262B35; border:var(--border-w) solid #383F4C; border-radius:var(--radius-lg);
-  padding:var(--sp-5); display:flex; flex-direction:column; gap:var(--sp-3);
-}
-.why-card__icon{
-  width:46px; height:46px; border-radius:var(--radius-sm);
-  display:flex; align-items:center; justify-content:center;
-  border:2px solid var(--ink);
-}
+@media(min-width:980px){ .why-grid{ grid-template-columns:repeat(3,1fr); } }
+.why-card{ background:#262B35; border:var(--border-w) solid #383F4C; border-radius:var(--radius-lg); padding:var(--sp-5); display:flex; flex-direction:column; gap:var(--sp-3); }
+.why-card__icon{ width:46px; height:46px; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; border:2px solid var(--swatch-dark); }
 .why-card__icon svg{ width:24px; height:24px; }
 .why-card__title{ font-family:var(--font-display); font-weight:700; font-size:1.1rem; }
 .why-card__body{ font-size:var(--fs-sm); color:#C7CCD6; }
 
 /* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list{ display:flex; flex-direction:column; gap:var(--sp-4); max-width:820px; }
+.faq-item{ background:var(--surface); border:var(--border-w) solid var(--line); border-radius:var(--radius-lg); overflow:hidden; }
+.faq-item__q{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:var(--sp-4);
+  padding:var(--sp-5); font-family:var(--font-display); font-weight:700; font-size:1.02rem; text-align:left; min-height:44px;
+}
+.faq-item__icon{ flex-shrink:0; width:28px; height:28px; border-radius:8px; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; transition: transform .2s var(--ease), background .2s ease; }
+.faq-item__icon svg{ width:14px; height:14px; transition: transform .2s var(--ease); }
+.faq-item[open] .faq-item__icon{ background:var(--marigold); }
+.faq-item[open] .faq-item__icon svg{ transform: rotate(45deg); }
+.faq-item__a{ padding: 0 var(--sp-5) var(--sp-5); color:var(--ink-soft); font-size:var(--fs-sm); max-width:65ch; }
+.faq-item__q::-webkit-details-marker{ display:none; }
+.faq-item > summary{ list-style:none; cursor:pointer; }
+
+/* ============================================================
    CTA BAND
    ============================================================ */
-.cta-band{
-  background:var(--marigold); border-top:var(--border-w) solid var(--ink); border-bottom:var(--border-w) solid var(--ink);
-  padding-block: var(--sp-7);
-}
-.cta-band__inner{
-  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--sp-5);
-}
+.cta-band{ background:var(--marigold); color:var(--swatch-dark); border-top:var(--border-w) solid var(--line); border-bottom:var(--border-w) solid var(--line); padding-block: var(--sp-7); }
+.cta-band__inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--sp-5); }
 .cta-band__title{ font-size:var(--fs-h2); max-width:24ch; }
+.cta-band .btn--ghost{ background:var(--swatch-white); color:var(--swatch-dark); }
 
 /* ============================================================
    FOOTER
    ============================================================ */
 footer{ padding-block: var(--sp-8) var(--sp-6); }
-.footer__grid{
-  display:grid; grid-template-columns:1fr; gap:var(--sp-7);
-  margin-bottom: var(--sp-7);
-}
+.footer__grid{ display:grid; grid-template-columns:1fr; gap:var(--sp-7); margin-bottom: var(--sp-7); }
 @media(min-width:680px){ .footer__grid{ grid-template-columns: 1.3fr 1fr 1fr; } }
 .footer__brand{ display:flex; flex-direction:column; gap:var(--sp-3); max-width:34ch; }
 .footer__logo{ display:flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:1.25rem; }
 .footer__tagline{ color:var(--ink-soft); font-size:var(--fs-sm); }
 .footer__col h4{ font-family:var(--font-body); font-weight:700; font-size:var(--fs-sm); text-transform:uppercase; letter-spacing:.04em; margin-bottom:var(--sp-4); color:var(--ink-soft); }
 .footer__col ul{ display:flex; flex-direction:column; gap:var(--sp-3); font-weight:600; font-size:var(--fs-sm); }
+.footer__col a{ display:inline-flex; align-items:center; min-height:24px; }
 .footer__col a:hover{ color:var(--poppy); }
-.footer__bottom{
-  display:flex; flex-wrap:wrap; gap:var(--sp-3); justify-content:space-between; align-items:center;
-  border-top:2px solid var(--paper-dim); padding-top:var(--sp-5);
-  font-size:var(--fs-xs); color:var(--ink-soft);
-}
+.footer__bottom{ display:flex; flex-wrap:wrap; gap:var(--sp-3); justify-content:space-between; align-items:center; border-top:2px solid var(--paper-dim); padding-top:var(--sp-5); font-size:var(--fs-xs); color:var(--ink-soft); }
 
-/* ============================================================
-   RESPONSIVE TUNING — desktop nav reveal
-   ============================================================ */
 @media(min-width:860px){
   .nav__links{ display:flex; }
   .nav__burger{ display:none; }
   .nav__mobile-panel{ display:none !important; }
 }
 
-/* ============================================================
-   REDUCED MOTION
-   ============================================================ */
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important; scroll-behavior: auto !important;
   }
   .block-tile{ opacity:1; transform: translateY(0) rotate(0deg) scale(1) !important; }
   .reveal{ opacity:1; transform:none; }
+  .blocks{ animation:none !important; }
 }
+
+::view-transition-old(root),
+::view-transition-new(root){ animation-duration: .25s; }
 </style>
 </head>
 <body>
@@ -511,10 +545,15 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <nav class="nav__links" aria-label="Primary">
       <a href="#games">Games</a>
       <a href="#why-us">Why Play Gaps</a>
-      <a href="#" id="navStoreLink" target="_blank" rel="noopener">Get the app</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" id="navStoreLink" target="_blank" rel="noopener">All apps on Google Play</a>
     </nav>
     <div class="nav__right">
-      <a href="#" id="navStoreBtn" class="btn btn--primary btn--sm" target="_blank" rel="noopener" style="display:none" data-show-min="860">Get the app</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+      </button>
+      <a href="#" id="navStoreBtn" class="btn btn--primary btn--sm" target="_blank" rel="noopener" style="display:none">Get the app</a>
       <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
         <span></span><span></span><span></span>
       </button>
@@ -523,7 +562,8 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   <div class="nav__mobile-panel container" id="navMobilePanel">
     <a href="#games">Games</a>
     <a href="#why-us">Why Play Gaps</a>
-    <a href="#" id="navStoreLinkMobile" target="_blank" rel="noopener">Get the app on Google Play</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" id="navStoreLinkMobile" target="_blank" rel="noopener">All apps on Google Play</a>
   </div>
 </header>
 
@@ -536,15 +576,16 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Android games for curious minds, ages 3+</span>
         <h1 class="hero__title">Where every gap in learning becomes <em>a game</em>.</h1>
-        <p class="hero__subtitle">From counting past a thousand to spelling out the alphabet, Play Gaps turns the basics — numbers, letters, shapes, and animals — into something kids actually want to tap, giggle, and learn through.</p>
+        <p class="hero__subtitle">From counting past a thousand to spelling out the alphabet, Play Gaps turns the basics — numbers, letters, shapes, colors, and animals — into something kids actually want to tap, giggle, and learn through.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore our games</a>
-          <a href="#" id="heroStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a href="#" id="heroStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See us on Google Play</a>
         </div>
         <div class="trust-row">
           <span class="trust-pill">🧩 16 games</span>
           <span class="trust-pill">⭐ 1.5M+ downloads</span>
-          <span class="trust-pill">🏅 Teacher Approved</span>
+          <span class="trust-pill">🏅 6 Teacher Approved</span>
+          <span class="trust-pill">🔒 No data collected*</span>
         </div>
       </div>
       <div class="blocks" aria-hidden="true">
@@ -553,7 +594,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         <div class="block-tile tile--sky">2</div>
         <div class="block-tile tile--leaf">B</div>
         <div class="block-tile tile--dark">+</div>
-        <div class="block-tile" style="background:var(--white)">3</div>
+        <div class="block-tile tile--white">3</div>
       </div>
     </div>
   </section>
@@ -570,12 +611,12 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         <span class="stat-label">Total downloads</span>
       </div>
       <div class="stat-card reveal">
-        <span class="stat-number" data-count data-end="7.5" data-decimals="1" data-suffix="K+">0</span>
+        <span class="stat-number" data-count data-end="7.6" data-decimals="1" data-suffix="K+">0</span>
         <span class="stat-label">Play Store reviews</span>
       </div>
       <div class="stat-card stat-card--badge reveal">
-        <span class="stat-number" style="font-size:clamp(1.3rem,2.4vw,1.8rem)">🏅 Teacher<br>Approved</span>
-        <span class="stat-label">on our flagship counting game</span>
+        <span class="stat-number" data-count data-end="6" data-decimals="0" data-suffix="">0</span>
+        <span class="stat-label">🏅 Teacher Approved games</span>
       </div>
     </div>
   </section>
@@ -584,17 +625,64 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   <section class="section" id="games">
     <div class="container">
       <div class="section__head reveal">
+        <span class="corner-block" aria-hidden="true">16</span>
         <span class="section__eyebrow">Our games</span>
         <h2 class="section__title">Pick a skill, press play.</h2>
-        <p class="section__sub">Every game below is live on Google Play right now. Tap any card to open it in the Play Store.</p>
+        <p class="section__sub">Every game below is live on Google Play right now, linked straight to its own store page. Tap any card to open it.</p>
       </div>
 
       <div class="bento" id="bentoGrid"><!-- top performers, rendered by JS --></div>
 
-      <div class="shelf-wrap reveal">
-        <h3 style="font-size:var(--fs-h3); margin-bottom:var(--sp-4);">More games to explore</h3>
-        <div class="shelf" id="moreGamesShelf" tabindex="0" aria-label="More games, scroll horizontally"><!-- rendered by JS --></div>
-        <p class="shelf-hint">← scroll for more →</p>
+      <div class="catalog reveal" id="catalog">
+        <div class="catalog__head">
+          <div>
+            <h3 style="font-size:var(--fs-h3); margin-bottom:4px;">Browse the full library</h3>
+            <p style="color:var(--ink-soft); font-size:var(--fs-sm);">All 16 games, searchable and sortable.</p>
+          </div>
+          <div class="catalog__toolbar">
+            <div class="search-wrap">
+              <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
+            </div>
+            <label class="visually-hidden" for="catalogSort">Sort games</label>
+            <select id="catalogSort" class="sort-select" aria-label="Sort games">
+              <option value="default">Sort: Featured</option>
+              <option value="rating">Sort: Top rated</option>
+              <option value="downloads">Sort: Most downloaded</option>
+              <option value="newest">Sort: Newest first</option>
+              <option value="az">Sort: A–Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="catalog__controls" id="catalogChips" role="group" aria-label="Filter games by category"></div>
+        <p class="catalog__count" id="catalogCount" aria-live="polite"></p>
+        <div class="catalog-grid" id="catalogGrid"><!-- rendered by JS --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Getting started</span>
+        <h2 class="section__title">From this page to playing, in three taps.</h2>
+      </div>
+      <div class="how-grid reveal">
+        <div class="how-step">
+          <div class="how-step__num" aria-hidden="true"></div>
+          <h3 class="how-step__title">Browse &amp; pick</h3>
+          <p class="how-step__body">Scroll the games above or search by name — filter by skill to narrow things down.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step__num" aria-hidden="true"></div>
+          <h3 class="how-step__title">Tap the card</h3>
+          <p class="how-step__body">Every card opens that game's official listing on Google Play — nothing downloads from this site.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step__num" aria-hidden="true"></div>
+          <h3 class="how-step__title">Install &amp; play</h3>
+          <p class="how-step__body">Install like any Android app. It's free to start, right away.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -610,32 +698,88 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="why-grid">
         <div class="why-card reveal">
           <div class="why-card__icon tile--poppy">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V6a2 2 0 1 1 4 0v5"/><path d="M13 7.5a2 2 0 1 1 4 0v5"/><path d="M17 9.5a2 2 0 1 1 4 0v4.5a6 6 0 0 1-6 6h-2a7 7 0 0 1-5.6-2.8L4 12.8c-.6-.9-.3-2 .6-2.4.8-.4 1.7-.1 2.3.6L9 13.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V6a2 2 0 1 1 4 0v5"/><path d="M13 7.5a2 2 0 1 1 4 0v5"/><path d="M17 9.5a2 2 0 1 1 4 0v4.5a6 6 0 0 1-6 6h-2a7 7 0 0 1-5.6-2.8L4 12.8c-.6-.9-.3-2 .6-2.4.8-.4 1.7-.1 2.3.6L9 13.5"/></svg>
           </div>
           <h3 class="why-card__title">Made for ages 3+</h3>
           <p class="why-card__body">Big buttons, simple taps, and zero reading required to get started — built around how toddlers actually use a touchscreen.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-card__icon tile--sky">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
           <h3 class="why-card__title">Real classroom basics</h3>
-          <p class="why-card__body">Counting, the alphabet, shapes, animals, and times tables — the fundamentals kids need, not just busywork.</p>
+          <p class="why-card__body">Counting, the alphabet, shapes, colors, animals, and times tables — the fundamentals kids need, not just busywork.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-card__icon tile--leaf">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12.5l2 2 4-4.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12.5l2 2 4-4.5"/></svg>
           </div>
           <h3 class="why-card__title">Free to start</h3>
           <p class="why-card__body">Every game is free to download. A few ads keep the lights on — extra content is always optional, never required to play.</p>
         </div>
         <div class="why-card reveal">
           <div class="why-card__icon tile--marigold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.2 12.5 6 21l6-3 6 3-2.2-8.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.2 12.5 6 21l6-3 6 3-2.2-8.5"/></svg>
           </div>
           <h3 class="why-card__title">Recognized by teachers</h3>
-          <p class="why-card__body">Our flagship counting game, Learn 1 to 1000 Numbers, carries Google Play's Teacher Approved badge.</p>
+          <p class="why-card__body">Six of our games carry Google Play's Teacher Approved badge — including our flagship counting game, Learn 1 to 1000 Numbers.</p>
         </div>
+        <div class="why-card reveal">
+          <div class="why-card__icon" style="background:#EDEFF4;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg>
+          </div>
+          <h3 class="why-card__title">Privacy-first by design</h3>
+          <p class="why-card__body">Check any game's Data Safety section on Google Play for the exact, current details — we link straight to it from every card.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__icon" style="background:var(--leaf);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"/></svg>
+          </div>
+          <h3 class="why-card__title">Actively growing</h3>
+          <p class="why-card__body">We're a small team shipping new games and updates regularly — look for the "Just launched" tag on the newest titles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Questions</span>
+        <h2 class="section__title">Good to know before you install.</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary class="faq-item__q">What ages are Play Gaps games designed for?
+            <span class="faq-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p class="faq-item__a">Every Play Gaps game is designed for kids ages 3 and up, with big buttons, simple taps, and no reading required to get started.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Are the games actually free?
+            <span class="faq-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p class="faq-item__a">Yes — all 16 games are free to download and free to start. A few ads keep the lights on, and any extra content is always optional, never required to play.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">What does the Teacher Approved badge mean?
+            <span class="faq-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p class="faq-item__a">Teacher Approved is a Google Play program that recognizes high-quality apps for kids, reviewed against Google Play's own guidelines. Six Play Gaps games currently carry the badge — look for the ribbon on their cards.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">Do you collect data from kids?
+            <span class="faq-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p class="faq-item__a">Data handling is disclosed per game in its Google Play Data Safety section — that's the most accurate, current place to check, and every card on this page links straight to it.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__q">How do I actually install a game?
+            <span class="faq-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p class="faq-item__a">Tap any game card on this page. It opens that game's official Google Play listing in a new tab, where you install it the same way as any other Android app.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -643,7 +787,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   <!-- ============ CTA BAND ============ -->
   <section class="cta-band">
     <div class="container cta-band__inner">
-      <h2 class="cta-band__title">Sixteen games. One app store search away.</h2>
+      <h2 class="cta-band__title">Sixteen games. One developer page away.</h2>
       <a href="#" id="bandStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See all Play Gaps games</a>
     </div>
   </section>
@@ -654,26 +798,28 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="footer__grid">
       <div class="footer__brand">
         <span class="footer__logo"><span class="nav__logo-dot" aria-hidden="true"></span>Play Gaps</span>
-        <p class="footer__tagline">Playful learning games for curious kids, ages 3 and up — numbers, letters, shapes, animals, and more.</p>
+        <p class="footer__tagline">Playful learning games for curious kids, ages 3 and up — numbers, letters, shapes, colors, animals, and more.</p>
       </div>
       <div class="footer__col">
         <h4>Explore</h4>
         <ul>
           <li><a href="#games">All games</a></li>
           <li><a href="#why-us">Why Play Gaps</a></li>
-          <li><a href="#" id="footerStoreLink" target="_blank" rel="noopener">Get the app</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" id="footerStoreLink" target="_blank" rel="noopener">All apps on Google Play</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Legal</h4>
+        <h4>Support</h4>
         <ul>
+          <li><a href="mailto:playgapsofficial@gmail.com">Email support</a></li>
           <li><a href="/privacy-policy.html">Privacy policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© <span id="year"></span> Play Gaps. All rights reserved.</span>
-      <span>All games rated for ages 3+ on Google Play.</span>
+      <span>All games rated for ages 3+ on Google Play. *Per each game's Play Store Data Safety disclosure.</span>
     </div>
   </div>
 </footer>
@@ -683,77 +829,138 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
 "use strict";
 
 /* ============================================================
-   DATA — every game, straight from the Play Store listings.
-   Edit this array to add games or swap in exact Play Store URLs
-   (replace storeUrl with a details?id=... link once you have it).
+   DATA — every game, verified live against its Google Play
+   listing. To add a game later: append an object to GAMES with
+   a unique pkg (Play Store package id) and slug (used for the
+   icon filename, see icons/README in the repo).
    ============================================================ */
-var DEV_SEARCH = "https://play.google.com/store/search?q=Play+Gaps&c=apps";
-function searchUrl(name){
-  return "https://play.google.com/store/search?q=" + encodeURIComponent(name + " Play Gaps") + "&c=apps";
-}
+var DEV_PAGE = "https://play.google.com/store/apps/dev?id=4612285757053932453";
+function storeUrl(pkg){ return "https://play.google.com/store/apps/details?id=" + pkg; }
+function iconPath(slug){ return "icons/" + slug + ".png"; }
 
 var GAMES = [
-  // ---- hero tier (5L+ downloads) ----
-  { name:"Learn 1 to 1000 Numbers", tagline:"Count every number from one all the way to a thousand.", category:"Numbers", rating:3.9, reviews:806, downloads:"5L+", tier:"hero", teacherApproved:true, accent:"poppy", markTop:"1 to", markBig:"1000" },
-  { name:"1 to 100 Number Counting Game", tagline:"Master counting from one to a hundred, one tap at a time.", category:"Numbers", rating:4.2, reviews:954, downloads:"5L+", tier:"hero", accent:"sky", markTop:"1 to", markBig:"100" },
+  { name:"Learn 1 to 1000 Numbers", slug:"learn-1-1000", pkg:"com.hiegames.freelearnnumbers1to1000",
+    tagline:"Count every number from one all the way to a thousand.", category:"Numbers",
+    rating:4.0, reviews:807, downloads:"500K+", downloadsRank:500000, tier:"hero", teacherApproved:true,
+    accent:"poppy", markTop:"1 to", markBig:"1000" },
 
-  // ---- top tier (1L+ downloads) ----
-  { name:"100 Animals and Birds for Kids", tagline:"Meet a hundred animals from farms, jungles, and skies.", category:"Animals", rating:4.0, reviews:331, downloads:"1L+", tier:"top", accent:"leaf", markBig:"100", glyph:"paw" },
-  { name:"Times Tables Chart", tagline:"Multiplication tables made simple to read and remember.", category:"Math", rating:3.8, reviews:4960, downloads:"1L+", tier:"top", accent:"dark", markTop:"2×2=", markBig:"4" },
-  { name:"Numbers Spelling", tagline:"Learn to read and spell out numbers, not just count them.", category:"Numbers", rating:4.1, reviews:140, downloads:"1L+", tier:"top", accent:"marigold", markTop:"100", markBig:"★" },
-  { name:"30 Basic Shapes Names for Kids", tagline:"Thirty everyday shapes, from circles to crescents.", category:"Shapes", rating:4.3, reviews:241, downloads:"1L+", tier:"top", accent:"sky", markBig:"30", glyph:"shapes" },
-  { name:"1 to 500 Number Counting Game", tagline:"A bigger counting challenge for confident little learners.", category:"Numbers", rating:4.5, reviews:162, downloads:"1L+", tier:"top", accent:"poppy", markTop:"1 to", markBig:"500" },
+  { name:"1 to 100 Number Counting Game", slug:"count-1-100", pkg:"com.hiegames.numbersforkids",
+    tagline:"Master counting from one to a hundred, one tap at a time.", category:"Numbers",
+    rating:4.1, reviews:954, downloads:"500K+", downloadsRank:500000, tier:"hero",
+    accent:"sky", markTop:"1 to", markBig:"100" },
 
-  // ---- more games (no detailed Play Store stats given yet — names + ratings only where confirmed) ----
-  { name:"100 Sea Animals for Kids", tagline:"Dive into a hundred creatures from the ocean.", category:"Animals", tier:"more", accent:"sky", markBig:"100", glyph:"wave" },
-  { name:"Color Peek: Kids First Drawing", tagline:"A gentle first drawing app for tiny artists.", category:"Creativity", tier:"more", accent:"marigold", markBig:"", glyph:"palette" },
-  { name:"Times Tables Mastery for Kids", tagline:"Learn mode, test mode, and game mode for tables practice.", category:"Math", tier:"more", accent:"dark", markBig:"×", premium:true, price:"₹150" },
-  { name:"Learn 1-100 Numbers for Kids", tagline:"A second, palm-tree-themed take on counting to 100.", category:"Numbers", rating:4.8, tier:"more", accent:"leaf", markTop:"1 to", markBig:"100" },
-  { name:"Learn the Alphabet with Boat", tagline:"Sail through the alphabet from A to Z.", category:"Alphabet", tier:"more", accent:"sky", markBig:"ABC" },
-  { name:"Number Woods: Kids Learn 1-100", tagline:"Count your way through a friendly wooden forest.", category:"Numbers", tier:"more", accent:"leaf", markTop:"1 to", markBig:"100", glyph:"tree" },
-  { name:"Learn ABC: Kids Alphabet Game", tagline:"Wooden alphabet blocks, brought to your screen.", category:"Alphabet", rating:4.1, tier:"more", accent:"marigold", markBig:"ABC" },
-  { name:"ABC, 123 & More: Pre-K Games", tagline:"A pre-K mix of letters, numbers, and more.", category:"Pre-K", rating:4.2, tier:"more", accent:"poppy", markBig:"A1" },
-  { name:"Colors For Kids to Learn", tagline:"Four simple colors to start, with more to discover.", category:"Colors", rating:4.5, tier:"more", accent:"white", markBig:"", glyph:"dots" }
+  { name:"100 Animals and Birds for Kids", slug:"animals-birds", pkg:"com.hiegames.animalsforkids",
+    tagline:"Meet a hundred animals from farms, jungles, and skies.", category:"Animals",
+    rating:3.9, reviews:331, downloads:"100K+", downloadsRank:100000, tier:"top",
+    accent:"leaf", markBig:"100", glyph:"paw" },
+
+  { name:"Times Tables Chart", slug:"times-tables-chart", pkg:"com.hiegames.timestableschart",
+    tagline:"Learn, practice, and play your way through multiplication.", category:"Math",
+    rating:4.3, reviews:4960, downloads:"100K+", downloadsRank:100000, tier:"top",
+    accent:"dark", markTop:"2×2=", markBig:"4" },
+
+  { name:"Numbers Spelling", slug:"numbers-spelling", pkg:"com.hiegames.numberswithspellings",
+    tagline:"Learn to read and spell out numbers, not just count them.", category:"Numbers",
+    rating:3.9, reviews:140, downloads:"100K+", downloadsRank:100000, tier:"top",
+    accent:"marigold", markTop:"100", markBig:"★" },
+
+  { name:"30 Basic Shapes Names for Kids", slug:"shapes-30", pkg:"com.hiegames.learnshapes",
+    tagline:"Thirty everyday shapes, from circles to hexagons.", category:"Shapes",
+    rating:4.2, reviews:241, downloads:"100K+", downloadsRank:100000, tier:"top",
+    accent:"sky", markBig:"30", glyph:"shapes" },
+
+  { name:"1 to 500 Number Counting Game", slug:"count-1-500", pkg:"com.hiegames.countingnumbersforkidsfree",
+    tagline:"A bigger counting challenge for confident little learners.", category:"Numbers",
+    rating:4.4, reviews:162, downloads:"100K+", downloadsRank:100000, tier:"top",
+    accent:"poppy", markTop:"1 to", markBig:"500" },
+
+  { name:"100 Sea Animals for Kids", slug:"sea-animals", pkg:"com.playgaps.seaanimals",
+    tagline:"Giant, photorealistic sea creatures with kid-voiced names.", category:"Animals",
+    downloads:"1K+", downloadsRank:1000, teacherApproved:true, tier:"more",
+    accent:"sky", markBig:"100", glyph:"wave" },
+
+  { name:"Color Peek: Kids First Drawing", slug:"color-peek", pkg:"com.playgaps.colorpeekforkids",
+    tagline:"A gentle first drawing app — touch to fill, colors magically appear.", category:"Creativity",
+    downloads:"100+", downloadsRank:100, teacherApproved:true, tier:"more",
+    accent:"marigold", markBig:"", glyph:"palette" },
+
+  { name:"Times Tables Mastery for Kids", slug:"times-tables-mastery", pkg:"com.hiegames.timestablesmasteryforkids",
+    tagline:"Learn mode, test mode, and game mode for tables practice.", category:"Math",
+    isNew:true, tier:"more", downloadsRank:0,
+    accent:"dark", markBig:"×" },
+
+  { name:"Learn 1-100 Numbers for Kids", slug:"learn-1-100", pkg:"com.hiegames.learn1to100numbersforkids",
+    tagline:"A second, palm-tree-themed take on counting to 100.", category:"Numbers",
+    rating:4.1, reviews:9, downloads:"1K+", downloadsRank:1000, teacherApproved:true, tier:"more",
+    accent:"leaf", markTop:"1 to", markBig:"100" },
+
+  { name:"Learn the Alphabet with Boat Game", slug:"alphabet-boat", pkg:"com.hiegames.learnthealphabet",
+    tagline:"Sail through the alphabet, catching letters from cloud to cloud.", category:"Alphabet",
+    rating:4.8, reviews:6, downloads:"1K+", downloadsRank:1000, tier:"more",
+    accent:"sky", markBig:"ABC" },
+
+  { name:"Number Woods: Kids Learn 1-100", slug:"number-woods", pkg:"com.hiegames.numberwoodenblocks",
+    tagline:"Count your way through a cozy, wooden-themed forest.", category:"Numbers",
+    rating:4.0, reviews:5, downloads:"1K+", downloadsRank:1000, tier:"more",
+    accent:"leaf", markTop:"1 to", markBig:"100", glyph:"tree" },
+
+  { name:"Learn ABC: Kids Alphabet Game", slug:"learn-abc", pkg:"com.hiegames.alphabetwoodenblocksgame",
+    tagline:"Wooden alphabet blocks with real human voice for every letter.", category:"Alphabet",
+    rating:4.2, reviews:18, downloads:"5K+", downloadsRank:5000, teacherApproved:true, tier:"more",
+    accent:"marigold", markBig:"ABC" },
+
+  { name:"ABC, 123 & More: Pre-K Games", slug:"abc-123-more", pkg:"com.hiegames.learnabcand123",
+    tagline:"A pre-K mix of letters, numbers, colors, and more in one app.", category:"Pre-K",
+    rating:4.2, reviews:9, downloads:"1K+", downloadsRank:1000, tier:"more",
+    accent:"poppy", markBig:"A1" },
+
+  { name:"Colors For Kids to Learn", slug:"colors-for-kids", pkg:"com.hiegames.colorsforkids",
+    tagline:"The simplest way to teach colors, with real-world examples.", category:"Colors",
+    rating:4.6, reviews:14, downloads:"5K+", downloadsRank:5000, teacherApproved:true, tier:"more",
+    accent:"white", markBig:"", glyph:"dots" }
 ];
+
+var CATEGORIES = ["All","Numbers","Alphabet","Math","Shapes","Animals","Colors","Creativity","Pre-K"];
+var CATEGORY_EMOJI = { "All":"🌈", "Numbers":"🔢", "Alphabet":"🔤", "Math":"➗", "Shapes":"🔺", "Animals":"🐾", "Colors":"🎨", "Creativity":"✏️", "Pre-K":"🎒" };
 
 /* small inline glyphs, reused across tiles */
 var GLYPHS = {
-  paw: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--ink)"><circle cx="6" cy="8" r="2.1"/><circle cx="11.5" cy="5.8" r="2.1"/><circle cx="17" cy="8" r="2.1"/><ellipse cx="12" cy="15.5" rx="6" ry="4.4"/></svg>',
-  wave: '<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"><path d="M2 9c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3 2-3 4-3"/><path d="M2 15c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3 2-3 4-3"/></svg>',
-  shapes: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--ink)"><circle cx="6" cy="7" r="3.4"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><polygon points="9,14 15,14 12,21"/></svg>',
-  palette: '<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.2"><path d="M12 3a9 6.5 0 1 0 0 13c1.4 0 1.4-1.6 0-2-1.2 0-1.2-2 0-2h2a4 4 0 0 0 4-4c0-2.8-2.7-5-6-5z"/><circle cx="8" cy="9" r="1" fill="var(--ink)"/><circle cx="11.5" cy="6.5" r="1" fill="var(--ink)"/></svg>',
-  tree: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--ink)"><circle cx="12" cy="8" r="6"/><rect x="10.5" y="14" width="3" height="7" rx="1"/></svg>',
-  dots: '<svg class="glyph" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.6" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1.4"/><circle cx="16" cy="8" r="3.6" fill="var(--poppy)" stroke="var(--ink)" stroke-width="1.4"/><circle cx="8" cy="16" r="3.6" fill="var(--sky)" stroke="var(--ink)" stroke-width="1.4"/><circle cx="16" cy="16" r="3.6" fill="var(--leaf)" stroke="var(--ink)" stroke-width="1.4"/></svg>'
+  paw: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--tile-ink)"><circle cx="6" cy="8" r="2.1"/><circle cx="11.5" cy="5.8" r="2.1"/><circle cx="17" cy="8" r="2.1"/><ellipse cx="12" cy="15.5" rx="6" ry="4.4"/></svg>',
+  wave: '<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.4" stroke-linecap="round"><path d="M2 9c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3 2-3 4-3"/><path d="M2 15c2 0 2-3 4-3s2 3 4 3 2-3 4-3 2 3 4 3 2-3 4-3"/></svg>',
+  shapes: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--tile-ink)"><circle cx="6" cy="7" r="3.4"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><polygon points="9,14 15,14 12,21"/></svg>',
+  palette: '<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2"><path d="M12 3a9 6.5 0 1 0 0 13c1.4 0 1.4-1.6 0-2-1.2 0-1.2-2 0-2h2a4 4 0 0 0 4-4c0-2.8-2.7-5-6-5z"/><circle cx="8" cy="9" r="1" fill="var(--tile-ink)"/><circle cx="11.5" cy="6.5" r="1" fill="var(--tile-ink)"/></svg>',
+  tree: '<svg class="glyph" viewBox="0 0 24 24" fill="var(--tile-ink)"><circle cx="12" cy="8" r="6"/><rect x="10.5" y="14" width="3" height="7" rx="1"/></svg>',
+  dots: '<svg class="glyph" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.6" fill="var(--marigold)" stroke="var(--tile-ink)" stroke-width="1.4"/><circle cx="16" cy="8" r="3.6" fill="var(--poppy)" stroke="var(--tile-ink)" stroke-width="1.4"/><circle cx="8" cy="16" r="3.6" fill="var(--sky)" stroke="var(--tile-ink)" stroke-width="1.4"/><circle cx="16" cy="16" r="3.6" fill="var(--leaf)" stroke="var(--tile-ink)" stroke-width="1.4"/></svg>'
 };
 
-var STAR = '<svg viewBox="0 0 24 24" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1.3"><polygon points="12,2.5 15,9 22,9.7 16.8,14.3 18.3,21 12,17.3 5.7,21 7.2,14.3 2,9.7 9,9"/></svg>';
-var BADGE = '<svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.2 12.5 6 21l6-3 6 3-2.2-8.5"/></svg>';
+var STAR = '<svg viewBox="0 0 24 24" fill="var(--marigold)" stroke="var(--tile-ink)" stroke-width="1.3"><polygon points="12,2.5 15,9 22,9.7 16.8,14.3 18.3,21 12,17.3 5.7,21 7.2,14.3 2,9.7 9,9"/></svg>';
+var BADGE = '<svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8.2 12.5 6 21l6-3 6 3-2.2-8.5"/></svg>';
 var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
 function tileMarkup(game){
   var glyphSvg = game.glyph ? GLYPHS[game.glyph] : "";
-  return '<div class="game-tile tile--' + game.accent + '">' + glyphSvg +
+  return '<div class="game-tile tile--' + game.accent + '">' +
+    '<img class="game-tile__icon" src="' + iconPath(game.slug) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' +
+    glyphSvg +
     (game.markTop ? '<span class="mark-top">' + game.markTop + '</span>' : '') +
     (game.markBig ? '<span class="mark-big">' + game.markBig + '</span>' : '') +
     '</div>';
 }
 
 function metaPills(game){
+  if (game.isNew){ return '<span class="meta-pill">✨ Just launched</span>'; }
   var pills = "";
   if (game.rating){
-    pills += '<span class="meta-pill">' + STAR + game.rating + (game.reviews ? ' (' + game.reviews.toLocaleString() + ')' : '') + '</span>';
+    pills += '<span class="meta-pill">' + STAR + game.rating.toFixed(1) + (game.reviews ? ' (' + game.reviews.toLocaleString() + ')' : '') + '</span>';
   }
   if (game.downloads){
     pills += '<span class="meta-pill">⬇ ' + game.downloads + '</span>';
-  }
-  if (game.premium){
-    pills += '<span class="meta-pill">' + game.price + '</span>';
   }
   return pills;
 }
 
 function cardMarkup(game, featured){
-  var url = searchUrl(game.name);
+  var url = storeUrl(game.pkg);
   var ribbon = game.teacherApproved
     ? '<span class="hand-note">' + BADGE + 'teacher\u2019s pick!</span><span class="ribbon">' + BADGE + 'Teacher Approved</span>'
     : "";
@@ -769,27 +976,120 @@ function cardMarkup(game, featured){
     '</div>' +
     '<p class="game-card__tagline">' + game.tagline + '</p>' +
     '<div class="game-card__meta">' + metaPills(game) + '</div>' +
-    '<div class="game-card__cta"><span>' + (game.premium ? "Buy on Google Play" : "Get it free") + '</span>' + ARROW + '</div>' +
+    '<div class="game-card__cta"><span>Get it free</span>' + ARROW + '</div>' +
   '</a>';
 }
 
 function render(){
   var heroGames = GAMES.filter(function(g){ return g.tier === "hero"; });
   var topGames  = GAMES.filter(function(g){ return g.tier === "top"; });
-  var moreGames = GAMES.filter(function(g){ return g.tier === "more"; });
 
   var html = '<div class="bento__hero-row">' + heroGames.map(function(g){ return cardMarkup(g, true); }).join("") + '</div>';
   html += '<div class="bento__top-row">' + topGames.map(function(g){ return cardMarkup(g, false); }).join("") + '</div>';
   document.getElementById("bentoGrid").innerHTML = html;
 
-  document.getElementById("moreGamesShelf").innerHTML = moreGames.map(function(g){ return cardMarkup(g, false); }).join("");
+  observeReveals(document.getElementById("bentoGrid"));
 }
 render();
 
-/* wire up Play Store CTA links (search-based fallback — see DEV_SEARCH above) */
+/* ============================================================
+   CATALOG — searchable / filterable / sortable grid of all
+   16 games
+   ============================================================ */
+var catalogState = { category: "All", query: "", sort: "default", teacherOnly: false };
+
+function renderChips(){
+  var html = CATEGORIES.map(function(cat){
+    var active = cat === catalogState.category ? " is-active" : "";
+    return '<button type="button" class="chip' + active + '" data-cat="' + cat + '" aria-pressed="' + (cat === catalogState.category) + '">' + CATEGORY_EMOJI[cat] + ' ' + cat + '</button>';
+  }).join("");
+  html += '<button type="button" class="chip chip--badge' + (catalogState.teacherOnly ? " is-active" : "") + '" id="teacherChip" aria-pressed="' + catalogState.teacherOnly + '">' + BADGE + ' Teacher Approved</button>';
+  document.getElementById("catalogChips").innerHTML = html;
+
+  document.querySelectorAll(".chip[data-cat]").forEach(function(chip){
+    chip.addEventListener("click", function(){
+      catalogState.category = chip.getAttribute("data-cat");
+      renderChips();
+      renderCatalog();
+    });
+  });
+  document.getElementById("teacherChip").addEventListener("click", function(){
+    catalogState.teacherOnly = !catalogState.teacherOnly;
+    renderChips();
+    renderCatalog();
+  });
+}
+
+function sortGames(list){
+  var arr = list.slice();
+  switch (catalogState.sort){
+    case "rating":
+      arr.sort(function(a,b){ return (b.rating || 0) - (a.rating || 0); });
+      break;
+    case "downloads":
+      arr.sort(function(a,b){ return (b.downloadsRank || 0) - (a.downloadsRank || 0); });
+      break;
+    case "newest":
+      arr.sort(function(a,b){ return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0); });
+      break;
+    case "az":
+      arr.sort(function(a,b){ return a.name.localeCompare(b.name); });
+      break;
+    default:
+      /* featured order: hero, top, more (source order) preserved */
+      break;
+  }
+  return arr;
+}
+
+function renderCatalog(){
+  var q = catalogState.query.trim().toLowerCase();
+  var filtered = GAMES.filter(function(g){
+    var matchesCat = catalogState.category === "All" || g.category === catalogState.category;
+    var matchesQuery = !q || g.name.toLowerCase().indexOf(q) !== -1 || g.tagline.toLowerCase().indexOf(q) !== -1;
+    var matchesTeacher = !catalogState.teacherOnly || g.teacherApproved;
+    return matchesCat && matchesQuery && matchesTeacher;
+  });
+  filtered = sortGames(filtered);
+
+  document.getElementById("catalogCount").textContent =
+    "Showing " + filtered.length + " of " + GAMES.length + " games";
+
+  var grid = document.getElementById("catalogGrid");
+  function paint(){
+    if (filtered.length === 0){
+      grid.innerHTML = '<div class="catalog-empty">No games match that search — try a different word, or tap “All” to see everything.</div>';
+      return;
+    }
+    grid.innerHTML = filtered.map(function(g){ return cardMarkup(g, false); }).join("");
+    observeReveals(grid);
+  }
+  if (document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.startViewTransition(paint);
+  } else {
+    paint();
+  }
+}
+
+renderChips();
+renderCatalog();
+
+var searchInput = document.getElementById("catalogSearch");
+searchInput.addEventListener("input", function(){
+  catalogState.query = searchInput.value;
+  renderCatalog();
+});
+
+var sortSelect = document.getElementById("catalogSort");
+sortSelect.addEventListener("change", function(){
+  catalogState.sort = sortSelect.value;
+  renderCatalog();
+});
+
+/* wire up Play Store CTA links to the developer page */
 ["navStoreLink","navStoreBtn","navStoreLinkMobile","heroStoreLink","bandStoreLink","footerStoreLink"].forEach(function(id){
   var el = document.getElementById(id);
-  if (el) el.href = DEV_SEARCH;
+  if (el) el.href = DEV_PAGE;
 });
 document.getElementById("navStoreBtn").style.display = window.innerWidth >= 860 ? "inline-flex" : "none";
 window.addEventListener("resize", function(){
@@ -825,23 +1125,54 @@ document.querySelectorAll(".nav__mobile-panel a").forEach(function(a){
   });
 });
 
+/* dark / light theme toggle */
+var themeToggle = document.getElementById("themeToggle");
+function currentTheme(){
+  var attr = document.documentElement.getAttribute("data-theme");
+  if (attr) return attr;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+function applyThemeButtonState(){
+  var isDark = currentTheme() === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+}
+applyThemeButtonState();
+themeToggle.addEventListener("click", function(){
+  var next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  try{ localStorage.setItem("pg-theme", next); }catch(e){}
+  applyThemeButtonState();
+});
+
 /* reduced motion check */
 var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* scroll reveal */
-if ("IntersectionObserver" in window && !prefersReducedMotion){
-  var revealObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting){
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold:0.12, rootMargin:"0px 0px -40px 0px" });
-  document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
-} else {
-  document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("is-visible"); });
+/* scroll reveal (re-usable observer so dynamically-rendered cards animate too) */
+var revealObserver = ("IntersectionObserver" in window && !prefersReducedMotion)
+  ? new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:"0px 0px -40px 0px" })
+  : null;
+
+function observeReveals(scope){
+  var els = scope.querySelectorAll(".reveal");
+  if (revealObserver){
+    els.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add("is-visible"); });
+  }
 }
+document.querySelectorAll(".reveal").forEach(function(el){
+  if (!el.closest("#bentoGrid") && !el.closest("#catalogGrid")){
+    if (revealObserver) revealObserver.observe(el); else el.classList.add("is-visible");
+  }
+});
 
 /* animated stat counters */
 function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
