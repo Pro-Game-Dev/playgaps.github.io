@@ -576,7 +576,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Android games for curious minds, ages 3+</span>
         <h1 class="hero__title">Where every gap in learning becomes <em>a game</em>.</h1>
-        <p class="hero__subtitle">From counting past a thousand to spelling out the alphabet, Play Gaps turns the basics — numbers, letters, shapes, colors, and animals — into something kids actually want to tap, giggle, and learn through.</p>
+        <p class="hero__subtitle">We believe kids learn best — and remember more — when they're having fun. So every Play Gaps game turns the basics into play: numbers, letters, shapes, colors, and animals, dressed up as something your child actually wants to tap, giggle, and learn through.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore our games</a>
           <a href="#" id="heroStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See us on Google Play</a>
@@ -628,30 +628,22 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         <span class="corner-block" aria-hidden="true">16</span>
         <span class="section__eyebrow">Our games</span>
         <h2 class="section__title">Pick a skill, press play.</h2>
-        <p class="section__sub">Every game below is live on Google Play right now, linked straight to its own store page. Tap any card to open it.</p>
+        <p class="section__sub">All 16 games are live on Google Play right now. Search by name, filter by skill, or just scroll — tap any card to open it.</p>
       </div>
 
-      <div class="bento" id="bentoGrid"><!-- top performers, rendered by JS --></div>
-
       <div class="catalog reveal" id="catalog">
-        <div class="catalog__head">
-          <div>
-            <h3 style="font-size:var(--fs-h3); margin-bottom:4px;">Browse the full library</h3>
-            <p style="color:var(--ink-soft); font-size:var(--fs-sm);">All 16 games, searchable and sortable.</p>
+        <div class="catalog__toolbar">
+          <div class="search-wrap">
+            <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
           </div>
-          <div class="catalog__toolbar">
-            <div class="search-wrap">
-              <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
-            </div>
-            <label class="visually-hidden" for="catalogSort">Sort games</label>
-            <select id="catalogSort" class="sort-select" aria-label="Sort games">
-              <option value="default">Sort: Featured</option>
-              <option value="rating">Sort: Top rated</option>
-              <option value="downloads">Sort: Most downloaded</option>
-              <option value="newest">Sort: Newest first</option>
-              <option value="az">Sort: A–Z</option>
-            </select>
-          </div>
+          <label class="visually-hidden" for="catalogSort">Sort games</label>
+          <select id="catalogSort" class="sort-select" aria-label="Sort games">
+            <option value="default">Sort: Featured</option>
+            <option value="rating">Sort: Top rated</option>
+            <option value="downloads">Sort: Most downloaded</option>
+            <option value="newest">Sort: Newest first</option>
+            <option value="az">Sort: A–Z</option>
+          </select>
         </div>
         <div class="catalog__controls" id="catalogChips" role="group" aria-label="Filter games by category"></div>
         <p class="catalog__count" id="catalogCount" aria-live="polite"></p>
@@ -666,22 +658,23 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="section__head reveal">
         <span class="section__eyebrow">Getting started</span>
         <h2 class="section__title">From this page to playing, in three taps.</h2>
+        <p class="section__sub">This site doesn't host any downloads itself — it just links straight to Google Play, the same place you already trust for every other app.</p>
       </div>
       <div class="how-grid reveal">
         <div class="how-step">
           <div class="how-step__num" aria-hidden="true"></div>
           <h3 class="how-step__title">Browse &amp; pick</h3>
-          <p class="how-step__body">Scroll the games above or search by name — filter by skill to narrow things down.</p>
+          <p class="how-step__body">Scroll the games above, search by name, or filter by skill — numbers, letters, shapes, and more.</p>
         </div>
         <div class="how-step">
           <div class="how-step__num" aria-hidden="true"></div>
           <h3 class="how-step__title">Tap the card</h3>
-          <p class="how-step__body">Every card opens that game's official listing on Google Play — nothing downloads from this site.</p>
+          <p class="how-step__body">That opens the real Google Play page for that game, in a new tab — nothing installs from this website.</p>
         </div>
         <div class="how-step">
           <div class="how-step__num" aria-hidden="true"></div>
           <h3 class="how-step__title">Install &amp; play</h3>
-          <p class="how-step__body">Install like any Android app. It's free to start, right away.</p>
+          <p class="how-step__body">Install it like any Android app. It's free to start, right away — no account, no waiting.</p>
         </div>
       </div>
     </div>
@@ -693,7 +686,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="section__head reveal">
         <span class="section__eyebrow">Why parents choose us</span>
         <h2 class="section__title">Built for little hands, trusted by real parents.</h2>
-        <p class="section__sub">We design every game around how young kids actually learn — and how parents actually decide what to install.</p>
+        <p class="section__sub">Kids learn better when they're having fun — so that's the whole design brief. Every game below is built around how young kids actually play, and how parents actually decide what to install.</p>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
@@ -980,17 +973,10 @@ function cardMarkup(game, featured){
   '</a>';
 }
 
-function render(){
-  var heroGames = GAMES.filter(function(g){ return g.tier === "hero"; });
-  var topGames  = GAMES.filter(function(g){ return g.tier === "top"; });
-
-  var html = '<div class="bento__hero-row">' + heroGames.map(function(g){ return cardMarkup(g, true); }).join("") + '</div>';
-  html += '<div class="bento__top-row">' + topGames.map(function(g){ return cardMarkup(g, false); }).join("") + '</div>';
-  document.getElementById("bentoGrid").innerHTML = html;
-
-  observeReveals(document.getElementById("bentoGrid"));
-}
-render();
+/* Note: no separate "top performers" render — the catalog's default
+   "Featured" sort already preserves GAMES source order (hero, then top,
+   then more), so the same standout games surface first without the
+   library duplicating cards the way the old two-block layout did. */
 
 /* ============================================================
    CATALOG — searchable / filterable / sortable grid of all
