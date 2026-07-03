@@ -294,17 +294,20 @@ input,select{ font: inherit; color: inherit; }
 .blocks{ position:relative; height: clamp(280px, 36vw, 420px); display:flex; align-items:center; justify-content:center; }
 .block-tile{
   position:absolute; display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-display); font-weight:800; border:var(--border-w) solid var(--swatch-dark);
-  border-radius:var(--radius-md); box-shadow: 5px 5px 0 var(--swatch-dark); color:var(--tile-ink);
-  opacity:0; transform: translateY(40px) rotate(0deg) scale(.7); animation: blockDrop .7s var(--ease) forwards;
+  font-family:var(--font-display); font-weight:800; border:var(--border-w) solid var(--line);
+  border-radius:var(--radius-md); box-shadow: 5px 5px 0 var(--line); color:var(--tile-ink);
+  opacity:0; transform: translate(-50%,-50%) translateY(40px) rotate(0deg) scale(.7);
+  animation: blockDrop .7s var(--ease) forwards;
 }
-@keyframes blockDrop{ to{ opacity:1; transform: translateY(0) rotate(var(--rot)) scale(1); } }
-.block-tile:nth-child(1){ --rot:-8deg; width:23%; aspect-ratio:9/17.5; font-size:clamp(1.6rem,3.6vw,2.3rem); top:0%; left:4%; background:var(--poppy); animation-delay:.05s; }
-.block-tile:nth-child(2){ --rot:7deg;  width:24%; aspect-ratio:9/17.5; font-size:clamp(1.6rem,3.6vw,2.3rem); top:2%; right:2%; background:var(--marigold); animation-delay:.18s; }
-.block-tile:nth-child(3){ --rot:6deg; width:20%; aspect-ratio:9/17.5; font-size:clamp(1.4rem,3.2vw,2rem); bottom:0%; left:0%; background:var(--sky); color:#fff; animation-delay:.30s; }
-.block-tile:nth-child(4){ --rot:-9deg; width:22%; aspect-ratio:9/17.5; font-size:clamp(1.5rem,3.4vw,2.2rem); bottom:4%; right:0%; background:var(--leaf); color:#fff; animation-delay:.42s; }
-.block-tile:nth-child(5){ --rot:13deg; width:17%; aspect-ratio:9/17.5; font-size:clamp(1.1rem,2.6vw,1.6rem); top:44%; right:-4%; background:var(--swatch-white); animation-delay:.54s; }
-.block-tile:nth-child(6){ width:40%; aspect-ratio:1; top:32%; left:29%; animation-delay:.64s; }
+@keyframes blockDrop{
+  to{ opacity:1; transform: translate(-50%,-50%) translateY(0) rotate(var(--rot)) scale(1); }
+}
+.block-tile:nth-child(1){ --rot:-6deg; width:20%; aspect-ratio:9/17.5; font-size:clamp(1.5rem,3.4vw,2.1rem); top:14%; left:50%; background:var(--poppy); animation-delay:.05s; }
+.block-tile:nth-child(2){ --rot:6deg;  width:20%; aspect-ratio:9/17.5; font-size:clamp(1.5rem,3.4vw,2.1rem); top:40%; left:84%; background:var(--marigold); animation-delay:.18s; }
+.block-tile:nth-child(3){ --rot:-5deg; width:20%; aspect-ratio:9/17.5; font-size:clamp(1.4rem,3.2vw,2rem); top:80%; left:71%; background:var(--sky); color:#fff; animation-delay:.30s; }
+.block-tile:nth-child(4){ --rot:5deg; width:20%; aspect-ratio:9/17.5; font-size:clamp(1.5rem,3.4vw,2.1rem); top:80%; left:29%; background:var(--leaf); color:#fff; animation-delay:.42s; }
+.block-tile:nth-child(5){ --rot:-6deg; width:20%; aspect-ratio:9/17.5; font-size:clamp(1.2rem,2.8vw,1.7rem); top:40%; left:16%; background:var(--swatch-white); animation-delay:.54s; }
+.block-tile:nth-child(6){ width:36%; aspect-ratio:1; top:50%; left:50%; animation-delay:.64s; }
 
 .block-tile--phone{ overflow:hidden; }
 .block-tile--phone::before{
@@ -319,7 +322,7 @@ input,select{ font: inherit; color: inherit; }
 }
 
 @media(hover:hover){
-  .block-tile:hover{ transform: translateY(-6px) rotate(var(--rot)) scale(1.04); transition: transform .2s var(--ease); }
+  .block-tile:hover{ transform: translate(-50%,-50%) translateY(-6px) rotate(var(--rot)) scale(1.04); transition: transform .2s var(--ease); }
 }
 @supports (animation-timeline: view()){
   @media (prefers-reduced-motion: no-preference){
@@ -573,7 +576,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important; scroll-behavior: auto !important;
   }
-  .block-tile{ opacity:1; transform: translateY(0) rotate(0deg) scale(1) !important; }
+  .block-tile{ opacity:1; transform: translate(-50%,-50%) rotate(0deg) scale(1) !important; }
   .reveal{ opacity:1; transform:none; }
   .blocks{ animation:none !important; }
 }
@@ -656,13 +659,13 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         <p class="section__sub">Two quick looks at what your child actually sees the moment a Play Gaps game opens.</p>
       </div>
       <div class="showcase__grid reveal">
-        <a class="showcase__card showcase__card--a" href="https://play.google.com/store/apps/details?id=com.hiegames.freelearnnumbers1to1000" target="_blank" rel="noopener">
-          <img class="showcase__shot" src="screenshots/hero-landscape-1.webp" alt="Gameplay screenshot from Learn 1 to 1000 Numbers" loading="lazy" decoding="async" onerror="this.closest('.showcase__card').remove()">
-          <span class="showcase__caption">Learn 1 to 1000 Numbers<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <a class="showcase__card showcase__card--a" href="https://play.google.com/store/apps/details?id=com.playgaps.seaanimals" target="_blank" rel="noopener">
+          <img class="showcase__shot" src="screenshots/hero-landscape-1.webp" alt="Gameplay screenshot from 100 Sea Animals for Kids" loading="lazy" decoding="async" onerror="this.closest('.showcase__card').remove()">
+          <span class="showcase__caption">100 Sea Animals for Kids<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
         </a>
-        <a class="showcase__card showcase__card--b" href="https://play.google.com/store/apps/details?id=com.hiegames.numbersforkids" target="_blank" rel="noopener">
-          <img class="showcase__shot" src="screenshots/hero-landscape-2.webp" alt="Gameplay screenshot from 1 to 100 Number Counting Game" loading="lazy" decoding="async" onerror="this.closest('.showcase__card').remove()">
-          <span class="showcase__caption">1 to 100 Number Counting Game<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <a class="showcase__card showcase__card--b" href="https://play.google.com/store/apps/details?id=com.hiegames.numberwoodenblocks" target="_blank" rel="noopener">
+          <img class="showcase__shot" src="screenshots/hero-landscape-2.webp" alt="Gameplay screenshot from Number Woods: Kids Learn 1-100" loading="lazy" decoding="async" onerror="this.closest('.showcase__card').remove()">
+          <span class="showcase__caption">Number Woods: Kids Learn 1-100<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
         </a>
       </div>
     </div>
