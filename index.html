@@ -391,20 +391,21 @@ input,select{ font: inherit; color: inherit; }
    get its own independent rounded patch, instead of one big box.
    ============================================================ */
 .hl{
-  --hl-bg: color-mix(in srgb, var(--sky) 26%, transparent);
+  --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent);
   background: var(--hl-bg);
-  padding: 0.06em 0.42em 0.1em;
-  margin: 0 -0.42em;
-  border-radius: 0.55em 0.7em 0.6em 0.75em;
+  padding: 0 0.14em 0.02em;
+  margin: 0 -0.14em;
+  border-radius: 0.16em 0.22em 0.18em 0.24em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline;
+  line-height: 1.18;
   color: var(--ink);
 }
-.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 26%, transparent); }
-.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 42%, transparent); }
-.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 28%, transparent); }
-.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 22%, transparent); }
+.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent); }
+.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 22%, transparent); }
+.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 15%, transparent); }
+.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 13%, transparent); }
 
 /* Sticker-chip variant — for headline copy that already sits on a solid
    brand-colour band (e.g. the marigold CTA band), where a translucent
@@ -414,8 +415,8 @@ input,select{ font: inherit; color: inherit; }
   color: var(--swatch-dark);
   border: 2.5px solid var(--swatch-dark);
   box-shadow: 3px 3px 0 var(--swatch-dark);
-  border-radius: 8px 12px 9px 13px;
-  padding: 0.04em 0.4em 0.08em;
+  border-radius: 8px 11px 9px 12px;
+  padding: 0.02em 0.32em 0.05em;
   margin: 0 0.05em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
