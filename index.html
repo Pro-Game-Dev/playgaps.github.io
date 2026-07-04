@@ -282,7 +282,7 @@ input,select{ font: inherit; color: inherit; }
   padding:7px 16px; box-shadow: 3px 3px 0 var(--line); margin-bottom: var(--sp-5);
 }
 .hero__eyebrow .pip{ width:8px; height:8px; border-radius:50%; background:var(--leaf); }
-.hero__title{ font-size: var(--fs-hero); font-weight:700; line-height: 1.18; margin-bottom: var(--sp-5); }
+.hero__title{ font-size: var(--fs-hero); font-weight:700; margin-bottom: var(--sp-5); }
 .hero__title em{ font-style:normal; color:var(--poppy); position:relative; white-space:nowrap; }
 .hero__subtitle{ font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch; margin-bottom: var(--sp-6); }
 .hero__ctas{ display:flex; flex-wrap:wrap; gap: var(--sp-4); margin-bottom: var(--sp-6); }
@@ -384,30 +384,40 @@ input,select{ font: inherit; color: inherit; }
 .reveal.is-visible{ opacity:1; transform:none; }
 
 /* ============================================================
-   TEXT HIGHLIGHTS — "highlighter marker" emphasis for headline copy
-   Sizes itself off the heading's own font-size (em units), so one
-   rule works for the 4.4rem hero and the smaller section titles alike.
-   box-decoration-break lets a highlight that wraps onto a new line
-   get its own independent rounded patch, instead of one big box.
+   TEXT HIGHLIGHTS — "highlighter marker" emphasis for headline copy.
+   display:inline-block means a highlight spanning a long phrase wraps
+   naturally across lines as one rounded block, and line-height is
+   what actually controls its height (see the fix note on .hl below).
    ============================================================ */
 .hl{
-  --hl-bg: color-mix(in srgb, var(--sky) 22%, transparent);
-  background-image: linear-gradient(var(--hl-bg), var(--hl-bg));
-  background-repeat: no-repeat;
-  background-size: 100% 1em;
-  background-position: 0 0.13em;
-  padding: 0 0.15em;
-  margin: 0 -0.15em;
+  --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent);
+  background: var(--hl-bg);
+  display: inline-block;
+  /* This is the actual fix. A plain `display: inline` element's
+     background hugs its font's own ascent/descent metrics — CSS
+     explicitly excludes line-height from resizing that box, which
+     is exactly why the previous line-height change had zero visible
+     effect. `inline-block` establishes real internal line boxes,
+     where line-height genuinely controls rendered height (the same
+     ordinary mechanism that controls paragraph line spacing). It
+     still wraps naturally if the phrase is too long for one line. */
+  line-height: 1.12;
+  padding: 0.02em 0.16em;
+  margin: 0 -0.16em;
   border-radius: 999px;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  display: inline;
   color: var(--ink);
 }
-.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 22%, transparent); }
-.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 30%, transparent); }
-.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 20%, transparent); }
-.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 17%, transparent); }
+.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent); }
+.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 22%, transparent); }
+.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 15%, transparent); }
+.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 13%, transparent); }
+
+/* The "Why us" section has a fixed dark background regardless of site
+   theme. --poppy at 13% transparency was tuned for the normal, lighter
+   adaptive page background — against this always-dark section it reads
+   as barely-there. Bumping opacity here keeps it legible without
+   touching the value used everywhere else. */
+.why .hl--poppy{ --hl-bg: color-mix(in srgb, var(--poppy) 34%, transparent); }
 
 /* Sticker-chip variant — for headline copy that already sits on a solid
    brand-colour band (e.g. the marigold CTA band), where a translucent
@@ -418,12 +428,10 @@ input,select{ font: inherit; color: inherit; }
   border: 2.5px solid var(--swatch-dark);
   box-shadow: 3px 3px 0 var(--swatch-dark);
   border-radius: 999px;
-  padding: 0.02em 0.32em;
-  margin: 0 0.05em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
   display: inline-block;
-  line-height: 1;
+  line-height: 1.12;
+  padding: 0.02em 0.34em;
+  margin: 0 0.05em;
 }
 
 /* corner-block accent — reuses the hero's block-tile signature next to section headers */
