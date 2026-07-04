@@ -391,21 +391,23 @@ input,select{ font: inherit; color: inherit; }
    get its own independent rounded patch, instead of one big box.
    ============================================================ */
 .hl{
-  --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent);
-  background: var(--hl-bg);
-  padding: 0.02em 0.16em;
-  margin: 0 -0.16em;
+  --hl-bg: color-mix(in srgb, var(--sky) 30%, transparent);
+  background-image: linear-gradient(var(--hl-bg), var(--hl-bg));
+  background-repeat: no-repeat;
+  background-size: 100% 0.86em;
+  background-position: 0 88%;
+  padding: 0 0.14em;
+  margin: 0 -0.14em;
   border-radius: 999px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline;
-  line-height: 1.04;
   color: var(--ink);
 }
-.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent); }
-.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 22%, transparent); }
-.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 15%, transparent); }
-.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 13%, transparent); }
+.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 30%, transparent); }
+.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 34%, transparent); }
+.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 24%, transparent); }
+.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 20%, transparent); }
 
 /* Sticker-chip variant — for headline copy that already sits on a solid
    brand-colour band (e.g. the marigold CTA band), where a translucent
@@ -416,12 +418,12 @@ input,select{ font: inherit; color: inherit; }
   border: 2.5px solid var(--swatch-dark);
   box-shadow: 3px 3px 0 var(--swatch-dark);
   border-radius: 999px;
-  padding: 0.03em 0.34em;
+  padding: 0.02em 0.32em;
   margin: 0 0.05em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline-block;
-  line-height: 1.04;
+  line-height: 1;
 }
 
 /* corner-block accent — reuses the hero's block-tile signature next to section headers */
