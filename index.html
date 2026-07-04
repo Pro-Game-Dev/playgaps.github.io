@@ -393,13 +393,13 @@ input,select{ font: inherit; color: inherit; }
 .hl{
   --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent);
   background: var(--hl-bg);
-  padding: 0 0.14em 0.02em;
-  margin: 0 -0.14em;
-  border-radius: 0.16em 0.22em 0.18em 0.24em;
+  padding: 0.02em 0.16em;
+  margin: 0 -0.16em;
+  border-radius: 999px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline;
-  line-height: 1.18;
+  line-height: 1.04;
   color: var(--ink);
 }
 .hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent); }
@@ -415,12 +415,13 @@ input,select{ font: inherit; color: inherit; }
   color: var(--swatch-dark);
   border: 2.5px solid var(--swatch-dark);
   box-shadow: 3px 3px 0 var(--swatch-dark);
-  border-radius: 8px 11px 9px 12px;
-  padding: 0.02em 0.32em 0.05em;
+  border-radius: 999px;
+  padding: 0.03em 0.34em;
   margin: 0 0.05em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline-block;
+  line-height: 1.04;
 }
 
 /* corner-block accent — reuses the hero's block-tile signature next to section headers */
