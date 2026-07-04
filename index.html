@@ -383,6 +383,45 @@ input,select{ font: inherit; color: inherit; }
 .reveal{ opacity:0; transform: translateY(26px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
 .reveal.is-visible{ opacity:1; transform:none; }
 
+/* ============================================================
+   TEXT HIGHLIGHTS — "highlighter marker" emphasis for headline copy
+   Sizes itself off the heading's own font-size (em units), so one
+   rule works for the 4.4rem hero and the smaller section titles alike.
+   box-decoration-break lets a highlight that wraps onto a new line
+   get its own independent rounded patch, instead of one big box.
+   ============================================================ */
+.hl{
+  --hl-bg: color-mix(in srgb, var(--sky) 26%, transparent);
+  background: var(--hl-bg);
+  padding: 0.06em 0.42em 0.1em;
+  margin: 0 -0.42em;
+  border-radius: 0.55em 0.7em 0.6em 0.75em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  display: inline;
+  color: var(--ink);
+}
+.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 26%, transparent); }
+.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 42%, transparent); }
+.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 28%, transparent); }
+.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 22%, transparent); }
+
+/* Sticker-chip variant — for headline copy that already sits on a solid
+   brand-colour band (e.g. the marigold CTA band), where a translucent
+   tint would barely show up against a solid background. */
+.hl--chip{
+  background: var(--swatch-white);
+  color: var(--swatch-dark);
+  border: 2.5px solid var(--swatch-dark);
+  box-shadow: 3px 3px 0 var(--swatch-dark);
+  border-radius: 8px 12px 9px 13px;
+  padding: 0.04em 0.4em 0.08em;
+  margin: 0 0.05em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  display: inline-block;
+}
+
 /* corner-block accent — reuses the hero's block-tile signature next to section headers */
 .corner-block{
   position:absolute; top:-6px; right:0; width:40px; height:40px; border-radius:10px;
@@ -624,7 +663,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container hero__inner">
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Android games for curious minds, ages 3+</span>
-        <h1 class="hero__title">Where every gap in learning becomes <em>a game</em>.</h1>
+        <h1 class="hero__title"><span class="hl hl--sky">Where every gap in learning becomes</span> <em>a game</em>.</h1>
         <p class="hero__subtitle">We believe kids learn best — and remember more — when they're having fun. So every Play Gaps game turns the basics into play: numbers, letters, shapes, colors, and animals, dressed up as something your child actually wants to tap, giggle, and learn through.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore our games</a>
@@ -655,7 +694,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">See it in action</span>
-        <h2 class="section__title">Real gameplay, not just promises.</h2>
+        <h2 class="section__title"><span class="hl hl--leaf">Real gameplay</span>, not just promises.</h2>
         <p class="section__sub">Two quick looks at what your child actually sees the moment a Play Gaps game opens.</p>
       </div>
       <div class="showcase__grid reveal">
@@ -699,7 +738,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="games__head reveal">
         <span class="section__eyebrow">Our games</span>
         <div class="games__head-row">
-          <h2 class="section__title games__head-title">Pick a skill, press play.</h2>
+          <h2 class="section__title games__head-title">Pick a skill, <span class="hl hl--marigold">press play</span>.</h2>
           <div class="catalog__toolbar games__head-toolbar">
             <div class="search-wrap">
               <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
@@ -733,7 +772,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Getting started</span>
-        <h2 class="section__title">From this page to playing, in three taps.</h2>
+        <h2 class="section__title">From this page to playing, in <span class="hl hl--sky">three taps</span>.</h2>
         <p class="section__sub">This site doesn't host any downloads itself — it just links straight to Google Play, the same place you already trust for every other app.</p>
       </div>
       <div class="how-grid reveal">
@@ -761,7 +800,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Why parents choose us</span>
-        <h2 class="section__title">Built for little hands, trusted by real parents.</h2>
+        <h2 class="section__title">Built for <span class="hl hl--poppy">little hands</span>, trusted by real parents.</h2>
         <p class="section__sub">Kids learn better when they're having fun — so that's the whole design brief. Every game below is built around how young kids actually play, and how parents actually decide what to install.</p>
       </div>
       <div class="why-grid">
@@ -816,7 +855,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Questions</span>
-        <h2 class="section__title">Good to know before you install.</h2>
+        <h2 class="section__title">Good to know <span class="hl hl--leaf">before you install</span>.</h2>
       </div>
       <div class="faq-list reveal">
         <details class="faq-item">
@@ -856,7 +895,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   <!-- ============ CTA BAND ============ -->
   <section class="cta-band">
     <div class="container cta-band__inner">
-      <h2 class="cta-band__title">Sixteen games. One developer page away.</h2>
+      <h2 class="cta-band__title"><span class="hl hl--chip">Sixteen games.</span> One developer page away.</h2>
       <a href="#" id="bandStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See all Play Gaps games</a>
     </div>
   </section>
