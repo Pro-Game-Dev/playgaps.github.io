@@ -380,38 +380,6 @@ input,select{ font: inherit; color: inherit; }
 .section__eyebrow{ display:inline-block; font-weight:700; font-size:var(--fs-xs); letter-spacing:.06em; text-transform:uppercase; color:var(--poppy); margin-bottom:var(--sp-3); }
 .section__title{ font-size: var(--fs-h2); margin-bottom: var(--sp-3); }
 .section__sub{ color:var(--ink-soft); font-size:var(--fs-lg); }
-
-/* ============================================================
-   HEADLINE HIGHLIGHTS — sticker-style emphasis for key phrases
-   in headings. Reuses the same border-width, offset-shadow, and
-   accent colors as buttons/badges/tiles so it reads as part of
-   the existing system rather than a new decoration.
-   box-decoration-break gives each wrapped line its own clean
-   chip instead of one box smeared across a line break.
-   ============================================================ */
-.hl{
-  background: var(--hl-bg, var(--marigold));
-  color: var(--hl-ink, var(--tile-ink));
-  border: 2.5px solid var(--line);
-  border-radius: 8px;
-  padding: 0.02em 0.34em 0.1em;
-  box-shadow: 3px 3px 0 var(--line);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-.hl--poppy{    --hl-bg: var(--poppy);       --hl-ink: #fff; }
-.hl--marigold{ --hl-bg: var(--marigold);    --hl-ink: var(--tile-ink); }
-.hl--sky{      --hl-bg: var(--sky);         --hl-ink: #fff; }
-.hl--leaf{     --hl-bg: var(--leaf);        --hl-ink: #fff; }
-/* always-dark chip, for use on backgrounds that are themselves
-   already colored (e.g. the marigold CTA band) — border is fixed
-   light rather than var(--line), because var(--line) flips to the
-   *same* dark color as this chip's own background in light mode,
-   which would make the border invisible (the exact bug we fixed
-   on the hero cluster, pre-empted here instead of shipped and
-   found later) */
-.hl--dark{     --hl-bg: var(--swatch-dark); --hl-ink: var(--marigold); border-color:#EDEFF4; box-shadow:3px 3px 0 #EDEFF4; }
-
 .reveal{ opacity:0; transform: translateY(26px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
 .reveal.is-visible{ opacity:1; transform:none; }
 
@@ -556,11 +524,6 @@ input,select{ font: inherit; color: inherit; }
 .why-card__icon svg{ width:24px; height:24px; }
 .why-card__title{ font-family:var(--font-display); font-weight:700; font-size:1.1rem; }
 .why-card__body{ font-size:var(--fs-sm); color:#C7CCD6; }
-/* .why has a fixed dark background regardless of site theme, but
-   var(--line) flips with the theme — in light mode it equals this
-   section's own background color, making the chip border vanish.
-   Force a light border here so it always reads against the section. */
-.why .hl{ border-color:#EDEFF4; box-shadow:3px 3px 0 #EDEFF4; }
 
 /* ============================================================
    FAQ
@@ -661,7 +624,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container hero__inner">
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Android games for curious minds, ages 3+</span>
-        <h1 class="hero__title">Where every <span class="hl hl--marigold">gap in learning</span> becomes <em>a game</em>.</h1>
+        <h1 class="hero__title">Where every gap in learning becomes <em>a game</em>.</h1>
         <p class="hero__subtitle">We believe kids learn best — and remember more — when they're having fun. So every Play Gaps game turns the basics into play: numbers, letters, shapes, colors, and animals, dressed up as something your child actually wants to tap, giggle, and learn through.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore our games</a>
@@ -692,7 +655,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">See it in action</span>
-        <h2 class="section__title"><span class="hl hl--sky">Real gameplay</span>, not just promises.</h2>
+        <h2 class="section__title">Real gameplay, not just promises.</h2>
         <p class="section__sub">Two quick looks at what your child actually sees the moment a Play Gaps game opens.</p>
       </div>
       <div class="showcase__grid reveal">
@@ -736,7 +699,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="games__head reveal">
         <span class="section__eyebrow">Our games</span>
         <div class="games__head-row">
-          <h2 class="section__title games__head-title">Pick a skill, <span class="hl hl--leaf">press play</span>.</h2>
+          <h2 class="section__title games__head-title">Pick a skill, press play.</h2>
           <div class="catalog__toolbar games__head-toolbar">
             <div class="search-wrap">
               <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
@@ -770,7 +733,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Getting started</span>
-        <h2 class="section__title">From this page to playing, in <span class="hl hl--poppy">three taps</span>.</h2>
+        <h2 class="section__title">From this page to playing, in three taps.</h2>
         <p class="section__sub">This site doesn't host any downloads itself — it just links straight to Google Play, the same place you already trust for every other app.</p>
       </div>
       <div class="how-grid reveal">
@@ -798,7 +761,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Why parents choose us</span>
-        <h2 class="section__title">Built for <span class="hl hl--marigold">little hands</span>, trusted by real parents.</h2>
+        <h2 class="section__title">Built for little hands, trusted by real parents.</h2>
         <p class="section__sub">Kids learn better when they're having fun — so that's the whole design brief. Every game below is built around how young kids actually play, and how parents actually decide what to install.</p>
       </div>
       <div class="why-grid">
@@ -853,7 +816,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Questions</span>
-        <h2 class="section__title">Good to know <span class="hl hl--sky">before you install</span>.</h2>
+        <h2 class="section__title">Good to know before you install.</h2>
       </div>
       <div class="faq-list reveal">
         <details class="faq-item">
@@ -893,7 +856,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   <!-- ============ CTA BAND ============ -->
   <section class="cta-band">
     <div class="container cta-band__inner">
-      <h2 class="cta-band__title"><span class="hl hl--dark">Sixteen games</span>. One developer page away.</h2>
+      <h2 class="cta-band__title">Sixteen games. One developer page away.</h2>
       <a href="#" id="bandStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See all Play Gaps games</a>
     </div>
   </section>
