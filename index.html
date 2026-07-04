@@ -282,7 +282,7 @@ input,select{ font: inherit; color: inherit; }
   padding:7px 16px; box-shadow: 3px 3px 0 var(--line); margin-bottom: var(--sp-5);
 }
 .hero__eyebrow .pip{ width:8px; height:8px; border-radius:50%; background:var(--leaf); }
-.hero__title{ font-size: var(--fs-hero); font-weight:700; margin-bottom: var(--sp-5); }
+.hero__title{ font-size: var(--fs-hero); font-weight:700; line-height: 1.3; margin-bottom: var(--sp-5); }
 .hero__title em{ font-style:normal; color:var(--poppy); position:relative; white-space:nowrap; }
 .hero__subtitle{ font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch; margin-bottom: var(--sp-6); }
 .hero__ctas{ display:flex; flex-wrap:wrap; gap: var(--sp-4); margin-bottom: var(--sp-6); }
@@ -391,39 +391,22 @@ input,select{ font: inherit; color: inherit; }
    get its own independent rounded patch, instead of one big box.
    ============================================================ */
 .hl{
-  --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent);
+  --hl-bg: color-mix(in srgb, var(--sky) 18%, transparent);
   background: var(--hl-bg);
-  padding: 0.025em 0.16em;
-  margin: 0 -0.16em;
+  padding: 0.02em 0.15em;
+  margin: 0 -0.15em;
   border-radius: 999px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline;
-  /* Baloo 2 (like several multi-script Google Fonts built to also
-     support tall Indic diacritics) bakes unusually generous ascent/
-     descent space into the font file itself — so even line-height:1
-     renders a box noticeably taller than the visible letterforms.
-     0.86 is tuned to hug this font's actual cap-height + descenders;
-     the padding above adds ~5% of the font-size back on top of that,
-     split across both edges, per your spec. Both values are in em,
-     so this one rule scales correctly whether it's sitting in the
-     4.4rem hero or a 1.7rem section title — no per-instance tuning
-     needed. If a specific instance still looks off after a live
-     check, nudge that 0.86 up/down in 0.02 steps and it'll hold. */
-  line-height: 0.86;
+  line-height: 1.05;
   color: var(--ink);
 }
-.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 16%, transparent); }
-.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 22%, transparent); }
-.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 15%, transparent); }
-.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 13%, transparent); }
-
-/* The "Why us" section has a fixed dark background regardless of site
-   theme. --poppy at 13% transparency was tuned for the normal, lighter
-   adaptive page background — against this always-dark section it reads
-   as barely-there. Bumping opacity here keeps it legible without
-   touching the value used everywhere else. */
-.why .hl--poppy{ --hl-bg: color-mix(in srgb, var(--poppy) 34%, transparent); }
+}
+.hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 18%, transparent); }
+.hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 24%, transparent); }
+.hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 16%, transparent); }
+.hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 14%, transparent); }
 
 /* Sticker-chip variant — for headline copy that already sits on a solid
    brand-colour band (e.g. the marigold CTA band), where a translucent
@@ -434,12 +417,12 @@ input,select{ font: inherit; color: inherit; }
   border: 2.5px solid var(--swatch-dark);
   box-shadow: 3px 3px 0 var(--swatch-dark);
   border-radius: 999px;
-  padding: 0.045em 0.34em;
+  padding: 0.02em 0.32em;
   margin: 0 0.05em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   display: inline-block;
-  line-height: 0.86;
+  line-height: 1;
 }
 
 /* corner-block accent — reuses the hero's block-tile signature next to section headers */
