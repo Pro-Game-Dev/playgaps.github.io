@@ -334,6 +334,11 @@ input,select{ font: inherit; color: inherit; }
 /* ============================================================
    SHOWCASE (landscape gameplay screenshots)
    ============================================================ */
+/* .hero already carries a large bottom padding (var(--sp-9)); without
+   this override .section's own top padding (also var(--sp-9)) stacks
+   on top of it, doubling the gap between the hero and this section
+   compared to every other section-to-section transition on the page. */
+.section.showcase{ padding-top:0; }
 .showcase__grid{ display:grid; grid-template-columns:1fr; gap: var(--sp-5); }
 @media(min-width:760px){ .showcase__grid{ grid-template-columns:1fr 1fr; } }
 .showcase__card{
