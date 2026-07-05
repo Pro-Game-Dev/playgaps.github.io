@@ -407,6 +407,22 @@ input,select{ font: inherit; color: inherit; }
 .hl--sky{      --hl-bg: color-mix(in srgb, var(--sky) 22%, transparent); }
 .hl--marigold{ --hl-bg: color-mix(in srgb, var(--marigold) 30%, transparent); }
 .hl--leaf{     --hl-bg: color-mix(in srgb, var(--leaf) 20%, transparent); }
+
+/* Single-line variant — used everywhere except the hero (where a highlighted
+   phrase wraps across two lines and must keep flat top/bottom edges so the
+   two lines' marks don't collide). display:inline-block makes the browser
+   size this box from line-height directly, instead of Baloo 2's oversized
+   internal ascent/descent box — so it comes out as a properly proportioned
+   capsule with a soft curve on all four sides, not just the pill ends. */
+.hl--solo{
+  display: inline-block;
+  background-image: none;
+  background-color: var(--hl-bg);
+  line-height: 1.12;
+  padding: 0.03em 0.42em;
+  margin: 0 0.05em;
+  border-radius: 999px;
+}
 .hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 17%, transparent); }
 
 /* Sticker-chip variant — for headline copy that already sits on a solid
@@ -698,7 +714,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">See it in action</span>
-        <h2 class="section__title"><span class="hl hl--leaf">Real gameplay</span>, not just promises.</h2>
+        <h2 class="section__title"><span class="hl hl--leaf hl--solo">Real gameplay</span>, not just promises.</h2>
         <p class="section__sub">Two quick looks at what your child actually sees the moment a Play Gaps game opens.</p>
       </div>
       <div class="showcase__grid reveal">
@@ -742,7 +758,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
       <div class="games__head reveal">
         <span class="section__eyebrow">Our games</span>
         <div class="games__head-row">
-          <h2 class="section__title games__head-title">Pick a skill, <span class="hl hl--marigold">press play</span>.</h2>
+          <h2 class="section__title games__head-title">Pick a skill, <span class="hl hl--marigold hl--solo">press play</span>.</h2>
           <div class="catalog__toolbar games__head-toolbar">
             <div class="search-wrap">
               <input type="search" id="catalogSearch" class="search-input" placeholder="Search games…" aria-label="Search games">
@@ -776,7 +792,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Getting started</span>
-        <h2 class="section__title">From this page to playing, in <span class="hl hl--sky">three taps</span>.</h2>
+        <h2 class="section__title">From this page to playing, in <span class="hl hl--sky hl--solo">three taps</span>.</h2>
         <p class="section__sub">This site doesn't host any downloads itself — it just links straight to Google Play, the same place you already trust for every other app.</p>
       </div>
       <div class="how-grid reveal">
@@ -804,7 +820,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Why parents choose us</span>
-        <h2 class="section__title">Built for <span class="hl hl--poppy">little hands</span>, trusted by real parents.</h2>
+        <h2 class="section__title">Built for <span class="hl hl--poppy hl--solo">little hands</span>, trusted by real parents.</h2>
         <p class="section__sub">Kids learn better when they're having fun — so that's the whole design brief. Every game below is built around how young kids actually play, and how parents actually decide what to install.</p>
       </div>
       <div class="why-grid">
@@ -859,7 +875,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container">
       <div class="section__head reveal">
         <span class="section__eyebrow">Questions</span>
-        <h2 class="section__title">Good to know <span class="hl hl--leaf">before you install</span>.</h2>
+        <h2 class="section__title">Good to know <span class="hl hl--leaf hl--solo">before you install</span>.</h2>
       </div>
       <div class="faq-list reveal">
         <details class="faq-item">
