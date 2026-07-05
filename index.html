@@ -283,6 +283,11 @@ input,select{ font: inherit; color: inherit; }
 }
 .hero__eyebrow .pip{ width:8px; height:8px; border-radius:50%; background:var(--leaf); }
 .hero__title{ font-size: var(--fs-hero); font-weight:700; margin-bottom: var(--sp-5); }
+/* EXPERIMENTAL — hl--solo on the hero. Baloo 2's natural ascent (1.078em)
+   is almost exactly the heading's line-height (1.08em), so the line right
+   after a tall inline-block needs a small compensating margin or it visually
+   collides. Verified empirically: 0.30em leaves a small clean gap. */
+.hero__title .hl--solo.hl--last{ margin-bottom: 0.30em; }
 .hero__title em{ font-style:normal; color:var(--poppy); position:relative; white-space:nowrap; }
 .hero__subtitle{ font-size: var(--fs-lg); color: var(--ink-soft); max-width: 46ch; margin-bottom: var(--sp-6); }
 .hero__ctas{ display:flex; flex-wrap:wrap; gap: var(--sp-4); margin-bottom: var(--sp-6); }
@@ -683,7 +688,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container hero__inner">
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Android games for curious minds, ages 3+</span>
-        <h1 class="hero__title"><span class="hl hl--sky">Where every gap in learning becomes</span> <em>a game</em>.</h1>
+        <h1 class="hero__title"><span class="hl hl--sky hl--solo">Where every gap in</span><br><span class="hl hl--sky hl--solo hl--last">learning becomes</span><br><em>a game</em>.</h1>
         <p class="hero__subtitle">We believe kids learn best — and remember more — when they're having fun. So every Play Gaps game turns the basics into play: numbers, letters, shapes, colors, and animals, dressed up as something your child actually wants to tap, giggle, and learn through.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore our games</a>
