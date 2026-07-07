@@ -675,18 +675,33 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
 .rb-source a{ text-underline-offset:2px; }
 
 /* ============================================================
-   QR POPUP (desktop non-Android users)
+   CHOICE MODAL (desktop non-Android users)
    ============================================================ */
-.qr-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.55); backdrop-filter:blur(4px); z-index:900; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .2s; }
-.qr-backdrop.is-open{ opacity:1; pointer-events:auto; }
-.qr-modal{ background:var(--surface); border:var(--border-w) solid var(--line); border-radius:var(--radius-lg); padding:var(--sp-6); display:flex; flex-direction:column; align-items:center; gap:var(--sp-4); max-width:340px; width:90vw; box-shadow:0 24px 64px rgba(0,0,0,.22); transform:scale(.94) translateY(8px); transition:transform .22s cubic-bezier(.34,1.26,.64,1); }
-.qr-backdrop.is-open .qr-modal{ transform:scale(1) translateY(0); }
-.qr-modal__title{ font-family:var(--font-display); font-weight:800; font-size:1.15rem; text-align:center; line-height:1.25; }
-.qr-modal__sub{ font-size:var(--fs-sm); color:var(--ink-soft); text-align:center; line-height:1.55; }
-.qr-modal__img{ width:200px; height:200px; border-radius:12px; border:3px solid var(--line); display:block; }
-.qr-modal__close{ position:absolute; top:var(--sp-3); right:var(--sp-3); background:transparent; border:none; cursor:pointer; color:var(--ink-soft); padding:4px; border-radius:6px; display:flex; }
-.qr-modal__close:hover{ color:var(--ink); }
-.qr-modal{ position:relative; }
+.cm-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.6); backdrop-filter:blur(6px); z-index:900; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .22s ease; padding:var(--sp-4); }
+.cm-backdrop.is-open{ opacity:1; pointer-events:auto; }
+.cm-modal{ background:var(--surface); border:var(--border-w) solid var(--line); border-radius:20px; width:min(680px,95vw); box-shadow:0 32px 80px rgba(0,0,0,.28); transform:scale(.93) translateY(12px); transition:transform .26s cubic-bezier(.34,1.26,.64,1); position:relative; overflow:hidden; }
+.cm-backdrop.is-open .cm-modal{ transform:scale(1) translateY(0); }
+.cm-close{ position:absolute; top:14px; right:14px; background:var(--paper-dim); border:var(--border-w) solid var(--line); cursor:pointer; color:var(--ink-soft); padding:6px; border-radius:8px; display:flex; line-height:1; z-index:2; transition:color .15s,background .15s; }
+.cm-close:hover{ color:var(--ink); background:var(--line); }
+.cm-header{ padding:var(--sp-5) var(--sp-6) 0; text-align:center; }
+.cm-header__title{ font-family:var(--font-display); font-weight:800; font-size:1.25rem; line-height:1.2; margin-bottom:6px; }
+.cm-header__sub{ font-size:var(--fs-sm); color:var(--ink-soft); line-height:1.5; }
+.cm-divider-row{ display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-4) var(--sp-6); }
+.cm-divider-line{ flex:1; height:1px; background:var(--line); }
+.cm-divider-text{ font-size:var(--fs-xs); color:var(--ink-soft); font-weight:600; white-space:nowrap; }
+.cm-panels{ display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.cm-panel{ display:flex; flex-direction:column; align-items:center; gap:var(--sp-3); padding:var(--sp-5) var(--sp-5) var(--sp-6); border-top:var(--border-w) solid var(--line); position:relative; }
+.cm-panel + .cm-panel{ border-left:var(--border-w) solid var(--line); }
+.cm-panel__badge{ display:inline-flex; align-items:center; gap:6px; font-size:var(--fs-xs); font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 10px; border-radius:var(--radius-pill); }
+.cm-panel__badge--scan{ background:color-mix(in srgb,var(--sky) 18%,transparent); color:var(--sky); border:1.5px solid color-mix(in srgb,var(--sky) 30%,transparent); }
+.cm-panel__badge--desktop{ background:color-mix(in srgb,var(--leaf) 18%,transparent); color:var(--leaf); border:1.5px solid color-mix(in srgb,var(--leaf) 30%,transparent); }
+.cm-panel__title{ font-family:var(--font-display); font-weight:700; font-size:1rem; text-align:center; line-height:1.3; }
+.cm-panel__body{ font-size:var(--fs-sm); color:var(--ink-soft); text-align:center; line-height:1.55; flex:1; }
+.cm-qr{ width:168px; height:168px; border-radius:12px; border:3px solid var(--line); display:block; background:var(--paper-dim); }
+.cm-btn{ display:inline-flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:0.95rem; padding:12px 22px; border-radius:var(--radius-pill); text-decoration:none; transition:transform .15s,box-shadow .15s; cursor:pointer; border:none; }
+.cm-btn--desktop{ background:var(--ink); color:var(--surface); }
+.cm-btn--desktop:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.18); }
+@media(max-width:540px){ .cm-panels{ grid-template-columns:1fr; } .cm-panel + .cm-panel{ border-left:none; border-top:var(--border-w) solid var(--line); } .cm-qr{ width:140px; height:140px; } }
 </style>
 </head>
 <body>
@@ -1026,15 +1041,41 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
   </section>
 </main>
 
-<!-- QR code popup for desktop visitors -->
-<div class="qr-backdrop" id="qrBackdrop" role="dialog" aria-modal="true" aria-label="Open on your phone">
-  <div class="qr-modal">
-    <button class="qr-modal__close" id="qrClose" aria-label="Close">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+<!-- Choice modal for desktop visitors: scan QR or open in browser -->
+<div class="cm-backdrop" id="cmBackdrop" role="dialog" aria-modal="true" aria-label="Get the app" tabindex="-1">
+  <div class="cm-modal">
+    <button class="cm-close" id="cmClose" aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
-    <p class="qr-modal__title">Open on your phone</p>
-    <img class="qr-modal__img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdev%3Fid%3D4612285757053932453" alt="QR code to open Play Gaps on Google Play" loading="lazy">
-    <p class="qr-modal__sub">Scan this with your phone camera.<br>It opens directly on Google Play — no typing needed.</p>
+    <div class="cm-header">
+      <p class="cm-header__title">How would you like to open this?</p>
+      <p class="cm-header__sub">Choose whatever works best for you. Both take you to the same Google Play page.</p>
+    </div>
+    <div class="cm-panels">
+      <!-- Option A: QR scan on phone -->
+      <div class="cm-panel">
+        <span class="cm-panel__badge cm-panel__badge--scan">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="4" height="4" rx=".5"/></svg>
+          Scan on your phone
+        </span>
+        <p class="cm-panel__title">Open on your phone</p>
+        <img class="cm-qr" id="cmQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=168x168&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdev%3Fid%3D4612285757053932453" alt="QR code — scan to open on Google Play" loading="lazy">
+        <p class="cm-panel__body">Point your phone camera at the QR code. It opens directly on Google Play, no typing needed.</p>
+      </div>
+      <!-- Option B: open in desktop browser -->
+      <div class="cm-panel">
+        <span class="cm-panel__badge cm-panel__badge--desktop">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>
+          Open in this browser
+        </span>
+        <p class="cm-panel__title">Continue on desktop</p>
+        <p class="cm-panel__body">Go straight to the Google Play listing in your current browser. You can explore the app page, read reviews, and send it to your phone from there.</p>
+        <a href="#" id="cmDesktopLink" class="cm-btn cm-btn--desktop" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          Open on Google Play
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1344,26 +1385,58 @@ document.getElementById("catalogShowAll").addEventListener("click", function(){
   renderCatalog();
 });
 
-/* wire up Play Store CTA links — show QR popup on desktop non-Android, open Play Store directly on mobile */
+/* =====================================================
+   CHOICE MODAL — desktop non-Android visitors
+   Both options (QR scan + desktop link) are shown
+   with equal weight. When triggered from a game card,
+   both target that specific game's Play Store URL.
+   ===================================================== */
 var isAndroid = /android/i.test(navigator.userAgent);
-var isMobile = /mobi|tablet|ipad|iphone/i.test(navigator.userAgent);
-var showQR = !isAndroid && !isMobile;
-var qrBackdrop = document.getElementById("qrBackdrop");
-var qrClose = document.getElementById("qrClose");
+var isMobile  = /mobi|tablet|ipad|iphone/i.test(navigator.userAgent);
+var showModal = !isAndroid && !isMobile;
 
-function openQR(e){ e.preventDefault(); qrBackdrop.classList.add("is-open"); qrBackdrop.focus(); }
-function closeQR(){ qrBackdrop.classList.remove("is-open"); }
-if (qrClose) qrClose.addEventListener("click", closeQR);
-if (qrBackdrop){
-  qrBackdrop.addEventListener("click", function(e){ if (e.target === qrBackdrop) closeQR(); });
-  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeQR(); });
+var cmBackdrop   = document.getElementById("cmBackdrop");
+var cmClose      = document.getElementById("cmClose");
+var cmQrImg      = document.getElementById("cmQrImg");
+var cmDesktopLink= document.getElementById("cmDesktopLink");
+
+function openChoiceModal(e, url){
+  e.preventDefault();
+  var targetUrl = url || DEV_PAGE;
+  /* update QR src to target this specific URL */
+  var encoded = encodeURIComponent(targetUrl);
+  cmQrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=168x168&data=" + encoded;
+  cmDesktopLink.href = targetUrl;
+  cmBackdrop.classList.add("is-open");
+  cmBackdrop.focus();
+}
+function closeChoiceModal(){
+  cmBackdrop.classList.remove("is-open");
 }
 
+if (cmClose) cmClose.addEventListener("click", closeChoiceModal);
+if (cmBackdrop){
+  cmBackdrop.addEventListener("click", function(e){ if (e.target === cmBackdrop) closeChoiceModal(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeChoiceModal(); });
+  /* desktop link closes the modal after a brief delay so the blur still shows */
+  if (cmDesktopLink) cmDesktopLink.addEventListener("click", function(){ setTimeout(closeChoiceModal, 200); });
+}
+
+/* Wire up the named Play Store CTA buttons in nav / hero / band / footer */
 ["navStoreLink","navStoreBtn","navStoreLinkMobile","heroStoreLink","bandStoreLink","footerStoreLink"].forEach(function(id){
   var el = document.getElementById(id);
   if (!el) return;
   el.href = DEV_PAGE;
-  if (showQR) el.addEventListener("click", openQR);
+  if (showModal) el.addEventListener("click", function(e){ openChoiceModal(e, DEV_PAGE); });
+});
+
+/* Wire up game cards — each card targets its own Play Store URL */
+document.addEventListener("click", function(e){
+  if (!showModal) return;
+  var card = e.target.closest(".game-card");
+  if (card && card.href && card.href.indexOf("play.google.com") !== -1){
+    openChoiceModal(e, card.href);
+  }
 });
 document.getElementById("navStoreBtn").style.display = window.innerWidth >= 860 ? "inline-flex" : "none";
 window.addEventListener("resize", function(){
