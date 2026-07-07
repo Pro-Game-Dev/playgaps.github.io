@@ -432,12 +432,12 @@ input,select{ font: inherit; color: inherit; }
 /* Custom tight, active marker specifically for the H1 "fun" word */
 .hl-fun {
   display: inline-block;
-  background-color: #008ca8; /* Active, vibrant skyblue/teal */
-  color: #fff;
-  line-height: 1.05;
-  padding: 0.02em 0.18em;
+  background-color: color-mix(in srgb, #008ca8 25%, transparent); /* Active skyblue, 25% opacity */
+  color: inherit;
+  line-height: 1.12;
+  padding: 0.03em 0.22em;
   margin: 0 0.05em;
-  border-radius: 6px;
+  border-radius: 999px;
 }
 .hl--poppy{    --hl-bg: color-mix(in srgb, var(--poppy) 17%, transparent); }
 
