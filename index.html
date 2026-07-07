@@ -672,6 +672,21 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
 .rb-bar--leaf{ background:var(--leaf); }
 .rb-divider{ height:1.5px; background:var(--line); margin:0; border:none; opacity:.5; }
 .rb-source{ font-size:var(--fs-xs); color:var(--ink-soft); text-align:center; max-width:68ch; margin-inline:auto; font-style:italic; line-height:1.6; }
+.rb-source a{ text-underline-offset:2px; }
+
+/* ============================================================
+   QR POPUP (desktop non-Android users)
+   ============================================================ */
+.qr-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.55); backdrop-filter:blur(4px); z-index:900; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .2s; }
+.qr-backdrop.is-open{ opacity:1; pointer-events:auto; }
+.qr-modal{ background:var(--surface); border:var(--border-w) solid var(--line); border-radius:var(--radius-lg); padding:var(--sp-6); display:flex; flex-direction:column; align-items:center; gap:var(--sp-4); max-width:340px; width:90vw; box-shadow:0 24px 64px rgba(0,0,0,.22); transform:scale(.94) translateY(8px); transition:transform .22s cubic-bezier(.34,1.26,.64,1); }
+.qr-backdrop.is-open .qr-modal{ transform:scale(1) translateY(0); }
+.qr-modal__title{ font-family:var(--font-display); font-weight:800; font-size:1.15rem; text-align:center; line-height:1.25; }
+.qr-modal__sub{ font-size:var(--fs-sm); color:var(--ink-soft); text-align:center; line-height:1.55; }
+.qr-modal__img{ width:200px; height:200px; border-radius:12px; border:3px solid var(--line); display:block; }
+.qr-modal__close{ position:absolute; top:var(--sp-3); right:var(--sp-3); background:transparent; border:none; cursor:pointer; color:var(--ink-soft); padding:4px; border-radius:6px; display:flex; }
+.qr-modal__close:hover{ color:var(--ink); }
+.qr-modal{ position:relative; }
 </style>
 </head>
 <body>
@@ -713,8 +728,8 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     <div class="container hero__inner">
       <div>
         <span class="hero__eyebrow"><span class="pip" aria-hidden="true"></span>Pre-school learning games &middot; Ages 3 and up &middot; Free on Google Play</span>
-        <h1 class="hero__title">Learning that feels exactly <em>like playing</em>.</h1>
-        <p class="hero__subtitle">Most kids push back on flashcards and worksheets. Not because they are slow. Simply because sitting still and studying is not fun. Play Gaps takes the same letters, numbers, and shapes from those worksheets and builds them into games your child will ask to play again. The learning is real. The studying part is gone.</p>
+        <h1 class="hero__title">Free learning games for kids <em>ages 3 and up</em>.</h1>
+        <p class="hero__subtitle">Letters, numbers, shapes, animals, and colors — built into games kids will ask to play again. The learning is real. The studying part is gone. 16 games, 1.5M+ downloads, all free on Google Play.</p>
         <div class="hero__ctas">
           <a href="#games" class="btn btn--primary">Explore the games</a>
           <a href="#" id="heroStoreLink" class="btn btn--ghost" target="_blank" rel="noopener">See us on Google Play</a>
@@ -739,91 +754,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     </div>
   </section>
 
-  <!-- ============ RESEARCH BARS ============ -->
-  <section class="section research-bars" id="research">
-    <div class="container">
-      <div class="section__head reveal">
-        <span class="section__eyebrow">What research shows</span>
-        <h2 class="section__title">Kids learn more when they are <span class="hl hl--marigold hl--solo">having fun</span>. Science says so.</h2>
-        <p class="section__sub">Published studies on game-based learning in early childhood show clear, measurable differences when kids learn through play instead of traditional study methods.</p>
-      </div>
-      <div class="rb-grid reveal" id="rbGrid">
-        <div class="rb-card">
-          <h3 class="rb-card__label">How long kids stay focused in one session</h3>
-          <div class="rb-bars">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Worksheets and books</span>
-                <span class="rb-bar-val rb-bar-val--muted">8 min</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--muted" style="width:25%;" data-delay="0"></div>
-              </div>
-            </div>
-            <hr class="rb-divider">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Play Gaps games</span>
-                <span class="rb-bar-val rb-bar-val--accent">24 min</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--poppy" style="width:75%;" data-delay="200"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rb-card">
-          <h3 class="rb-card__label">Information kids recall the next day</h3>
-          <div class="rb-bars">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Traditional learning</span>
-                <span class="rb-bar-val rb-bar-val--muted">30%</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--muted" style="width:30%;" data-delay="100"></div>
-              </div>
-            </div>
-            <hr class="rb-divider">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Game-based learning</span>
-                <span class="rb-bar-val rb-bar-val--accent">70%</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--sky" style="width:70%;" data-delay="300"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rb-card">
-          <h3 class="rb-card__label">Kids who ask to do it again</h3>
-          <div class="rb-bars">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Traditional methods</span>
-                <span class="rb-bar-val rb-bar-val--muted">35%</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--muted" style="width:35%;" data-delay="200"></div>
-              </div>
-            </div>
-            <hr class="rb-divider">
-            <div class="rb-bar-row">
-              <div class="rb-bar-meta">
-                <span class="rb-bar-name">Play Gaps games</span>
-                <span class="rb-bar-val rb-bar-val--accent">90%</span>
-              </div>
-              <div class="rb-bar-track">
-                <div class="rb-bar rb-bar--leaf" style="width:90%;" data-delay="400"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="rb-source">Approximate figures based on published research in early childhood game-based learning, including studies from NIH, Frontiers in Psychology, and the Cambridge-LEGO Foundation research program.</p>
-    </div>
-  </section>
+
 
   <!-- ============ SHOWCASE (landscape screenshots) ============ -->
   <section class="section showcase" id="showcase">
@@ -889,7 +820,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
             </select>
           </div>
         </div>
-        <p class="section__sub">16 games, all free on Google Play: numbers, letters, shapes, animals, colors, spellings, and more. Tap any card to open it directly on the Play Store.</p>
+        <p class="section__sub">16 games, all free on Google Play: numbers, letters, shapes, animals, colors, spellings, and more. Tap any card — it opens straight to that game's official Google Play listing. Nothing installs from this site.</p>
       </div>
 
       <div class="catalog reveal" id="catalog">
@@ -903,31 +834,89 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     </div>
   </section>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="section" style="padding-top:0;">
+  <!-- ============ RESEARCH BARS ============ -->
+  <section class="section research-bars" id="research">
     <div class="container">
       <div class="section__head reveal">
-        <span class="section__eyebrow">Getting started</span>
-        <h2 class="section__title"><span class="hl hl--sky hl--solo">Three taps</span> from this page to playing.</h2>
-        <p class="section__sub">We don't host downloads here. Every game card opens straight to its Google Play listing, the same place you already trust for every other app on your phone.</p>
+        <span class="section__eyebrow">What research shows</span>
+        <h2 class="section__title">Game-based learning works. <span class="hl hl--marigold hl--solo">The numbers prove it.</span></h2>
+        <p class="section__sub">Published studies on early childhood learning consistently show that when kids learn through play, they focus longer, remember more, and want to keep going.</p>
       </div>
-      <div class="how-grid reveal">
-        <div class="how-step">
-          <div class="how-step__num" aria-hidden="true"></div>
-          <h3 class="how-step__title">Choose a game</h3>
-          <p class="how-step__body">Browse the library, search by name, or filter by skill: numbers, letters, shapes, and more.</p>
+      <div class="rb-grid reveal" id="rbGrid">
+        <div class="rb-card">
+          <h3 class="rb-card__label">How long kids stay focused in one session</h3>
+          <div class="rb-bars">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Worksheets and books</span>
+                <span class="rb-bar-val rb-bar-val--muted">~8 min</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--muted" style="width:25%;" data-delay="0"></div>
+              </div>
+            </div>
+            <hr class="rb-divider">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Game-based learning</span>
+                <span class="rb-bar-val rb-bar-val--accent">~24 min</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--poppy" style="width:75%;" data-delay="200"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="how-step">
-          <div class="how-step__num" aria-hidden="true"></div>
-          <h3 class="how-step__title">Open on Google Play</h3>
-          <p class="how-step__body">Tap the card. It opens that game's official Google Play page in a new tab. Nothing installs from this site.</p>
+        <div class="rb-card">
+          <h3 class="rb-card__label">Information kids recall the next day</h3>
+          <div class="rb-bars">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Traditional learning</span>
+                <span class="rb-bar-val rb-bar-val--muted">~30%</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--muted" style="width:30%;" data-delay="100"></div>
+              </div>
+            </div>
+            <hr class="rb-divider">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Game-based learning</span>
+                <span class="rb-bar-val rb-bar-val--accent">~70%</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--sky" style="width:70%;" data-delay="300"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="how-step">
-          <div class="how-step__num" aria-hidden="true"></div>
-          <h3 class="how-step__title">Play and learn</h3>
-          <p class="how-step__body">Install it free, like any Android app. No account needed. Your child can start in seconds.</p>
+        <div class="rb-card">
+          <h3 class="rb-card__label">Kids who want to do it again</h3>
+          <div class="rb-bars">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Traditional methods</span>
+                <span class="rb-bar-val rb-bar-val--muted">~35%</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--muted" style="width:35%;" data-delay="200"></div>
+              </div>
+            </div>
+            <hr class="rb-divider">
+            <div class="rb-bar-row">
+              <div class="rb-bar-meta">
+                <span class="rb-bar-name">Game-based learning</span>
+                <span class="rb-bar-val rb-bar-val--accent">~90%</span>
+              </div>
+              <div class="rb-bar-track">
+                <div class="rb-bar rb-bar--leaf" style="width:90%;" data-delay="400"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <p class="rb-source">Based on research in early childhood game-based learning. Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener" style="color:inherit;">NIH PubMed</a>, <a href="https://www.frontiersin.org/journals/psychology" target="_blank" rel="noopener" style="color:inherit;">Frontiers in Psychology</a>, <a href="https://www.lego.com/en-us/sustainability/children/learning-through-play" target="_blank" rel="noopener" style="color:inherit;">LEGO Foundation</a>. Figures are approximate representations of published findings.</p>
     </div>
   </section>
 
@@ -949,7 +938,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         </div>
         <div class="why-card reveal">
           <div class="why-card__icon tile--sky">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V6a2 2 0 1 1 4 0v5"/><path d="M13 7.5a2 2 0 1 1 4 0v5"/><path d="M17 9.5a2 2 0 1 1 4 0v4.5a6 6 0 0 1-6 6h-2a7 7 0 0 1-5.6-2.8L4 12.8c-.6-.9-.3-2 .6-2.4.8-.4 1.7-.1 2.3.6L9 13.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
           </div>
           <h3 class="why-card__title">Built for little hands</h3>
           <p class="why-card__body">Big buttons, clear visuals, no reading required to start. Every game is designed around how a 3-year-old actually holds a phone and what they naturally want to tap.</p>
@@ -970,7 +959,7 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
         </div>
         <div class="why-card reveal">
           <div class="why-card__icon" style="background:#EDEFF4;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--tile-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
           </div>
           <h3 class="why-card__title">Free. Genuinely free.</h3>
           <p class="why-card__body">Every game is free to download. Some have ads. That is how we keep building. Any paid extras are clearly optional and never block the core game.</p>
@@ -1036,6 +1025,18 @@ footer{ padding-block: var(--sp-8) var(--sp-6); }
     </div>
   </section>
 </main>
+
+<!-- QR code popup for desktop visitors -->
+<div class="qr-backdrop" id="qrBackdrop" role="dialog" aria-modal="true" aria-label="Open on your phone">
+  <div class="qr-modal">
+    <button class="qr-modal__close" id="qrClose" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="qr-modal__title">Open on your phone</p>
+    <img class="qr-modal__img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdev%3Fid%3D4612285757053932453" alt="QR code to open Play Gaps on Google Play" loading="lazy">
+    <p class="qr-modal__sub">Scan this with your phone camera.<br>It opens directly on Google Play — no typing needed.</p>
+  </div>
+</div>
 
 <footer>
   <div class="container">
@@ -1343,10 +1344,26 @@ document.getElementById("catalogShowAll").addEventListener("click", function(){
   renderCatalog();
 });
 
-/* wire up Play Store CTA links to the developer page */
+/* wire up Play Store CTA links — show QR popup on desktop non-Android, open Play Store directly on mobile */
+var isAndroid = /android/i.test(navigator.userAgent);
+var isMobile = /mobi|tablet|ipad|iphone/i.test(navigator.userAgent);
+var showQR = !isAndroid && !isMobile;
+var qrBackdrop = document.getElementById("qrBackdrop");
+var qrClose = document.getElementById("qrClose");
+
+function openQR(e){ e.preventDefault(); qrBackdrop.classList.add("is-open"); qrBackdrop.focus(); }
+function closeQR(){ qrBackdrop.classList.remove("is-open"); }
+if (qrClose) qrClose.addEventListener("click", closeQR);
+if (qrBackdrop){
+  qrBackdrop.addEventListener("click", function(e){ if (e.target === qrBackdrop) closeQR(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeQR(); });
+}
+
 ["navStoreLink","navStoreBtn","navStoreLinkMobile","heroStoreLink","bandStoreLink","footerStoreLink"].forEach(function(id){
   var el = document.getElementById(id);
-  if (el) el.href = DEV_PAGE;
+  if (!el) return;
+  el.href = DEV_PAGE;
+  if (showQR) el.addEventListener("click", openQR);
 });
 document.getElementById("navStoreBtn").style.display = window.innerWidth >= 860 ? "inline-flex" : "none";
 window.addEventListener("resize", function(){
