@@ -4,15 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Play Gaps</title>
-<meta name="description" content="How Play Gaps handles data across its educational Android games for kids ages 3+.">
+<meta name="description" content="Play Gaps' Privacy Policy for our general-audience apps and games: what we collect, how ads and purchases work, and your privacy rights.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://playgaps.com/privacy-policy.html">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F8FA">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14161B">
+
+<meta property="og:title" content="Privacy Policy — Play Gaps">
+<meta property="og:description" content="What Play Gaps' general-audience apps and games do (and don't) collect, in plain language.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://playgaps.com/privacy-policy.html">
+<meta property="og:site_name" content="Play Gaps">
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' fill='%23E8503F' stroke='%231C2027' stroke-width='5'/%3E%3Ctext x='32' y='44' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='%231C2027' text-anchor='middle'%3E1%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/logo-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/logo-180.png">
+<link rel="manifest" href="site.webmanifest">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
 <script>
 (function(){
   try{
@@ -23,6 +36,21 @@
   }catch(e){}
 })();
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "url": "https://playgaps.com/privacy-policy.html",
+  "isPartOf": { "@id": "https://playgaps.com/#website" },
+  "about": { "@id": "https://playgaps.com/#organization" },
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-07-12",
+  "inLanguage": "en"
+}
+</script>
+
 <style>
 :root{
   color-scheme: light dark;
@@ -32,133 +60,376 @@
   --line:      light-dark(#1C2027, #EDEFF4);
   --ink:       light-dark(#1C2027, #EDEFF4);
   --ink-soft:  light-dark(#4A5160, #A6AEBD);
+
   --poppy:     #E8503F;
   --marigold:  #FFC53D;
-  --swatch-dark:  #1C2027;
-  --tile-ink:  #1C2027;
+  --sky:       #2F6FE4;
+  --leaf:      #2FAE6B;
+
   --font-display: 'Baloo 2', system-ui, sans-serif;
   --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
-  --radius-md: 16px; --radius-lg: 22px; --radius-pill: 999px; --border-w: 3px;
-  --shadow-sm: 3px 3px 0 var(--line);
-  --container: 800px;
+  --font-hand:    'Caveat', cursive;
+
+  --fs-h2:    clamp(1.6rem, 1.6vw + 1rem, 2.2rem);
+  --fs-sm:    0.875rem;
+  --fs-xs:    0.75rem;
+
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --border-w: 3px;
+
+  --shadow-md: 5px 5px 0 var(--line);
+  --ease: cubic-bezier(.22,.9,.32,1.18);
+  --container: 1160px;
 }
 :root[data-theme="light"]{ color-scheme: light; }
 :root[data-theme="dark"]{  color-scheme: dark; }
-*,*::before,*::after{ box-sizing:border-box; }
+
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
 body{
-  margin:0; font-family: var(--font-body); font-size:1rem; line-height:1.65;
-  color: var(--ink); background: var(--paper); -webkit-font-smoothing:antialiased;
+  margin:0; font-family: var(--font-body); font-size: 1rem;
+  line-height: 1.6; color: var(--ink); background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(circle at 1px 1px, light-dark(rgba(28,32,39,.05), rgba(255,255,255,.045)) 1px, transparent 0);
+  background-size: 22px 22px;
 }
-h1,h2{ font-family: var(--font-display); line-height:1.15; letter-spacing:-0.01em; }
-a{ color: var(--poppy); font-weight:700; text-decoration: none; }
-a:hover{ text-decoration: underline; }
-.container{ width:100%; max-width: var(--container); margin-inline:auto; padding-inline: 24px; }
-header.nav{
-  padding-block:20px; border-bottom: var(--border-w) solid var(--line); background: var(--surface);
+h1,h2,h3,h4{ font-family: var(--font-display); margin:0; line-height:1.15; letter-spacing:-0.01em; }
+p{ margin:0; }
+ul,ol{ margin:0; padding:0; }
+a{ color:inherit; text-decoration:none; }
+img,svg{ display:block; max-width:100%; }
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+
+.container{ width:100%; max-width:var(--container); margin-inline:auto; padding-inline:var(--sp-5); }
+.skip-link{
+  position:absolute; top:-100px; left:var(--sp-4); background:var(--ink); color:var(--paper);
+  padding:var(--sp-3) var(--sp-5); border-radius:var(--radius-sm); z-index:1000;
+  transition:top .2s var(--ease); font-weight:600;
 }
-.nav__inner{ display:flex; align-items:center; justify-content:space-between; max-width: var(--container); margin-inline:auto; padding-inline:24px; }
-.nav__logo{ display:flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--ink); }
-.nav__logo-dot{ width:14px; height:14px; border-radius:4px; background:var(--poppy); border:2px solid var(--swatch-dark); transform: rotate(12deg); }
-.back-link{ font-size:.9rem; }
-main{ padding-block: 56px 96px; }
-.eyebrow{
-  display:inline-block; font-weight:700; font-size:.75rem; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--poppy); margin-bottom:12px;
+.skip-link:focus{ top:var(--sp-4); }
+:focus-visible{ outline:3px solid var(--sky); outline-offset:3px; border-radius:4px; }
+
+/* NAV */
+.nav{
+  position:sticky; top:0; z-index:100; width:100%;
+  background: light-dark(rgba(246,248,250,.86), rgba(20,22,27,.86));
+  -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: var(--border-w) solid var(--line);
 }
-h1{ font-size: clamp(2rem, 3vw + 1rem, 2.8rem); margin: 0 0 8px; }
-.updated{ color: var(--ink-soft); font-size:.9rem; margin-bottom: 40px; }
-.callout{
-  background: var(--marigold); color: var(--swatch-dark); border: var(--border-w) solid var(--swatch-dark);
-  border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 40px; font-weight:600; box-shadow: var(--shadow-sm);
+.nav__inner{ display:flex; align-items:center; justify-content:space-between; padding-block:var(--sp-4); gap:var(--sp-4); }
+.nav__logo{ display:flex; align-items:center; gap:var(--sp-2); font-family:var(--font-display); font-weight:700; font-size:1.3rem; }
+.nav__logo-img{ width:36px; height:36px; border-radius:50%; object-fit:cover; }
+.nav__right{ display:flex; align-items:center; gap:var(--sp-3); }
+.theme-toggle{
+  display:flex; align-items:center; justify-content:center; width:40px; height:40px;
+  border:var(--border-w) solid var(--line); border-radius:var(--radius-sm); background:var(--surface);
+  flex-shrink:0; transition:transform .15s var(--ease);
 }
-section{ margin-bottom: 36px; }
-h2{ font-size: 1.25rem; margin: 0 0 12px; }
-p{ margin: 0 0 12px; color: var(--ink); }
-p.soft{ color: var(--ink-soft); }
-ul{ margin:0 0 12px; padding-left: 20px; }
-li{ margin-bottom: 6px; }
-.card{
-  background: var(--surface); border: var(--border-w) solid var(--line); border-radius: var(--radius-lg);
-  padding: 24px; margin-bottom: 12px;
+.theme-toggle:hover{ transform:translate(-1px,-1px); }
+.theme-toggle svg{ width:18px; height:18px; }
+.theme-toggle .icon-sun{ display:none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+
+/* BUTTONS */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-family:var(--font-body); font-weight:700; font-size:var(--fs-sm);
+  padding:9px 16px; border-radius:var(--radius-pill); border:var(--border-w) solid var(--line);
+  box-shadow:3px 3px 0 var(--line); min-height:36px;
+  transition:transform .15s var(--ease), box-shadow .15s var(--ease); white-space:nowrap;
 }
-footer{ border-top: var(--border-w) solid var(--line); padding-block: 32px; text-align:center; color: var(--ink-soft); font-size:.85rem; }
+.btn:hover{ transform:translate(-2px,-2px); box-shadow:var(--shadow-md); }
+.btn:active{ transform:translate(1px,1px); box-shadow:1px 1px 0 var(--line); }
+.btn--ghost{ background:var(--surface); color:var(--ink); }
+
+/* PAGE HEAD */
+.legal-hero{ padding-block: var(--sp-8) var(--sp-6); }
+.legal-eyebrow{
+  display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:var(--fs-xs);
+  text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); background:var(--paper-dim);
+  border:2px solid var(--line); border-radius:var(--radius-pill); padding:6px 14px; margin-bottom:var(--sp-4);
+}
+.legal-hero h1{ font-size:var(--fs-h2); margin-bottom:var(--sp-3); }
+.legal-updated{ color:var(--ink-soft); font-size:var(--fs-sm); font-weight:600; }
+.legal-scope-note{
+  margin-top:var(--sp-4); font-size:var(--fs-sm); color:var(--ink-soft); max-width:65ch; line-height:1.6;
+  background:var(--paper-dim); border-left:4px solid var(--sky); border-radius:8px; padding:var(--sp-4) var(--sp-5);
+}
+.legal-scope-note a{ color:var(--sky); font-weight:700; text-decoration:underline; }
+
+/* SUMMARY BOX */
+.summary-box{
+  background:var(--surface); border:var(--border-w) solid var(--line); border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-md); padding:var(--sp-6); margin-bottom:var(--sp-8);
+  border-left: 8px solid var(--sky);
+}
+.summary-box h2{ font-size:1.25rem; margin-bottom:var(--sp-4); }
+.summary-list{ display:flex; flex-direction:column; gap:var(--sp-3); margin-bottom:var(--sp-5); list-style:none; }
+.summary-list li{ display:flex; gap:12px; align-items:flex-start; line-height:1.55; }
+.summary-list li::before{
+  content:"✓"; flex-shrink:0; width:22px; height:22px; border-radius:50%; margin-top:2px;
+  background:var(--sky); color:#fff; font-weight:800; font-size:.75rem;
+  display:flex; align-items:center; justify-content:center;
+}
+.summary-contact{ padding-top:var(--sp-4); border-top:2px solid var(--paper-dim); font-size:var(--fs-sm); color:var(--ink-soft); }
+.summary-contact a{ color:var(--sky); font-weight:700; text-decoration:underline; }
+
+/* LAYOUT + TOC */
+.legal-layout{ display:grid; grid-template-columns:1fr; gap:var(--sp-7); align-items:start; padding-bottom:80px; }
+.toc{ background:var(--paper-dim); border:var(--border-w) solid var(--line); border-radius:var(--radius-md); padding:var(--sp-5); }
+.toc h4{ font-size:var(--fs-xs); text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); margin-bottom:var(--sp-3); font-family:var(--font-body); font-weight:700; }
+.toc ol{ list-style:none; display:flex; flex-direction:column; gap:2px; }
+.toc a{ font-size:var(--fs-sm); font-weight:600; display:block; padding:7px 4px; border-radius:8px; }
+.toc a:hover{ color:var(--poppy); background:var(--surface); }
+
+.policy-content{ max-width:70ch; }
+.policy-content section{ padding-block:var(--sp-6); border-top:2px solid var(--paper-dim); }
+.policy-content section:first-child{ border-top:none; padding-top:0; }
+.policy-content h2{ font-size:1.25rem; margin-bottom:var(--sp-4); scroll-margin-top:96px; }
+.policy-content h3{ font-size:1rem; margin: var(--sp-4) 0 var(--sp-2); }
+.policy-content p{ margin-bottom:var(--sp-3); }
+.policy-content p:last-child{ margin-bottom:0; }
+.policy-content ul{ display:flex; flex-direction:column; gap:var(--sp-2); margin:var(--sp-3) 0 var(--sp-4); padding-left:1.25em; list-style:disc; }
+.policy-content li{ line-height:1.6; }
+.policy-content a{ color:var(--sky); font-weight:600; text-decoration:underline; text-underline-offset:2px; }
+.policy-content strong{ font-weight:700; }
+.tier-box{
+  border:2px solid var(--line); border-radius:var(--radius-md); padding:var(--sp-4) var(--sp-5); margin: var(--sp-4) 0;
+}
+.tier-box + .tier-box{ margin-top:var(--sp-3); }
+.tier-box h3{ margin-top:0; display:flex; align-items:center; gap:8px; }
+.tier-box.tier-everyone{ border-left:6px solid var(--leaf); }
+.tier-box.tier-teen{ border-left:6px solid var(--marigold); }
+
+footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-dim); }
+.footer__logo{ display:flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:1.1rem; }
+.footer__bottom-only{ display:flex; flex-wrap:wrap; gap:var(--sp-4); align-items:center; justify-content:space-between; font-size:var(--fs-sm); color:var(--ink-soft); }
+.footer__bottom-only a{ color:var(--ink-soft); text-decoration:underline; }
+.footer__bottom-only a:hover{ color:var(--poppy); }
+
+@media(min-width:900px){
+  .legal-layout{ grid-template-columns:220px 1fr; }
+  .toc{ position:sticky; top:96px; }
+}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="nav">
-  <div class="nav__inner">
-    <a href="/" class="nav__logo"><span class="nav__logo-dot" aria-hidden="true"></span>Play Gaps</a>
-    <a href="/" class="back-link">&larr; Back to home</a>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__logo">
+      <img class="nav__logo-img" src="assets/logo.png" alt="" width="36" height="36" decoding="async" onerror="this.remove()">
+      Play Gaps
+    </a>
+    <div class="nav__right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+      </button>
+      <a href="/" class="btn btn--ghost">← Back to Play Gaps</a>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="main">
   <div class="container">
-    <span class="eyebrow">Legal</span>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 2026</p>
-
-    <div class="callout">
-      The short version: Play Gaps games are built for kids, so we keep data collection to a minimum. Every game's exact, current data practices are always disclosed in that game's own Google Play Data Safety section — that's the most accurate place to check before you install.
+    <div class="legal-hero">
+      <span class="legal-eyebrow">General-audience apps &amp; games</span>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: July 12, 2026</p>
+      <p class="legal-scope-note">Looking for the policy for one of our children's educational games? Those are covered separately by our <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>, which never permits personalized advertising. This page covers Play Gaps' general-audience apps and games instead — things like our platformers and puzzle games.</p>
     </div>
 
-    <section>
-      <h2>Who we are</h2>
-      <p>Play Gaps designs pre-education Android games for kids ages 3 and up — counting, the alphabet, shapes, colors, animals, and times tables. This policy explains, in plain language, how data is handled across our games and this website.</p>
-    </section>
+    <div class="summary-box">
+      <h2>The short version</h2>
+      <ul class="summary-list">
+        <li>Every Play Gaps app tells you plainly, in its own store listing, whether it's built for everyone (including children) or only for teens and adults.</li>
+        <li>Apps built for everyone show only non-personalized, child-safe ads — same standard as our kids' games.</li>
+        <li>Apps meant only for teens/adults may show personalized ads. Where the law requires your permission first (EU, UK, Switzerland), we ask before turning them on, and you can change your mind anytime.</li>
+        <li>We don't require an account to play, and we never see your payment details — purchases go entirely through Google Play Billing.</li>
+        <li>You have real rights over your data — to know, correct, delete, or opt out — wherever you live.</li>
+      </ul>
+      <p class="summary-contact">Questions or a rights request? Email <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a> — we read every message ourselves.</p>
+    </div>
 
-    <section>
-      <h2>What this website collects</h2>
-      <p>playgaps.com is a static informational site hosted on GitHub Pages. It doesn't have accounts, doesn't run analytics scripts that track you individually, and doesn't collect personal information beyond what your browser or GitHub Pages' hosting infrastructure logs automatically (like standard server access logs).</p>
-      <p class="soft">Tapping a game card takes you to that game's official Google Play listing — this site never handles any part of a game install itself.</p>
-    </section>
+    <div class="legal-layout">
+      <nav class="toc" aria-label="Table of contents">
+        <h4>On this page</h4>
+        <ol>
+          <li><a href="#scope">1. Who this covers</a></li>
+          <li><a href="#collect">2. Information we collect</a></li>
+          <li><a href="#use">3. How we use it</a></li>
+          <li><a href="#advertising">4. Advertising</a></li>
+          <li><a href="#purchases">5. In-app purchases</a></li>
+          <li><a href="#third-party">6. Third-party services</a></li>
+          <li><a href="#rights">7. Your privacy rights</a></li>
+          <li><a href="#children">8. Children and this app</a></li>
+          <li><a href="#international">9. International data transfers</a></li>
+          <li><a href="#retention">10. Data retention</a></li>
+          <li><a href="#security">11. Security</a></li>
+          <li><a href="#changes">12. Changes to this policy</a></li>
+          <li><a href="#contact">13. Contact us</a></li>
+        </ol>
+      </nav>
 
-    <section>
-      <h2>What our games collect</h2>
-      <p>Data practices can differ from game to game, since some show ads and some don't. Rather than repeat details here that could go out of date, every Play Gaps game lists its exact, current data handling in its Google Play Data Safety section, including:</p>
-      <div class="card">
-        <ul>
-          <li>What data (if any) is collected</li>
-          <li>Whether data is shared with third parties, such as ad networks</li>
-          <li>Whether data collection is optional</li>
-          <li>How data is secured</li>
-        </ul>
+      <div class="policy-content">
+        <section id="scope">
+          <h2>1. Who This Policy Covers</h2>
+          <p>This Privacy Policy applies to Play Gaps apps and games intended for a general audience — casual games such as platformers and puzzle games, and any future general-audience app we publish. It does not cover our children's educational games, which follow our separate Kids Privacy Policy.</p>
+          <p>Because our general-audience apps vary — some are suitable for everyone including children, while others are intended only for teens or adults — the specific practices below may differ from app to app. Each app's Play Store listing states plainly which category it falls into; this policy describes the full range of what's possible across our apps, not what every single app does.</p>
+        </section>
+
+        <section id="collect">
+          <h2>2. Information We Collect</h2>
+          <p>Not every Play Gaps app collects everything below — this is the complete range across our general-audience apps:</p>
+          <ul>
+            <li>Advertising identifiers and limited device or usage information, processed by our advertising partners to serve ads</li>
+            <li>Basic technical information — device type, operating system version, general (non-precise) region, and crash or performance data — used to keep the app running properly</li>
+            <li>In-app purchase records, processed entirely through Google Play Billing</li>
+            <li>If a specific app offers optional features like leaderboards, achievements, or cloud saves through Google Play Games Services, an account identifier tied to those features</li>
+          </ul>
+          <p>No Play Gaps app requires you to create an account just to play. Where a feature like cloud save is optional, you can use the app without it.</p>
+        </section>
+
+        <section id="use">
+          <h2>3. How We Use Information</h2>
+          <p>We use the information above only to:</p>
+          <ul>
+            <li>Serve ads — personalized or non-personalized, depending on the specific app and your consent choices</li>
+            <li>Process in-app purchases through Google Play Billing</li>
+            <li>Keep the app stable, secure, and free of bugs</li>
+            <li>Provide optional features you choose to use, like leaderboards or cloud saves</li>
+          </ul>
+          <p>We do not sell your personal information for money. Depending on the app and where you live, sharing data with ad partners to serve ads can still count as a "sale" or "sharing" under certain laws (including California's) even without money changing hands — see <a href="#rights">Your Privacy Rights</a> for how to opt out.</p>
+        </section>
+
+        <section id="advertising">
+          <h2>4. Advertising</h2>
+          <p>Play Gaps apps fall into two advertising categories. Check the specific app's store listing to see which one applies:</p>
+
+          <div class="tier-box tier-everyone">
+            <h3>🟢 Apps for everyone, including children</h3>
+            <p>Ads are always non-personalized and contextual, tagged as child-directed with Google AdMob — the same standard used across our kids' games. No profiling, no behavioral targeting, ever, for anyone using these apps.</p>
+          </div>
+
+          <div class="tier-box tier-teen">
+            <h3>🟡 Apps for teens and adults only</h3>
+            <p>Rated 13+ or higher, and genuinely built and marketed for that audience. These apps may show personalized ads based on your interests and activity. Where the law requires your permission first — including the European Economic Area, the United Kingdom, and Switzerland — we show a consent screen, using a system certified by Google, before any personalized ad is served. You can change your choice anytime from the app's privacy settings.</p>
+          </div>
+
+          <p>All advertising runs through Google AdMob. If we ever add other ad networks through AdMob's mediation (for example, Unity Ads), we'll only use networks Google has approved for the relevant audience type, and we'll update this page to name them.</p>
+        </section>
+
+        <section id="purchases">
+          <h2>5. In-App Purchases</h2>
+          <p>Some Play Gaps apps offer optional in-app purchases. Every purchase is processed entirely through Google Play's own billing system — we never receive, see, or store your payment card or financial information. If a specific app offers randomized virtual items (sometimes called "loot boxes"), the odds of receiving each item are disclosed in the app before you purchase, as required by Google Play policy.</p>
+        </section>
+
+        <section id="third-party">
+          <h2>6. Third-Party Services</h2>
+          <p>Depending on the app, Play Gaps apps may use:</p>
+          <ul>
+            <li><strong>Google AdMob</strong> (advertising), including other ad networks used through AdMob's mediation, limited to networks Google has approved for the app's audience</li>
+            <li><strong>Google Play Billing</strong> (in-app purchases)</li>
+            <li><strong>Google Play Games Services</strong> (optional leaderboards, achievements, and cloud saves, only in apps that offer these features)</li>
+          </ul>
+          <p>We do not use these services to sell your personal information to unrelated third parties, and any provider we use is required by Google Play's policies to handle data securely rather than sell it onward.</p>
+        </section>
+
+        <section id="rights">
+          <h2>7. Your Privacy Rights</h2>
+          <p>Wherever you live, you generally have the right to:</p>
+          <ul>
+            <li>Know what personal information we, or our service providers, hold about you, and why</li>
+            <li>Correct inaccurate information</li>
+            <li>Delete your information, with reasonable exceptions (such as records needed to complete a purchase you've already made)</li>
+            <li>Opt out of the use of your data for personalized advertising, and of any "sale" or "sharing" of your data</li>
+            <li>Not be discriminated against for exercising any of these rights — we won't degrade your experience or change pricing because you opted out</li>
+          </ul>
+          <p>If you're in the European Economic Area, the UK, or Switzerland, you also have the right to data portability and to lodge a complaint with your local data protection authority.</p>
+          <p>Because these are mobile apps rather than websites, the most direct way to limit ad personalization is through your device's own settings (on Android: Settings → Google → Ads, or Settings → Privacy → Ads → Opt out of Ads personalization). We honor this device-level choice across our apps. If you ever reach a Play Gaps web page from a browser sending a Global Privacy Control signal, we honor that too, for anything processed through that page.</p>
+          <p>To exercise any of these rights, email <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a>. Play Gaps is a small, independently-run studio, so you'll be reaching the developer directly — we aim to respond within the timeframe required by applicable law, typically 30–45 days.</p>
+        </section>
+
+        <section id="children">
+          <h2>8. Children and This App</h2>
+          <p>Play Gaps' general-audience apps rated 13+ or higher are not directed to, or intended for use by, children under that age. We do not knowingly collect personal information from children below the relevant age through these apps. If we learn that a child has provided us with personal information through one of these apps, we will delete it promptly.</p>
+          <p>If you're a parent and believe this has happened, contact us at <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a> and we'll investigate and delete it. Apps specifically intended for young children are covered by our separate <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>, which never permits personalized advertising regardless of age.</p>
+        </section>
+
+        <section id="international">
+          <h2>9. International Data Transfers</h2>
+          <p>Play Gaps is based in India. Your information may be processed by our service providers — primarily Google — on servers located in the United States, the European Union, or elsewhere. Google maintains its own safeguards for these transfers, including Standard Contractual Clauses where required under EU or UK law. We do not operate our own servers that store personal information.</p>
+        </section>
+
+        <section id="retention">
+          <h2>10. Data Retention</h2>
+          <p>We do not maintain our own database of personal information. Advertising and purchase data described in this policy is retained according to Google's own retention practices — see Google's Privacy Policy for details. If a specific app offers an account-based feature like cloud saves through Google Play Games Services, that data is governed by Google's own account and retention policies.</p>
+        </section>
+
+        <section id="security">
+          <h2>11. Security</h2>
+          <p>We rely on Google's infrastructure — Play Billing, AdMob, Play Games Services — for anything involving payment or advertising data, which maintains its own industry-standard security measures. We don't operate a separate server or database of personal information for these apps, which limits our own exposure by design, not just by promise.</p>
+        </section>
+
+        <section id="changes">
+          <h2>12. Changes to This Policy</h2>
+          <p>If we make a meaningful change — for instance, if a new app or feature changes what information is processed — we'll update the "Last updated" date at the top of this page and post the revised policy here. We recommend checking back occasionally.</p>
+        </section>
+
+        <section id="contact">
+          <h2>13. Contact Us</h2>
+          <p>Questions, concerns, or a privacy rights request for any Play Gaps general-audience app:</p>
+          <p><strong>Email:</strong> <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a></p>
+          <p>We aim to respond within a few business days.</p>
+        </section>
       </div>
-      <p>You can find this by opening any game's Play Store page and scrolling to the "Data safety" section — the same page you reach by tapping any card on our home page.</p>
-    </section>
-
-    <section>
-      <h2>Advertising</h2>
-      <p>Some Play Gaps games are free to play and supported by ads served through third-party ad networks (such as Google AdMob). These networks may use device identifiers to serve and measure ads. Where a game targets children, ad serving follows Google Play's Families Policy requirements, including restrictions on personalized advertising where applicable.</p>
-    </section>
-
-    <section>
-      <h2>Children's privacy</h2>
-      <p>Our games are designed for young children, and we build them with that responsibility in mind. We don't knowingly collect more information than a game's stated purpose requires, and we don't ask children for personal details like names, addresses, or contact information to play.</p>
-    </section>
-
-    <section>
-      <h2>Your choices</h2>
-      <p>You can review or adjust ad personalization settings from your Android device's Google Settings at any time, and you can uninstall any Play Gaps game the same way you would any other app.</p>
-    </section>
-
-    <section>
-      <h2>Changes to this policy</h2>
-      <p>If this policy changes, we'll update the date at the top of this page. Continued use of our games or this website after a change means you accept the updated policy.</p>
-    </section>
-
-    <section>
-      <h2>Contact us</h2>
-      <p>Questions about privacy or data handling? Reach out any time at <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a>.</p>
-    </section>
+    </div>
   </div>
 </main>
 
 <footer>
-  <div class="container">© <span id="year"></span> Play Gaps. All rights reserved.</div>
+  <div class="container footer__bottom-only">
+    <span class="footer__logo">
+      <img src="assets/logo.png" alt="" width="28" height="28" loading="lazy" decoding="async" onerror="this.remove()" style="border-radius:50%;">
+      Play Gaps
+    </span>
+    <span>© <span id="year"></span> Play Gaps · <a href="/">playgaps.com</a> · <a href="mailto:playgapsofficial@gmail.com">playgapsofficial@gmail.com</a></span>
+  </div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+(function(){
+  var toggle = document.getElementById("themeToggle");
+  function currentTheme(){
+    var attr = document.documentElement.getAttribute("data-theme");
+    if (attr) return attr;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  function applyThemeButtonState(){
+    var isDark = currentTheme() === "dark";
+    toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+  applyThemeButtonState();
+  toggle.addEventListener("click", function(){
+    var next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try{ localStorage.setItem("pg-theme", next); }catch(e){}
+    applyThemeButtonState();
+  });
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
