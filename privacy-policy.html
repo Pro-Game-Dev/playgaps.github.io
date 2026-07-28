@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Play Gaps</title>
-<meta name="description" content="Play Gaps' Privacy Policy for our general-audience apps and games: what we collect, how ads and purchases work, and your privacy rights.">
+<meta name="description" content="Play Gaps' Privacy Policy for our general-audience apps and games: what we collect, how online rankings, ads and purchases work, and your privacy rights.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://playgaps.com/privacy-policy.html">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F8FA">
@@ -46,7 +46,7 @@
   "isPartOf": { "@id": "https://playgaps.com/#website" },
   "about": { "@id": "https://playgaps.com/#organization" },
   "datePublished": "2026-07-12",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-07-28",
   "inLanguage": "en"
 }
 </script>
@@ -207,6 +207,17 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
 .tier-box h3{ margin-top:0; display:flex; align-items:center; gap:8px; }
 .tier-box.tier-everyone{ border-left:6px solid var(--leaf); }
 .tier-box.tier-teen{ border-left:6px solid var(--marigold); }
+.tier-box.tier-data{ border-left:6px solid var(--sky); }
+
+/* "We never collect" list — the ✕ counterpart to the summary box's ✓.
+   Scoped to .policy-content so it outranks the disc-bulleted default there. */
+.policy-content ul.never-list{ padding-left:0; list-style:none; }
+.policy-content ul.never-list li{ display:flex; gap:10px; align-items:flex-start; }
+.policy-content ul.never-list li::before{
+  content:"✕"; flex-shrink:0; width:20px; height:20px; border-radius:50%; margin-top:3px;
+  background:var(--poppy); color:#fff; font-weight:800; font-size:.68rem;
+  display:flex; align-items:center; justify-content:center;
+}
 
 footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-dim); }
 .footer__logo{ display:flex; align-items:center; gap:8px; font-family:var(--font-display); font-weight:700; font-size:1.1rem; }
@@ -244,18 +255,19 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
     <div class="legal-hero">
       <span class="legal-eyebrow">General-audience apps &amp; games</span>
       <h1>Privacy Policy</h1>
-      <p class="legal-updated">Last updated: July 12, 2026</p>
+      <p class="legal-updated">Last updated: July 28, 2026</p>
       <p class="legal-scope-note">Looking for the policy for one of our children's educational games? Those are covered separately by our <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>, which never permits personalized advertising. This page covers Play Gaps' general-audience apps and games instead — things like our platformers and puzzle games.</p>
     </div>
 
     <div class="summary-box">
       <h2>The short version</h2>
       <ul class="summary-list">
-        <li>Every Play Gaps app tells you plainly, in its own store listing, whether it's built for everyone (including children) or only for teens and adults.</li>
-        <li>Apps built for everyone show only non-personalized, child-safe ads — same standard as our kids' games.</li>
-        <li>Apps meant only for teens/adults may show personalized ads. Where the law requires your permission first (EU, UK, Switzerland), we ask before turning them on, and you can change your mind anytime.</li>
-        <li>We don't require an account to play, and we never see your payment details — purchases go entirely through Google Play Billing.</li>
-        <li>You have real rights over your data — to know, correct, delete, or opt out — wherever you live.</li>
+        <li>You never need an account. No sign-up, no email, no password — you can play every Play Gaps game without telling us who you are.</li>
+        <li>Some of our games have online rankings. Those store a nickname and a score under a random ID. The nickname is visible to other players, so please don't use your real name — we pick a friendly one like "Brave Fox" for you by default.</li>
+        <li>Every Play Gaps app tells you plainly, in its own store listing, whether it's built for everyone (including children) or only for teens and adults. Apps for everyone show only non-personalized, child-safe ads.</li>
+        <li>We never see your payment details. Purchases go entirely through Google Play Billing.</li>
+        <li>Reminder notifications are worked out on your own phone. Nothing about when or how you play is sent anywhere to send them.</li>
+        <li>You have real rights over your data — to know, correct, delete, or opt out — wherever you live, and one email is enough to use them.</li>
       </ul>
       <p class="summary-contact">Questions or a rights request? Email <a href="mailto:contact@playgaps.com">contact@playgaps.com</a> — we read every message ourselves.</p>
     </div>
@@ -267,34 +279,56 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
           <li><a href="#scope">1. Who this covers</a></li>
           <li><a href="#collect">2. Information we collect</a></li>
           <li><a href="#use">3. How we use it</a></li>
-          <li><a href="#advertising">4. Advertising</a></li>
-          <li><a href="#purchases">5. In-app purchases</a></li>
-          <li><a href="#third-party">6. Third-party services</a></li>
-          <li><a href="#rights">7. Your privacy rights</a></li>
-          <li><a href="#children">8. Children and this app</a></li>
-          <li><a href="#international">9. International data transfers</a></li>
-          <li><a href="#retention">10. Data retention</a></li>
-          <li><a href="#security">11. Security</a></li>
-          <li><a href="#changes">12. Changes to this policy</a></li>
-          <li><a href="#contact">13. Contact us</a></li>
+          <li><a href="#never">4. What we never collect</a></li>
+          <li><a href="#leaderboards">5. Online rankings and names</a></li>
+          <li><a href="#advertising">6. Advertising</a></li>
+          <li><a href="#purchases">7. In-app purchases</a></li>
+          <li><a href="#notifications">8. Reminders and notifications</a></li>
+          <li><a href="#third-party">9. Third-party services</a></li>
+          <li><a href="#legal-bases">10. Legal bases (EEA/UK)</a></li>
+          <li><a href="#rights">11. Your privacy rights</a></li>
+          <li><a href="#delete">12. Deleting your data</a></li>
+          <li><a href="#children">13. Children and this app</a></li>
+          <li><a href="#international">14. International data transfers</a></li>
+          <li><a href="#retention">15. Data retention</a></li>
+          <li><a href="#security">16. Security</a></li>
+          <li><a href="#changes">17. Changes to this policy</a></li>
+          <li><a href="#contact">18. Contact us</a></li>
         </ol>
       </nav>
 
       <div class="policy-content">
         <section id="scope">
           <h2>1. Who This Policy Covers</h2>
-          <p>This Privacy Policy applies to Play Gaps apps and games intended for a general audience — casual games such as platformers and puzzle games, and any future general-audience app we publish. It does not cover our children's educational games, which follow our separate Kids Privacy Policy.</p>
-          <p>Because our general-audience apps vary — some are suitable for everyone including children, while others are intended only for teens or adults — the specific practices below may differ from app to app. Each app's Play Store listing states plainly which category it falls into; this policy describes the full range of what's possible across our apps, not what every single app does.</p>
+          <p>This Privacy Policy applies to Play Gaps apps and games intended for a general audience — casual games such as platformers and puzzle games, and any future general-audience app we publish. It does not cover our children's educational games, which follow our separate <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>.</p>
+          <p>Because our general-audience apps vary — some are suitable for everyone including children, while others are intended only for teens or adults, and only some of them have online features like rankings — the specific practices below may differ from app to app. Each app's Play Store listing states plainly which audience it is for; this policy describes the full range of what's possible across our apps, not what every single app does.</p>
+          <p>Play Gaps is an independently-run studio based in India. For privacy law in the European Economic Area and the UK, Play Gaps is the <strong>data controller</strong> for the small amount of information described in this policy that reaches us directly, and Google acts as our processor or as an independent controller for the services listed in <a href="#third-party">Third-Party Services</a>.</p>
         </section>
 
         <section id="collect">
           <h2>2. Information We Collect</h2>
-          <p>Not every Play Gaps app collects everything below — this is the complete range across our general-audience apps:</p>
+          <p>Not every Play Gaps app collects everything below — this is the complete range across our general-audience apps, grouped by where the information actually goes.</p>
+
+          <h3>a. Information that stays on your device</h3>
+          <p>Most of what a game knows about you never leaves your phone. Depending on the app, that includes your progress and saved game, your best times and scores, which levels or puzzles you have already seen, your sound, music, haptic and accessibility settings, which items you have unlocked or purchased, and your reminder preferences. This is stored in the app's own private storage and is removed when you uninstall the app or clear its data.</p>
+
+          <h3>b. Information we receive</h3>
+          <p>Only apps with online rankings send us anything directly. For those, we hold, per player:</p>
           <ul>
-            <li>Advertising identifiers and limited device or usage information, processed by our advertising partners to serve ads</li>
-            <li>Basic technical information — device type, operating system version, general (non-precise) region, and crash or performance data — used to keep the app running properly</li>
-            <li>In-app purchase records, processed entirely through Google Play Billing</li>
-            <li>If a specific app offers optional features like leaderboards, achievements, or cloud saves through Google Play Games Services, an account identifier tied to those features</li>
+            <li>A <strong>random anonymous ID</strong> created for the app installation by Firebase Authentication. It is not your Google account, your email or your phone number, and it tells us nothing about who you are.</li>
+            <li>The <strong>display name</strong> shown on the rankings — either the friendly one the game generated for you, or one you typed in yourself.</li>
+            <li>Your <strong>scores and play counts</strong>: a weekly score, an all-time score, a number of puzzles solved, and the date the record was last updated.</li>
+          </ul>
+          <p>That is the whole record. There is no email address, no contact list, no location and no message history in it. See <a href="#leaderboards">Online Rankings and Player Names</a> for what is visible to other players.</p>
+
+          <h3>c. Information our providers collect</h3>
+          <ul>
+            <li><strong>Advertising identifiers</strong> and limited device, network and ad-interaction information, processed by Google AdMob and its approved mediation partners to select and measure ads.</li>
+            <li><strong>App analytics</strong>: anonymous, app-generated events about how the game is used — a level started, a level completed, an ad shown, a purchase made, a screen opened — together with an app instance ID, device model, operating system version and general (non-precise) region. We use these as aggregate counts to see what is working; they are not used to build a profile of you as a person.</li>
+            <li><strong>Crash and performance data</strong>: if the app crashes, a technical report of what went wrong, including the error, device state and an installation identifier.</li>
+            <li><strong>In-app purchase records</strong>, processed entirely through Google Play Billing.</li>
+            <li><strong>An app integrity check</strong>: when an app talks to our rankings, Google Play Integrity confirms the request is coming from a genuine, unmodified copy of the app. This is an anti-cheating and anti-abuse check about the app, not about you.</li>
+            <li>If a specific app offers optional features like leaderboards, achievements or cloud saves through <strong>Google Play Games Services</strong>, an account identifier tied to those features.</li>
           </ul>
           <p>No Play Gaps app requires you to create an account just to play. Where a feature like cloud save is optional, you can use the app without it.</p>
         </section>
@@ -303,16 +337,52 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
           <h2>3. How We Use Information</h2>
           <p>We use the information above only to:</p>
           <ul>
+            <li>Run the game itself — save your progress, settings and unlocked items</li>
+            <li>Show online rankings, in apps that have them, and work out where you stand</li>
             <li>Serve ads — personalized or non-personalized, depending on the specific app and your consent choices</li>
-            <li>Process in-app purchases through Google Play Billing</li>
-            <li>Keep the app stable, secure, and free of bugs</li>
-            <li>Provide optional features you choose to use, like leaderboards or cloud saves</li>
+            <li>Process in-app purchases through Google Play Billing, and restore them if you reinstall</li>
+            <li>Keep the app stable, secure and free of bugs, and keep rankings free of cheated scores</li>
+            <li>Understand in aggregate which parts of a game people play, so we can improve it</li>
           </ul>
+          <p>We do not use any of it to make automated decisions that have legal or similarly significant effects on you, and we do not combine it with information from other sources to build a profile of you.</p>
           <p>We do not sell your personal information for money. Depending on the app and where you live, sharing data with ad partners to serve ads can still count as a "sale" or "sharing" under certain laws (including California's) even without money changing hands — see <a href="#rights">Your Privacy Rights</a> for how to opt out.</p>
         </section>
 
+        <section id="never">
+          <h2>4. What We Never Collect</h2>
+          <p>Across every Play Gaps general-audience app, none of the following is ever collected, requested or stored by us:</p>
+          <ul class="never-list">
+            <li>Your name, email address, phone number or postal address</li>
+            <li>Your payment card or any financial details — these go directly to Google Play and never reach us</li>
+            <li>Precise or GPS location</li>
+            <li>Your contacts, calendar, photos, files, SMS or call history</li>
+            <li>Microphone or camera access</li>
+            <li>Anything you type, other than a display name you deliberately choose for a ranking</li>
+          </ul>
+          <p>The permissions our apps request are limited to what the game needs to run: internet access, network status, vibration for haptic feedback, and — only if you agree — permission to post reminder notifications.</p>
+        </section>
+
+        <section id="leaderboards">
+          <h2>5. Online Rankings and Player Names</h2>
+          <p>Some of our games include an online ranking board so you can see how you compare with other players. This is the one part of our apps where information is stored on a server we control, so it is worth being exact about it.</p>
+
+          <div class="tier-box tier-data">
+            <h3>📊 What a ranking entry contains</h3>
+            <p>A random anonymous ID, a display name, a weekly score, an all-time score, a count of puzzles solved, and a last-updated timestamp. The data is held in Google Cloud Firestore under our Firebase project, and it is the only database of player information we operate.</p>
+          </div>
+
+          <h3>Your name is public to other players</h3>
+          <p>The display name and score of top-ranked players are shown inside the app to everyone else playing. Please treat it as a public nickname. To make that the safe default, the game gives you a randomly generated, gender- and culture-neutral name such as "Brave Fox" the first time you play — you are never asked for a real name, and if you never change it, nothing about you is revealed. If you do choose your own, a basic filter blocks offensive words, and we may remove or reset any name that is offensive, impersonates someone, or contains personal contact details. You can change your name at any time in the app's settings or from the rankings screen.</p>
+
+          <h3>You can play without ever appearing</h3>
+          <p>Rankings are a side feature, never a requirement. If you would rather not appear at all, contact us and we will delete your entry (see <a href="#delete">Deleting Your Data</a>).</p>
+
+          <h3>Contests and prizes</h3>
+          <p>Some games run a free contest based on the weekly ranking — for example, the top player of the week wins an in-game item. Entry is automatic by playing, there is nothing to buy and nothing to sign up for, and the full rules are shown inside the game. Prizes are always delivered inside the app itself: we never ask a winner for an address, a bank account, a tax detail or any other personal information, and there is never a prize that has to be posted or paid out.</p>
+        </section>
+
         <section id="advertising">
-          <h2>4. Advertising</h2>
+          <h2>6. Advertising</h2>
           <p>Play Gaps apps fall into two advertising categories. Check the specific app's store listing to see which one applies:</p>
 
           <div class="tier-box tier-everyone">
@@ -325,68 +395,119 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
             <p>Rated 13+ or higher, and genuinely built and marketed for that audience. These apps may show personalized ads based on your interests and activity. Where the law requires your permission first — including the European Economic Area, the United Kingdom, and Switzerland — we show a consent screen, using a system certified by Google, before any personalized ad is served. You can change your choice anytime from the app's privacy settings.</p>
           </div>
 
-          <p>All advertising runs through Google AdMob. If we ever add other ad networks through AdMob's mediation (for example, Unity Ads), we'll only use networks Google has approved for the relevant audience type, and we'll update this page to name them.</p>
+          <p>All advertising runs through Google AdMob. Some of our apps also serve ads through <strong>Unity Ads</strong>, used as an approved bidding partner inside AdMob's mediation — no other ad network is used, and if we ever add one we will name it here. Ad creatives in our teen-and-adult apps are capped at Google's "T" (Teen) content rating, so mature ad content is not served into our games.</p>
+
+          <h3>Rewarded ads are always your choice</h3>
+          <p>Where a game offers a rewarded video in exchange for a hint or a bonus, watching it is entirely optional and is only ever started by you tapping to start it. Removing ads through a purchase, where offered, removes the ads that appear on their own; optional rewarded videos remain available if you want them.</p>
         </section>
 
         <section id="purchases">
-          <h2>5. In-App Purchases</h2>
-          <p>Some Play Gaps apps offer optional in-app purchases. Every purchase is processed entirely through Google Play's own billing system — we never receive, see, or store your payment card or financial information. If a specific app offers randomized virtual items (sometimes called "loot boxes"), the odds of receiving each item are disclosed in the app before you purchase, as required by Google Play policy.</p>
+          <h2>7. In-App Purchases</h2>
+          <p>Some Play Gaps apps offer optional in-app purchases. Every purchase is processed entirely through Google Play's own billing system — we never receive, see, or store your payment card or financial information. What we keep is only the fact that an item is unlocked, saved on your own device, which is what lets "restore purchases" work when you reinstall. If a specific app offers randomized virtual items (sometimes called "loot boxes"), the odds of receiving each item are disclosed in the app before you purchase, as required by Google Play policy.</p>
+          <p>Refunds, payment disputes and purchase history are handled by Google Play, not by us. You can review them in the Play Store under your own Google account.</p>
+        </section>
+
+        <section id="notifications">
+          <h2>8. Reminders and Notifications</h2>
+          <p>Some of our games can send you an occasional reminder to come back and play. These are worked out and scheduled entirely on your own device, using only what the app already knows locally, such as when you last played. There is no push token, no server, and nothing about your play habits is transmitted to us or to anyone else in order to send them.</p>
+          <p>On Android 13 and later, the system asks your permission before any notification can be shown, and you can turn reminders off at any time, either in the app's own settings or in your phone's notification settings for the app.</p>
         </section>
 
         <section id="third-party">
-          <h2>6. Third-Party Services</h2>
-          <p>Depending on the app, Play Gaps apps may use:</p>
+          <h2>9. Third-Party Services</h2>
+          <p>Depending on the app, Play Gaps apps may use the following services, all of them operated by Google:</p>
           <ul>
-            <li><strong>Google AdMob</strong> (advertising), including other ad networks used through AdMob's mediation, limited to networks Google has approved for the app's audience</li>
+            <li><strong>Google AdMob</strong> (advertising), including <strong>Unity Ads</strong> used through AdMob's mediation, limited to networks Google has approved for the app's audience</li>
             <li><strong>Google Play Billing</strong> (in-app purchases)</li>
-            <li><strong>Google Play Games Services</strong> (optional leaderboards, achievements, and cloud saves, only in apps that offer these features)</li>
+            <li><strong>Firebase Authentication</strong> (the anonymous ID behind online rankings — no sign-in, no email, no password)</li>
+            <li><strong>Cloud Firestore</strong> (storing and serving the ranking entries described in section 5)</li>
+            <li><strong>Google Analytics for Firebase</strong> (aggregate app usage statistics)</li>
+            <li><strong>Firebase Crashlytics</strong> (crash and stability reports)</li>
+            <li><strong>Firebase Remote Config</strong> (letting us adjust game settings without shipping an update)</li>
+            <li><strong>Firebase App Check with Google Play Integrity</strong> (confirming requests come from a genuine copy of the app, which is what keeps cheated scores off the rankings)</li>
+            <li><strong>Google Play In-App Review and In-App Update</strong> (the native "rate this app" and "update available" prompts)</li>
+            <li><strong>Google Play Games Services</strong> (optional leaderboards, achievements and cloud saves, only in apps that offer these features)</li>
           </ul>
-          <p>We do not use these services to sell your personal information to unrelated third parties, and any provider we use is required by Google Play's policies to handle data securely rather than sell it onward.</p>
+          <p>How Google handles data from apps that use its services is described in <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a> and in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>. Unity's own policy for players is available at <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">unity.com/legal</a>.</p>
+          <p>We do not use these services to sell your personal information to unrelated third parties, and any provider we use is required by Google Play's policies to handle data securely rather than sell it onward. Sharing a game's result or score through your phone's own share sheet is entirely your choice, sends nothing to us, and is handled by whichever app you pick.</p>
+        </section>
+
+        <section id="legal-bases">
+          <h2>10. Legal Bases for Processing (EEA and UK)</h2>
+          <p>If you are in the European Economic Area or the United Kingdom, we rely on the following legal bases under the GDPR:</p>
+          <ul>
+            <li><strong>Contract</strong> — running the game you asked to play, including saving progress, showing your ranking, and delivering purchases you made.</li>
+            <li><strong>Consent</strong> — personalized advertising, and permission to send notifications. You can withdraw either at any time, from the app's privacy settings or your phone's settings, without affecting anything that happened before.</li>
+            <li><strong>Legitimate interests</strong> — keeping the app stable through crash reports, understanding in aggregate how the game is used, and protecting rankings from cheating and abuse. We have considered your rights against each of these and use the least amount of information that makes them work.</li>
+            <li><strong>Legal obligation</strong> — keeping the limited records we are required to keep, such as those relating to a completed purchase.</li>
+          </ul>
         </section>
 
         <section id="rights">
-          <h2>7. Your Privacy Rights</h2>
+          <h2>11. Your Privacy Rights</h2>
           <p>Wherever you live, you generally have the right to:</p>
           <ul>
             <li>Know what personal information we, or our service providers, hold about you, and why</li>
             <li>Correct inaccurate information</li>
             <li>Delete your information, with reasonable exceptions (such as records needed to complete a purchase you've already made)</li>
             <li>Opt out of the use of your data for personalized advertising, and of any "sale" or "sharing" of your data</li>
+            <li>Withdraw a consent you previously gave, at any time</li>
             <li>Not be discriminated against for exercising any of these rights — we won't degrade your experience or change pricing because you opted out</li>
           </ul>
-          <p>If you're in the European Economic Area, the UK, or Switzerland, you also have the right to data portability and to lodge a complaint with your local data protection authority.</p>
-          <p>Because these are mobile apps rather than websites, the most direct way to limit ad personalization is through your device's own settings (on Android: Settings → Google → Ads, or Settings → Privacy → Ads → Opt out of Ads personalization). We honor this device-level choice across our apps. If you ever reach a Play Gaps web page from a browser sending a Global Privacy Control signal, we honor that too, for anything processed through that page.</p>
-          <p>To exercise any of these rights, email <a href="contact@playgaps.com">contact@playgaps.com</a>. Play Gaps is a small, independently-run studio, so you'll be reaching the developer directly — we aim to respond within the timeframe required by applicable law, typically 30–45 days.</p>
+          <p>If you're in the European Economic Area, the UK, or Switzerland, you also have the right to object to processing based on legitimate interests, the right to data portability, and the right to lodge a complaint with your local data protection authority.</p>
+          <p>Because these are mobile apps rather than websites, the most direct way to limit ad personalization is through your device's own settings (on Android: Settings → Google → Ads, or Settings → Privacy → Ads → Opt out of Ads personalization). We honor this device-level choice across our apps. In apps where a consent screen was shown, you can also reopen it any time from the app's own settings, under "privacy choices". If you ever reach a Play Gaps web page from a browser sending a Global Privacy Control signal, we honor that too, for anything processed through that page.</p>
+          <p>To exercise any of these rights, email <a href="mailto:contact@playgaps.com">contact@playgaps.com</a>. Play Gaps is a small, independently-run studio, so you'll be reaching the developer directly — we aim to respond within the timeframe required by applicable law, typically 30–45 days.</p>
+        </section>
+
+        <section id="delete">
+          <h2>12. Deleting Your Data</h2>
+          <p>You can remove everything at any time, and it takes two steps at most:</p>
+          <ul>
+            <li><strong>Everything on your device</strong> — progress, settings, saved items and reminder preferences — is deleted when you uninstall the app, or when you clear its data from Android's app settings. Nothing is left behind and we do not hold a copy.</li>
+            <li><strong>Your ranking entry</strong>, if you played a game with online rankings, is the only thing that sits on our side. Email <a href="mailto:contact@playgaps.com">contact@playgaps.com</a> with the game's name and the display name shown on your rankings screen, and we will find and delete that entry. We do not need, and will not ask for, any other personal detail to do it.</li>
+          </ul>
+          <p>One thing worth knowing: because the ID behind a ranking entry is generated fresh for each installation and is not linked to your Google account, uninstalling the app means the app itself can no longer point at your old entry. Your display name is enough for us to find and remove it, so please send us that.</p>
+          <p>Analytics and crash data are not tied to an identity we can look you up by. If you want to stop contributing to them, opting out of ads personalization at the device level and uninstalling the app both have that effect.</p>
         </section>
 
         <section id="children">
-          <h2>8. Children and This App</h2>
+          <h2>13. Children and This App</h2>
           <p>Play Gaps' general-audience apps rated 13+ or higher are not directed to, or intended for use by, children under that age. We do not knowingly collect personal information from children below the relevant age through these apps. If we learn that a child has provided us with personal information through one of these apps, we will delete it promptly.</p>
           <p>If you're a parent and believe this has happened, contact us at <a href="mailto:contact@playgaps.com">contact@playgaps.com</a> and we'll investigate and delete it. Apps specifically intended for young children are covered by our separate <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>, which never permits personalized advertising regardless of age.</p>
         </section>
 
         <section id="international">
-          <h2>9. International Data Transfers</h2>
-          <p>Play Gaps is based in India. Your information may be processed by our service providers — primarily Google — on servers located in the United States, the European Union, or elsewhere. Google maintains its own safeguards for these transfers, including Standard Contractual Clauses where required under EU or UK law. We do not operate our own servers that store personal information.</p>
+          <h2>14. International Data Transfers</h2>
+          <p>Play Gaps is based in India. The ranking data described in section 5, and everything handled by the services in section 9, is stored and processed on Google's cloud infrastructure, which may be located in the United States, the European Union, or elsewhere depending on the service. We do not run any servers of our own.</p>
+          <p>Google maintains its own safeguards for these transfers, including Standard Contractual Clauses where required under EU or UK law, and we rely on those safeguards for the data we hold with them.</p>
         </section>
 
         <section id="retention">
-          <h2>10. Data Retention</h2>
-          <p>We do not maintain our own database of personal information. Advertising and purchase data described in this policy is retained according to Google's own retention practices — see Google's Privacy Policy for details. If a specific app offers an account-based feature like cloud saves through Google Play Games Services, that data is governed by Google's own account and retention policies.</p>
+          <h2>15. Data Retention</h2>
+          <p>We keep as little as possible, for as short a time as the feature allows:</p>
+          <ul>
+            <li><strong>On-device data</strong> stays until you uninstall the app or clear its data. We never receive a copy of it.</li>
+            <li><strong>Weekly ranking scores</strong> reset on their own every week, when the new week begins.</li>
+            <li><strong>A ranking entry</strong> (name, all-time score, solve count) is kept while the game's rankings are running, so that returning players keep their standing. We delete it sooner on request, and we may remove entries that have been inactive for a long period or that appear to be automated or cheated. If a game's online rankings are ever retired, the underlying database is deleted.</li>
+            <li><strong>Analytics events</strong> are held by Google under the retention period set on our project, up to a maximum of 14 months, and are then deleted automatically. We do not export or keep our own copy.</li>
+            <li><strong>Crash reports</strong> are retained under Firebase Crashlytics' own retention schedule and are deleted automatically when it expires.</li>
+            <li><strong>Advertising and purchase data</strong> is retained according to Google's own retention practices — see Google's Privacy Policy for details.</li>
+          </ul>
         </section>
 
         <section id="security">
-          <h2>11. Security</h2>
-          <p>We rely on Google's infrastructure — Play Billing, AdMob, Play Games Services — for anything involving payment or advertising data, which maintains its own industry-standard security measures. We don't operate a separate server or database of personal information for these apps, which limits our own exposure by design, not just by promise.</p>
+          <h2>16. Security</h2>
+          <p>We rely on Google's infrastructure — Play Billing, AdMob, Firebase — for anything involving payment, advertising or stored player data, which maintains its own industry-standard security measures. The ranking database is protected by server-side security rules that limit what any copy of the app is allowed to read or write, and by Firebase App Check with Google Play Integrity, so that requests from modified or automated clients are rejected.</p>
+          <p>Because we deliberately hold no names, no email addresses, no contact details and no payment information, the worst case for our own database is a nickname and a score. That is a limit built into the design, not just a promise. No system is perfectly secure, but there is very little here to lose.</p>
         </section>
 
         <section id="changes">
-          <h2>12. Changes to This Policy</h2>
+          <h2>17. Changes to This Policy</h2>
           <p>If we make a meaningful change — for instance, if a new app or feature changes what information is processed — we'll update the "Last updated" date at the top of this page and post the revised policy here. We recommend checking back occasionally.</p>
         </section>
 
         <section id="contact">
-          <h2>13. Contact Us</h2>
+          <h2>18. Contact Us</h2>
           <p>Questions, concerns, or a privacy rights request for any Play Gaps general-audience app:</p>
           <p><strong>Email:</strong> <a href="mailto:contact@playgaps.com">contact@playgaps.com</a></p>
           <p>We aim to respond within a few business days.</p>
