@@ -255,7 +255,7 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
     <div class="legal-hero">
       <span class="legal-eyebrow">General-audience apps &amp; games</span>
       <h1>Privacy Policy</h1>
-      <p class="legal-updated">Last updated: July 28, 2026</p>
+      <p class="legal-updated">Last updated: July 29, 2026</p>
       <p class="legal-scope-note">Looking for the policy for one of our children's educational games? Those are covered separately by our <a href="/kids-privacy-policy.html">Kids Privacy Policy</a>, which never permits personalized advertising. This page covers Play Gaps' general-audience apps and games instead — things like our platformers and puzzle games.</p>
     </div>
 
@@ -265,6 +265,7 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
         <li>You never need an account. No sign-up, no email, no password — you can play every Play Gaps game without telling us who you are.</li>
         <li>Some of our games have online rankings. Those store a nickname and a score under a random ID. The nickname is visible to other players, so please don't use your real name — we pick a friendly one like "Brave Fox" for you by default.</li>
         <li>Every Play Gaps app tells you plainly, in its own store listing, whether it's built for everyone (including children) or only for teens and adults. Apps for everyone show only non-personalized, child-safe ads.</li>
+        <li>If a game lets you keep or favourite something, that list stays on your phone. We count how many people kept each item so the game can show the number, and we keep no record of who kept what.</li>
         <li>We never see your payment details. Purchases go entirely through Google Play Billing.</li>
         <li>Reminder notifications are worked out on your own phone. Nothing about when or how you play is sent anywhere to send them.</li>
         <li>You have real rights over your data — to know, correct, delete, or opt out — wherever you live, and one email is enough to use them.</li>
@@ -310,16 +311,18 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
           <p>Not every Play Gaps app collects everything below — this is the complete range across our general-audience apps, grouped by where the information actually goes.</p>
 
           <h3>a. Information that stays on your device</h3>
-          <p>Most of what a game knows about you never leaves your phone. Depending on the app, that includes your progress and saved game, your best times and scores, which levels or puzzles you have already seen, your sound, music, haptic and accessibility settings, which items you have unlocked or purchased, and your reminder preferences. This is stored in the app's own private storage and is removed when you uninstall the app or clear its data.</p>
+          <p>Most of what a game knows about you never leaves your phone. Depending on the app, that includes your progress and saved game, your best times and scores, which levels or puzzles you have already seen, anything you have chosen to keep or favourite inside the app — such as a quote you liked — your sound, music, haptic and accessibility settings, which items you have unlocked or purchased, and your reminder preferences. This is stored in the app's own private storage, we never receive a copy of it, and it is removed from the device when you uninstall the app or clear its data.</p>
+          <p><strong>One thing worth knowing about backups.</strong> Android has its own Automatic Backup feature, which may copy an app's saved data to <em>your</em> Google Drive so that your progress comes back if you reinstall the app or set up a new phone. That is a feature of Android and of your own Google account rather than something we run: the backup belongs to you, it does not count against your Drive storage, and we cannot read it. You can switch it off in your device settings under Google, then Backup. While it is on, uninstalling an app or clearing its data may not remove the copy held in your own Drive.</p>
 
           <h3>b. Information we receive</h3>
-          <p>Only apps with online rankings send us anything directly. For those, we hold, per player:</p>
+          <p>Only apps with an online feature send us anything directly. For apps with online rankings, we hold, per player:</p>
           <ul>
             <li>A <strong>random anonymous ID</strong> created for the app installation by Firebase Authentication. It is not your Google account, your email or your phone number, and it tells us nothing about who you are.</li>
             <li>The <strong>display name</strong> shown on the rankings — either the friendly one the game generated for you, or one you typed in yourself.</li>
             <li>Your <strong>scores and play counts</strong>: a weekly score, an all-time score, a number of puzzles solved, and the date the record was last updated.</li>
           </ul>
           <p>That is the whole record. There is no email address, no contact list, no location and no message history in it. See <a href="#leaderboards">Online Rankings and Player Names</a> for what is visible to other players.</p>
+          <p>One other thing reaches us, and it is not held against a player at all. Where a game lets you keep or favourite something, keeping an item adds <strong>1</strong> to a public running total for that item, so the app can show how many people have kept it. What we store is a single number per item and nothing else — no player ID, no display name, and no record of who kept what. So we can say how many people kept something, and we cannot say which things you kept. Your own list of kept items never leaves your phone.</p>
 
           <h3>c. Information our providers collect</h3>
           <ul>
@@ -486,7 +489,8 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
           <h2>15. Data Retention</h2>
           <p>We keep as little as possible, for as short a time as the feature allows:</p>
           <ul>
-            <li><strong>On-device data</strong> stays until you uninstall the app or clear its data. We never receive a copy of it.</li>
+            <li><strong>On-device data</strong> stays until you uninstall the app or clear its data. We never receive a copy of it. Android's own backup may keep a copy in your Google Drive — see the note in <a href="#collect">section 2</a>, and your device settings to turn it off.</li>
+            <li><strong>Keep counts</strong> are one running total per item, with nothing attached that identifies anyone. They are kept while the feature is running, and are deleted along with the database if it is ever retired. Because there is no link between a count and a person, there is nothing in them to look up or remove for an individual.</li>
             <li><strong>Weekly ranking scores</strong> reset on their own every week, when the new week begins.</li>
             <li><strong>A ranking entry</strong> (name, all-time score, solve count) is kept while the game's rankings are running, so that returning players keep their standing. We delete it sooner on request, and we may remove entries that have been inactive for a long period or that appear to be automated or cheated. If a game's online rankings are ever retired, the underlying database is deleted.</li>
             <li><strong>Analytics events</strong> are held by Google under the retention period set on our project, up to a maximum of 14 months, and are then deleted automatically. We do not export or keep our own copy.</li>
@@ -498,7 +502,7 @@ footer{ padding-block:var(--sp-7) var(--sp-6); border-top:2px solid var(--paper-
         <section id="security">
           <h2>16. Security</h2>
           <p>We rely on Google's infrastructure — Play Billing, AdMob, Firebase — for anything involving payment, advertising or stored player data, which maintains its own industry-standard security measures. The ranking database is protected by server-side security rules that limit what any copy of the app is allowed to read or write, and by Firebase App Check with Google Play Integrity, so that requests from modified or automated clients are rejected.</p>
-          <p>Because we deliberately hold no names, no email addresses, no contact details and no payment information, the worst case for our own database is a nickname and a score. That is a limit built into the design, not just a promise. No system is perfectly secure, but there is very little here to lose.</p>
+          <p>Because we deliberately hold no names, no email addresses, no contact details and no payment information, the worst case for our own database is a nickname, a score, and a set of totals with nobody's name on them. That is a limit built into the design, not just a promise. No system is perfectly secure, but there is very little here to lose.</p>
         </section>
 
         <section id="changes">
